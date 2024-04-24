@@ -1,4 +1,4 @@
-lexer grammar miniGoScanner;
+lexer grammar MiniGoScanner;
 
 // Tokens
 

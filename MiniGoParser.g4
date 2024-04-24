@@ -1,8 +1,8 @@
 // Parser Rules
-parser grammar miniGoParser;
+parser grammar MiniGoParser;
 
 options {
-  tokenVocab=miniGoScanner;
+  tokenVocab=MiniGoScanner;
 }
 
 root            : PACKAGE IDENTIFIER SEMICOLON topDeclarationList                                                       #rootAST

@@ -1,10 +1,11 @@
-// Code generated from E:/Universidad/2024/I Semestre/Compiladores e Interpretes/Proyecto Compiladores/miniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from C:/Users/noni4/Desktop/Proyecto-Compiladores/MiniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
 
-package generated // miniGoParser
+package parser // MiniGoParser
+
 import "github.com/antlr4-go/antlr/v4"
 
-// miniGoParserListener is a complete listener for a parse tree produced by miniGoParser.
-type miniGoParserListener interface {
+// MiniGoParserListener is a complete listener for a parse tree produced by MiniGoParser.
+type MiniGoParserListener interface {
 	antlr.ParseTreeListener
 
 	// EnterRootAST is called when entering the rootAST production.

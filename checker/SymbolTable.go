@@ -3,7 +3,7 @@ package checker
 // SymbolTable representa la tabla de símbolos del compilador MiniGo
 type SymbolTable struct {
 	Parent    *SymbolTable         // Ámbito padre
-	Variables map[string]Type      // Mapa de identificadores a tipos
+	Variables map[string]Type      // Mapa de identificadores a tipos bote
 	Functions map[string]Function  // Mapa de funciones a sus definiciones
 	Structs   map[string]Structure // Mapa de estructuras a sus definiciones
 }

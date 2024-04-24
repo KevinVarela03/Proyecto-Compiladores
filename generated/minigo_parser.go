@@ -1,6 +1,7 @@
-// Code generated from E:/Universidad/2024/I Semestre/Compiladores e Interpretes/Proyecto Compiladores/miniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from C:/Users/noni4/Desktop/Proyecto-Compiladores/MiniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
 
-package generated // miniGoParser
+package parser // MiniGoParser
+
 import (
 	"fmt"
 	"strconv"
@@ -14,7 +15,7 @@ var _ = fmt.Printf
 var _ = strconv.Itoa
 var _ = sync.Once{}
 
-type miniGoParser struct {
+type MiniGoParser struct {
 	*antlr.BaseParser
 }
 
@@ -357,150 +358,150 @@ func minigoparserParserInit() {
 	}
 }
 
-// miniGoParserInit initializes any static state used to implement miniGoParser. By default the
+// MiniGoParserInit initializes any static state used to implement MiniGoParser. By default the
 // static state used to implement the parser is lazily initialized during the first call to
-// NewminiGoParser(). You can call this function if you wish to initialize the static state ahead
+// NewMiniGoParser(). You can call this function if you wish to initialize the static state ahead
 // of time.
 func MiniGoParserInit() {
 	staticData := &MiniGoParserParserStaticData
 	staticData.once.Do(minigoparserParserInit)
 }
 
-// NewminiGoParser produces a new parser instance for the optional input antlr.TokenStream.
-func NewminiGoParser(input antlr.TokenStream) *miniGoParser {
+// NewMiniGoParser produces a new parser instance for the optional input antlr.TokenStream.
+func NewMiniGoParser(input antlr.TokenStream) *MiniGoParser {
 	MiniGoParserInit()
-	this := new(miniGoParser)
+	this := new(MiniGoParser)
 	this.BaseParser = antlr.NewBaseParser(input)
 	staticData := &MiniGoParserParserStaticData
 	this.Interpreter = antlr.NewParserATNSimulator(this, staticData.atn, staticData.decisionToDFA, staticData.PredictionContextCache)
 	this.RuleNames = staticData.RuleNames
 	this.LiteralNames = staticData.LiteralNames
 	this.SymbolicNames = staticData.SymbolicNames
-	this.GrammarFileName = "miniGoParser.g4"
+	this.GrammarFileName = "MiniGoParser.g4"
 
 	return this
 }
 
-// miniGoParser tokens.
+// MiniGoParser tokens.
 const (
-	miniGoParserEOF                      = antlr.TokenEOF
-	miniGoParserINTLITERAL               = 1
-	miniGoParserFLOATLITERAL             = 2
-	miniGoParserRUNELITERAL              = 3
-	miniGoParserRAWSTRINGLITERAL         = 4
-	miniGoParserINTERPRETEDSTRINGLITERAL = 5
-	miniGoParserPACKAGE                  = 6
-	miniGoParserVAR                      = 7
-	miniGoParserTYPE                     = 8
-	miniGoParserFUNC                     = 9
-	miniGoParserSTRUCT                   = 10
-	miniGoParserLEN                      = 11
-	miniGoParserCAP                      = 12
-	miniGoParserPRINT                    = 13
-	miniGoParserPRINTLN                  = 14
-	miniGoParserRETURN                   = 15
-	miniGoParserBREAK                    = 16
-	miniGoParserCONTINUE                 = 17
-	miniGoParserAPPEND                   = 18
-	miniGoParserIF                       = 19
-	miniGoParserELSE                     = 20
-	miniGoParserFOR                      = 21
-	miniGoParserSWITCH                   = 22
-	miniGoParserCASE                     = 23
-	miniGoParserDEFAULT                  = 24
-	miniGoParserIDENTIFIER               = 25
-	miniGoParserPLUS                     = 26
-	miniGoParserMINUS                    = 27
-	miniGoParserMULTIPLY                 = 28
-	miniGoParserDIVIDE                   = 29
-	miniGoParserMODULO                   = 30
-	miniGoParserLESS                     = 31
-	miniGoParserLESSEQUAL                = 32
-	miniGoParserGREATER                  = 33
-	miniGoParserGREATEREQUAL             = 34
-	miniGoParserEQUAL                    = 35
-	miniGoParserNOTEQUAL                 = 36
-	miniGoParserAND                      = 37
-	miniGoParserOR                       = 38
-	miniGoParserNOT                      = 39
-	miniGoParserBITWISEAND               = 40
-	miniGoParserBITWISEOR                = 41
-	miniGoParserBITWISEXOR               = 42
-	miniGoParserBITWISECLEAR             = 43
-	miniGoParserSHIFTLEFT                = 44
-	miniGoParserSHIFTRIGHT               = 45
-	miniGoParserINCREMENT                = 46
-	miniGoParserDECREMENT                = 47
-	miniGoParserASSIGN                   = 48
-	miniGoParserPLUSEQUAL                = 49
-	miniGoParserMINUSEQUAL               = 50
-	miniGoParserMULTIPLYEQUAL            = 51
-	miniGoParserDIVIDEEQUAL              = 52
-	miniGoParserMODULOEQUAL              = 53
-	miniGoParserBITWISEANDEQUAL          = 54
-	miniGoParserBITWISEOREQUAL           = 55
-	miniGoParserBITWISEXOREQUAL          = 56
-	miniGoParserSHIFTLEFTEQUAL           = 57
-	miniGoParserSHIFTRIGHTEQUAL          = 58
-	miniGoParserBITWISECLEAREQUAL        = 59
-	miniGoParserCOLON                    = 60
-	miniGoParserSEMICOLON                = 61
-	miniGoParserCOMMA                    = 62
-	miniGoParserDOT                      = 63
-	miniGoParserLPAREN                   = 64
-	miniGoParserRPAREN                   = 65
-	miniGoParserLBRACKET                 = 66
-	miniGoParserRBRACKET                 = 67
-	miniGoParserLBRACE                   = 68
-	miniGoParserRBRACE                   = 69
-	miniGoParserSPACES                   = 70
-	miniGoParserLINE_COMMENT             = 71
-	miniGoParserBLOCK_COMMENT            = 72
+	MiniGoParserEOF                      = antlr.TokenEOF
+	MiniGoParserINTLITERAL               = 1
+	MiniGoParserFLOATLITERAL             = 2
+	MiniGoParserRUNELITERAL              = 3
+	MiniGoParserRAWSTRINGLITERAL         = 4
+	MiniGoParserINTERPRETEDSTRINGLITERAL = 5
+	MiniGoParserPACKAGE                  = 6
+	MiniGoParserVAR                      = 7
+	MiniGoParserTYPE                     = 8
+	MiniGoParserFUNC                     = 9
+	MiniGoParserSTRUCT                   = 10
+	MiniGoParserLEN                      = 11
+	MiniGoParserCAP                      = 12
+	MiniGoParserPRINT                    = 13
+	MiniGoParserPRINTLN                  = 14
+	MiniGoParserRETURN                   = 15
+	MiniGoParserBREAK                    = 16
+	MiniGoParserCONTINUE                 = 17
+	MiniGoParserAPPEND                   = 18
+	MiniGoParserIF                       = 19
+	MiniGoParserELSE                     = 20
+	MiniGoParserFOR                      = 21
+	MiniGoParserSWITCH                   = 22
+	MiniGoParserCASE                     = 23
+	MiniGoParserDEFAULT                  = 24
+	MiniGoParserIDENTIFIER               = 25
+	MiniGoParserPLUS                     = 26
+	MiniGoParserMINUS                    = 27
+	MiniGoParserMULTIPLY                 = 28
+	MiniGoParserDIVIDE                   = 29
+	MiniGoParserMODULO                   = 30
+	MiniGoParserLESS                     = 31
+	MiniGoParserLESSEQUAL                = 32
+	MiniGoParserGREATER                  = 33
+	MiniGoParserGREATEREQUAL             = 34
+	MiniGoParserEQUAL                    = 35
+	MiniGoParserNOTEQUAL                 = 36
+	MiniGoParserAND                      = 37
+	MiniGoParserOR                       = 38
+	MiniGoParserNOT                      = 39
+	MiniGoParserBITWISEAND               = 40
+	MiniGoParserBITWISEOR                = 41
+	MiniGoParserBITWISEXOR               = 42
+	MiniGoParserBITWISECLEAR             = 43
+	MiniGoParserSHIFTLEFT                = 44
+	MiniGoParserSHIFTRIGHT               = 45
+	MiniGoParserINCREMENT                = 46
+	MiniGoParserDECREMENT                = 47
+	MiniGoParserASSIGN                   = 48
+	MiniGoParserPLUSEQUAL                = 49
+	MiniGoParserMINUSEQUAL               = 50
+	MiniGoParserMULTIPLYEQUAL            = 51
+	MiniGoParserDIVIDEEQUAL              = 52
+	MiniGoParserMODULOEQUAL              = 53
+	MiniGoParserBITWISEANDEQUAL          = 54
+	MiniGoParserBITWISEOREQUAL           = 55
+	MiniGoParserBITWISEXOREQUAL          = 56
+	MiniGoParserSHIFTLEFTEQUAL           = 57
+	MiniGoParserSHIFTRIGHTEQUAL          = 58
+	MiniGoParserBITWISECLEAREQUAL        = 59
+	MiniGoParserCOLON                    = 60
+	MiniGoParserSEMICOLON                = 61
+	MiniGoParserCOMMA                    = 62
+	MiniGoParserDOT                      = 63
+	MiniGoParserLPAREN                   = 64
+	MiniGoParserRPAREN                   = 65
+	MiniGoParserLBRACKET                 = 66
+	MiniGoParserRBRACKET                 = 67
+	MiniGoParserLBRACE                   = 68
+	MiniGoParserRBRACE                   = 69
+	MiniGoParserSPACES                   = 70
+	MiniGoParserLINE_COMMENT             = 71
+	MiniGoParserBLOCK_COMMENT            = 72
 )
 
-// miniGoParser rules.
+// MiniGoParser rules.
 const (
-	miniGoParserRULE_root                     = 0
-	miniGoParserRULE_topDeclarationList       = 1
-	miniGoParserRULE_variableDecl             = 2
-	miniGoParserRULE_innerVarDecls            = 3
-	miniGoParserRULE_singleVarDecl            = 4
-	miniGoParserRULE_singleVarDeclNoExps      = 5
-	miniGoParserRULE_typeDecl                 = 6
-	miniGoParserRULE_innerTypeDecls           = 7
-	miniGoParserRULE_singleTypeDecl           = 8
-	miniGoParserRULE_funcDecl                 = 9
-	miniGoParserRULE_funcFrontDecl            = 10
-	miniGoParserRULE_funcArgDecls             = 11
-	miniGoParserRULE_declType                 = 12
-	miniGoParserRULE_sliceDeclType            = 13
-	miniGoParserRULE_arrayDeclType            = 14
-	miniGoParserRULE_structDeclType           = 15
-	miniGoParserRULE_structMemDecls           = 16
-	miniGoParserRULE_identifierList           = 17
-	miniGoParserRULE_expression               = 18
-	miniGoParserRULE_expressionList           = 19
-	miniGoParserRULE_primaryExpression        = 20
-	miniGoParserRULE_operand                  = 21
-	miniGoParserRULE_literal                  = 22
-	miniGoParserRULE_index                    = 23
-	miniGoParserRULE_arguments                = 24
-	miniGoParserRULE_selector                 = 25
-	miniGoParserRULE_appendExpression         = 26
-	miniGoParserRULE_lengthExpression         = 27
-	miniGoParserRULE_capExpression            = 28
-	miniGoParserRULE_statementList            = 29
-	miniGoParserRULE_block                    = 30
-	miniGoParserRULE_statement                = 31
-	miniGoParserRULE_simpleStatement          = 32
-	miniGoParserRULE_assignmentStatement      = 33
-	miniGoParserRULE_ifStatement              = 34
-	miniGoParserRULE_loop                     = 35
-	miniGoParserRULE_switchStmt               = 36
-	miniGoParserRULE_expressionCaseClauseList = 37
-	miniGoParserRULE_expressionCaseClause     = 38
-	miniGoParserRULE_expressionSwitchCase     = 39
-	miniGoParserRULE_epsilon                  = 40
+	MiniGoParserRULE_root                     = 0
+	MiniGoParserRULE_topDeclarationList       = 1
+	MiniGoParserRULE_variableDecl             = 2
+	MiniGoParserRULE_innerVarDecls            = 3
+	MiniGoParserRULE_singleVarDecl            = 4
+	MiniGoParserRULE_singleVarDeclNoExps      = 5
+	MiniGoParserRULE_typeDecl                 = 6
+	MiniGoParserRULE_innerTypeDecls           = 7
+	MiniGoParserRULE_singleTypeDecl           = 8
+	MiniGoParserRULE_funcDecl                 = 9
+	MiniGoParserRULE_funcFrontDecl            = 10
+	MiniGoParserRULE_funcArgDecls             = 11
+	MiniGoParserRULE_declType                 = 12
+	MiniGoParserRULE_sliceDeclType            = 13
+	MiniGoParserRULE_arrayDeclType            = 14
+	MiniGoParserRULE_structDeclType           = 15
+	MiniGoParserRULE_structMemDecls           = 16
+	MiniGoParserRULE_identifierList           = 17
+	MiniGoParserRULE_expression               = 18
+	MiniGoParserRULE_expressionList           = 19
+	MiniGoParserRULE_primaryExpression        = 20
+	MiniGoParserRULE_operand                  = 21
+	MiniGoParserRULE_literal                  = 22
+	MiniGoParserRULE_index                    = 23
+	MiniGoParserRULE_arguments                = 24
+	MiniGoParserRULE_selector                 = 25
+	MiniGoParserRULE_appendExpression         = 26
+	MiniGoParserRULE_lengthExpression         = 27
+	MiniGoParserRULE_capExpression            = 28
+	MiniGoParserRULE_statementList            = 29
+	MiniGoParserRULE_block                    = 30
+	MiniGoParserRULE_statement                = 31
+	MiniGoParserRULE_simpleStatement          = 32
+	MiniGoParserRULE_assignmentStatement      = 33
+	MiniGoParserRULE_ifStatement              = 34
+	MiniGoParserRULE_loop                     = 35
+	MiniGoParserRULE_switchStmt               = 36
+	MiniGoParserRULE_expressionCaseClauseList = 37
+	MiniGoParserRULE_expressionCaseClause     = 38
+	MiniGoParserRULE_expressionSwitchCase     = 39
+	MiniGoParserRULE_epsilon                  = 40
 )
 
 // IRootContext is an interface to support dynamic dispatch.
@@ -521,13 +522,13 @@ type RootContext struct {
 func NewEmptyRootContext() *RootContext {
 	var p = new(RootContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_root
+	p.RuleIndex = MiniGoParserRULE_root
 	return p
 }
 
 func InitEmptyRootContext(p *RootContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_root
+	p.RuleIndex = MiniGoParserRULE_root
 }
 
 func (*RootContext) IsRootContext() {}
@@ -538,7 +539,7 @@ func NewRootContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokin
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_root
+	p.RuleIndex = MiniGoParserRULE_root
 
 	return p
 }
@@ -576,15 +577,15 @@ func (s *RootASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *RootASTContext) PACKAGE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserPACKAGE, 0)
+	return s.GetToken(MiniGoParserPACKAGE, 0)
 }
 
 func (s *RootASTContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIDENTIFIER, 0)
+	return s.GetToken(MiniGoParserIDENTIFIER, 0)
 }
 
 func (s *RootASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *RootASTContext) TopDeclarationList() ITopDeclarationListContext {
@@ -604,20 +605,20 @@ func (s *RootASTContext) TopDeclarationList() ITopDeclarationListContext {
 }
 
 func (s *RootASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterRootAST(s)
 	}
 }
 
 func (s *RootASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitRootAST(s)
 	}
 }
 
 func (s *RootASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitRootAST(s)
 
 	default:
@@ -625,14 +626,14 @@ func (s *RootASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	}
 }
 
-func (p *miniGoParser) Root() (localctx IRootContext) {
+func (p *MiniGoParser) Root() (localctx IRootContext) {
 	localctx = NewRootContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 0, miniGoParserRULE_root)
+	p.EnterRule(localctx, 0, MiniGoParserRULE_root)
 	localctx = NewRootASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(82)
-		p.Match(miniGoParserPACKAGE)
+		p.Match(MiniGoParserPACKAGE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -640,7 +641,7 @@ func (p *miniGoParser) Root() (localctx IRootContext) {
 	}
 	{
 		p.SetState(83)
-		p.Match(miniGoParserIDENTIFIER)
+		p.Match(MiniGoParserIDENTIFIER)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -648,7 +649,7 @@ func (p *miniGoParser) Root() (localctx IRootContext) {
 	}
 	{
 		p.SetState(84)
-		p.Match(miniGoParserSEMICOLON)
+		p.Match(MiniGoParserSEMICOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -690,13 +691,13 @@ type TopDeclarationListContext struct {
 func NewEmptyTopDeclarationListContext() *TopDeclarationListContext {
 	var p = new(TopDeclarationListContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_topDeclarationList
+	p.RuleIndex = MiniGoParserRULE_topDeclarationList
 	return p
 }
 
 func InitEmptyTopDeclarationListContext(p *TopDeclarationListContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_topDeclarationList
+	p.RuleIndex = MiniGoParserRULE_topDeclarationList
 }
 
 func (*TopDeclarationListContext) IsTopDeclarationListContext() {}
@@ -707,7 +708,7 @@ func NewTopDeclarationListContext(parser antlr.Parser, parent antlr.ParserRuleCo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_topDeclarationList
+	p.RuleIndex = MiniGoParserRULE_topDeclarationList
 
 	return p
 }
@@ -868,20 +869,20 @@ func (s *TopDeclarationListASTContext) FuncDecl(i int) IFuncDeclContext {
 }
 
 func (s *TopDeclarationListASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterTopDeclarationListAST(s)
 	}
 }
 
 func (s *TopDeclarationListASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitTopDeclarationListAST(s)
 	}
 }
 
 func (s *TopDeclarationListASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitTopDeclarationListAST(s)
 
 	default:
@@ -889,9 +890,9 @@ func (s *TopDeclarationListASTContext) Accept(visitor antlr.ParseTreeVisitor) in
 	}
 }
 
-func (p *miniGoParser) TopDeclarationList() (localctx ITopDeclarationListContext) {
+func (p *MiniGoParser) TopDeclarationList() (localctx ITopDeclarationListContext) {
 	localctx = NewTopDeclarationListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 2, miniGoParserRULE_topDeclarationList)
+	p.EnterRule(localctx, 2, MiniGoParserRULE_topDeclarationList)
 	var _la int
 
 	localctx = NewTopDeclarationListASTContext(p, localctx)
@@ -911,19 +912,19 @@ func (p *miniGoParser) TopDeclarationList() (localctx ITopDeclarationListContext
 		}
 
 		switch p.GetTokenStream().LA(1) {
-		case miniGoParserVAR:
+		case MiniGoParserVAR:
 			{
 				p.SetState(87)
 				p.VariableDecl()
 			}
 
-		case miniGoParserTYPE:
+		case MiniGoParserTYPE:
 			{
 				p.SetState(88)
 				p.TypeDecl()
 			}
 
-		case miniGoParserFUNC:
+		case MiniGoParserFUNC:
 			{
 				p.SetState(89)
 				p.FuncDecl()
@@ -973,13 +974,13 @@ type VariableDeclContext struct {
 func NewEmptyVariableDeclContext() *VariableDeclContext {
 	var p = new(VariableDeclContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_variableDecl
+	p.RuleIndex = MiniGoParserRULE_variableDecl
 	return p
 }
 
 func InitEmptyVariableDeclContext(p *VariableDeclContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_variableDecl
+	p.RuleIndex = MiniGoParserRULE_variableDecl
 }
 
 func (*VariableDeclContext) IsVariableDeclContext() {}
@@ -990,7 +991,7 @@ func NewVariableDeclContext(parser antlr.Parser, parent antlr.ParserRuleContext,
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_variableDecl
+	p.RuleIndex = MiniGoParserRULE_variableDecl
 
 	return p
 }
@@ -1028,11 +1029,11 @@ func (s *VariableDeclBlockASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *VariableDeclBlockASTContext) VAR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserVAR, 0)
+	return s.GetToken(MiniGoParserVAR, 0)
 }
 
 func (s *VariableDeclBlockASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *VariableDeclBlockASTContext) InnerVarDecls() IInnerVarDeclsContext {
@@ -1052,28 +1053,28 @@ func (s *VariableDeclBlockASTContext) InnerVarDecls() IInnerVarDeclsContext {
 }
 
 func (s *VariableDeclBlockASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *VariableDeclBlockASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *VariableDeclBlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterVariableDeclBlockAST(s)
 	}
 }
 
 func (s *VariableDeclBlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitVariableDeclBlockAST(s)
 	}
 }
 
 func (s *VariableDeclBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitVariableDeclBlockAST(s)
 
 	default:
@@ -1100,36 +1101,36 @@ func (s *VariableDeclEmptyASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *VariableDeclEmptyASTContext) VAR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserVAR, 0)
+	return s.GetToken(MiniGoParserVAR, 0)
 }
 
 func (s *VariableDeclEmptyASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *VariableDeclEmptyASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *VariableDeclEmptyASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *VariableDeclEmptyASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterVariableDeclEmptyAST(s)
 	}
 }
 
 func (s *VariableDeclEmptyASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitVariableDeclEmptyAST(s)
 	}
 }
 
 func (s *VariableDeclEmptyASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitVariableDeclEmptyAST(s)
 
 	default:
@@ -1156,7 +1157,7 @@ func (s *VariableDeclASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *VariableDeclASTContext) VAR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserVAR, 0)
+	return s.GetToken(MiniGoParserVAR, 0)
 }
 
 func (s *VariableDeclASTContext) SingleVarDecl() ISingleVarDeclContext {
@@ -1176,24 +1177,24 @@ func (s *VariableDeclASTContext) SingleVarDecl() ISingleVarDeclContext {
 }
 
 func (s *VariableDeclASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *VariableDeclASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterVariableDeclAST(s)
 	}
 }
 
 func (s *VariableDeclASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitVariableDeclAST(s)
 	}
 }
 
 func (s *VariableDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitVariableDeclAST(s)
 
 	default:
@@ -1201,9 +1202,9 @@ func (s *VariableDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interfac
 	}
 }
 
-func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
+func (p *MiniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 	localctx = NewVariableDeclContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 4, miniGoParserRULE_variableDecl)
+	p.EnterRule(localctx, 4, MiniGoParserRULE_variableDecl)
 	p.SetState(109)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -1216,7 +1217,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(95)
-			p.Match(miniGoParserVAR)
+			p.Match(MiniGoParserVAR)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1228,7 +1229,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		}
 		{
 			p.SetState(97)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1240,7 +1241,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(99)
-			p.Match(miniGoParserVAR)
+			p.Match(MiniGoParserVAR)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1248,7 +1249,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		}
 		{
 			p.SetState(100)
-			p.Match(miniGoParserLPAREN)
+			p.Match(MiniGoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1260,7 +1261,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		}
 		{
 			p.SetState(102)
-			p.Match(miniGoParserRPAREN)
+			p.Match(MiniGoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1268,7 +1269,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		}
 		{
 			p.SetState(103)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1280,7 +1281,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(105)
-			p.Match(miniGoParserVAR)
+			p.Match(MiniGoParserVAR)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1288,7 +1289,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		}
 		{
 			p.SetState(106)
-			p.Match(miniGoParserLPAREN)
+			p.Match(MiniGoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1296,7 +1297,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		}
 		{
 			p.SetState(107)
-			p.Match(miniGoParserRPAREN)
+			p.Match(MiniGoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1304,7 +1305,7 @@ func (p *miniGoParser) VariableDecl() (localctx IVariableDeclContext) {
 		}
 		{
 			p.SetState(108)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1346,13 +1347,13 @@ type InnerVarDeclsContext struct {
 func NewEmptyInnerVarDeclsContext() *InnerVarDeclsContext {
 	var p = new(InnerVarDeclsContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_innerVarDecls
+	p.RuleIndex = MiniGoParserRULE_innerVarDecls
 	return p
 }
 
 func InitEmptyInnerVarDeclsContext(p *InnerVarDeclsContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_innerVarDecls
+	p.RuleIndex = MiniGoParserRULE_innerVarDecls
 }
 
 func (*InnerVarDeclsContext) IsInnerVarDeclsContext() {}
@@ -1363,7 +1364,7 @@ func NewInnerVarDeclsContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_innerVarDecls
+	p.RuleIndex = MiniGoParserRULE_innerVarDecls
 
 	return p
 }
@@ -1442,28 +1443,28 @@ func (s *InnerVarDeclsASTContext) SingleVarDecl(i int) ISingleVarDeclContext {
 }
 
 func (s *InnerVarDeclsASTContext) AllSEMICOLON() []antlr.TerminalNode {
-	return s.GetTokens(miniGoParserSEMICOLON)
+	return s.GetTokens(MiniGoParserSEMICOLON)
 }
 
 func (s *InnerVarDeclsASTContext) SEMICOLON(i int) antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, i)
+	return s.GetToken(MiniGoParserSEMICOLON, i)
 }
 
 func (s *InnerVarDeclsASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterInnerVarDeclsAST(s)
 	}
 }
 
 func (s *InnerVarDeclsASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitInnerVarDeclsAST(s)
 	}
 }
 
 func (s *InnerVarDeclsASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitInnerVarDeclsAST(s)
 
 	default:
@@ -1471,9 +1472,9 @@ func (s *InnerVarDeclsASTContext) Accept(visitor antlr.ParseTreeVisitor) interfa
 	}
 }
 
-func (p *miniGoParser) InnerVarDecls() (localctx IInnerVarDeclsContext) {
+func (p *MiniGoParser) InnerVarDecls() (localctx IInnerVarDeclsContext) {
 	localctx = NewInnerVarDeclsContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 6, miniGoParserRULE_innerVarDecls)
+	p.EnterRule(localctx, 6, MiniGoParserRULE_innerVarDecls)
 	var _la int
 
 	localctx = NewInnerVarDeclsASTContext(p, localctx)
@@ -1484,7 +1485,7 @@ func (p *miniGoParser) InnerVarDecls() (localctx IInnerVarDeclsContext) {
 	}
 	{
 		p.SetState(112)
-		p.Match(miniGoParserSEMICOLON)
+		p.Match(MiniGoParserSEMICOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -1497,14 +1498,14 @@ func (p *miniGoParser) InnerVarDecls() (localctx IInnerVarDeclsContext) {
 	}
 	_la = p.GetTokenStream().LA(1)
 
-	for _la == miniGoParserIDENTIFIER {
+	for _la == MiniGoParserIDENTIFIER {
 		{
 			p.SetState(113)
 			p.SingleVarDecl()
 		}
 		{
 			p.SetState(114)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1550,13 +1551,13 @@ type SingleVarDeclContext struct {
 func NewEmptySingleVarDeclContext() *SingleVarDeclContext {
 	var p = new(SingleVarDeclContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_singleVarDecl
+	p.RuleIndex = MiniGoParserRULE_singleVarDecl
 	return p
 }
 
 func InitEmptySingleVarDeclContext(p *SingleVarDeclContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_singleVarDecl
+	p.RuleIndex = MiniGoParserRULE_singleVarDecl
 }
 
 func (*SingleVarDeclContext) IsSingleVarDeclContext() {}
@@ -1567,7 +1568,7 @@ func NewSingleVarDeclContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_singleVarDecl
+	p.RuleIndex = MiniGoParserRULE_singleVarDecl
 
 	return p
 }
@@ -1621,7 +1622,7 @@ func (s *SingleVarDeclAssignASTContext) IdentifierList() IIdentifierListContext 
 }
 
 func (s *SingleVarDeclAssignASTContext) ASSIGN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserASSIGN, 0)
+	return s.GetToken(MiniGoParserASSIGN, 0)
 }
 
 func (s *SingleVarDeclAssignASTContext) ExpressionList() IExpressionListContext {
@@ -1641,20 +1642,20 @@ func (s *SingleVarDeclAssignASTContext) ExpressionList() IExpressionListContext 
 }
 
 func (s *SingleVarDeclAssignASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSingleVarDeclAssignAST(s)
 	}
 }
 
 func (s *SingleVarDeclAssignASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSingleVarDeclAssignAST(s)
 	}
 }
 
 func (s *SingleVarDeclAssignASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSingleVarDeclAssignAST(s)
 
 	default:
@@ -1713,7 +1714,7 @@ func (s *SingleVarDeclASTContext) DeclType() IDeclTypeContext {
 }
 
 func (s *SingleVarDeclASTContext) ASSIGN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserASSIGN, 0)
+	return s.GetToken(MiniGoParserASSIGN, 0)
 }
 
 func (s *SingleVarDeclASTContext) ExpressionList() IExpressionListContext {
@@ -1733,20 +1734,20 @@ func (s *SingleVarDeclASTContext) ExpressionList() IExpressionListContext {
 }
 
 func (s *SingleVarDeclASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSingleVarDeclAST(s)
 	}
 }
 
 func (s *SingleVarDeclASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSingleVarDeclAST(s)
 	}
 }
 
 func (s *SingleVarDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSingleVarDeclAST(s)
 
 	default:
@@ -1789,20 +1790,20 @@ func (s *SingleVarDeclNoExpsASTContext) SingleVarDeclNoExps() ISingleVarDeclNoEx
 }
 
 func (s *SingleVarDeclNoExpsASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSingleVarDeclNoExpsAST(s)
 	}
 }
 
 func (s *SingleVarDeclNoExpsASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSingleVarDeclNoExpsAST(s)
 	}
 }
 
 func (s *SingleVarDeclNoExpsASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSingleVarDeclNoExpsAST(s)
 
 	default:
@@ -1810,9 +1811,9 @@ func (s *SingleVarDeclNoExpsASTContext) Accept(visitor antlr.ParseTreeVisitor) i
 	}
 }
 
-func (p *miniGoParser) SingleVarDecl() (localctx ISingleVarDeclContext) {
+func (p *MiniGoParser) SingleVarDecl() (localctx ISingleVarDeclContext) {
 	localctx = NewSingleVarDeclContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 8, miniGoParserRULE_singleVarDecl)
+	p.EnterRule(localctx, 8, MiniGoParserRULE_singleVarDecl)
 	p.SetState(131)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -1833,7 +1834,7 @@ func (p *miniGoParser) SingleVarDecl() (localctx ISingleVarDeclContext) {
 		}
 		{
 			p.SetState(123)
-			p.Match(miniGoParserASSIGN)
+			p.Match(MiniGoParserASSIGN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1853,7 +1854,7 @@ func (p *miniGoParser) SingleVarDecl() (localctx ISingleVarDeclContext) {
 		}
 		{
 			p.SetState(127)
-			p.Match(miniGoParserASSIGN)
+			p.Match(MiniGoParserASSIGN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -1907,13 +1908,13 @@ type SingleVarDeclNoExpsContext struct {
 func NewEmptySingleVarDeclNoExpsContext() *SingleVarDeclNoExpsContext {
 	var p = new(SingleVarDeclNoExpsContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_singleVarDeclNoExps
+	p.RuleIndex = MiniGoParserRULE_singleVarDeclNoExps
 	return p
 }
 
 func InitEmptySingleVarDeclNoExpsContext(p *SingleVarDeclNoExpsContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_singleVarDeclNoExps
+	p.RuleIndex = MiniGoParserRULE_singleVarDeclNoExps
 }
 
 func (*SingleVarDeclNoExpsContext) IsSingleVarDeclNoExpsContext() {}
@@ -1924,7 +1925,7 @@ func NewSingleVarDeclNoExpsContext(parser antlr.Parser, parent antlr.ParserRuleC
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_singleVarDeclNoExps
+	p.RuleIndex = MiniGoParserRULE_singleVarDeclNoExps
 
 	return p
 }
@@ -1994,20 +1995,20 @@ func (s *SingleVarDeclNoExpsDeclTypeASTContext) DeclType() IDeclTypeContext {
 }
 
 func (s *SingleVarDeclNoExpsDeclTypeASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSingleVarDeclNoExpsDeclTypeAST(s)
 	}
 }
 
 func (s *SingleVarDeclNoExpsDeclTypeASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSingleVarDeclNoExpsDeclTypeAST(s)
 	}
 }
 
 func (s *SingleVarDeclNoExpsDeclTypeASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSingleVarDeclNoExpsDeclTypeAST(s)
 
 	default:
@@ -2015,9 +2016,9 @@ func (s *SingleVarDeclNoExpsDeclTypeASTContext) Accept(visitor antlr.ParseTreeVi
 	}
 }
 
-func (p *miniGoParser) SingleVarDeclNoExps() (localctx ISingleVarDeclNoExpsContext) {
+func (p *MiniGoParser) SingleVarDeclNoExps() (localctx ISingleVarDeclNoExpsContext) {
 	localctx = NewSingleVarDeclNoExpsContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 10, miniGoParserRULE_singleVarDeclNoExps)
+	p.EnterRule(localctx, 10, MiniGoParserRULE_singleVarDeclNoExps)
 	localctx = NewSingleVarDeclNoExpsDeclTypeASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
@@ -2060,13 +2061,13 @@ type TypeDeclContext struct {
 func NewEmptyTypeDeclContext() *TypeDeclContext {
 	var p = new(TypeDeclContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_typeDecl
+	p.RuleIndex = MiniGoParserRULE_typeDecl
 	return p
 }
 
 func InitEmptyTypeDeclContext(p *TypeDeclContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_typeDecl
+	p.RuleIndex = MiniGoParserRULE_typeDecl
 }
 
 func (*TypeDeclContext) IsTypeDeclContext() {}
@@ -2077,7 +2078,7 @@ func NewTypeDeclContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_typeDecl
+	p.RuleIndex = MiniGoParserRULE_typeDecl
 
 	return p
 }
@@ -2115,36 +2116,36 @@ func (s *TypeDeclEmptyASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *TypeDeclEmptyASTContext) TYPE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserTYPE, 0)
+	return s.GetToken(MiniGoParserTYPE, 0)
 }
 
 func (s *TypeDeclEmptyASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *TypeDeclEmptyASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *TypeDeclEmptyASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *TypeDeclEmptyASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterTypeDeclEmptyAST(s)
 	}
 }
 
 func (s *TypeDeclEmptyASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitTypeDeclEmptyAST(s)
 	}
 }
 
 func (s *TypeDeclEmptyASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitTypeDeclEmptyAST(s)
 
 	default:
@@ -2171,7 +2172,7 @@ func (s *TypeDeclASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *TypeDeclASTContext) TYPE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserTYPE, 0)
+	return s.GetToken(MiniGoParserTYPE, 0)
 }
 
 func (s *TypeDeclASTContext) SingleTypeDecl() ISingleTypeDeclContext {
@@ -2191,24 +2192,24 @@ func (s *TypeDeclASTContext) SingleTypeDecl() ISingleTypeDeclContext {
 }
 
 func (s *TypeDeclASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *TypeDeclASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterTypeDeclAST(s)
 	}
 }
 
 func (s *TypeDeclASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitTypeDeclAST(s)
 	}
 }
 
 func (s *TypeDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitTypeDeclAST(s)
 
 	default:
@@ -2235,11 +2236,11 @@ func (s *TypeDeclBlockASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *TypeDeclBlockASTContext) TYPE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserTYPE, 0)
+	return s.GetToken(MiniGoParserTYPE, 0)
 }
 
 func (s *TypeDeclBlockASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *TypeDeclBlockASTContext) InnerTypeDecls() IInnerTypeDeclsContext {
@@ -2259,28 +2260,28 @@ func (s *TypeDeclBlockASTContext) InnerTypeDecls() IInnerTypeDeclsContext {
 }
 
 func (s *TypeDeclBlockASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *TypeDeclBlockASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *TypeDeclBlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterTypeDeclBlockAST(s)
 	}
 }
 
 func (s *TypeDeclBlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitTypeDeclBlockAST(s)
 	}
 }
 
 func (s *TypeDeclBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitTypeDeclBlockAST(s)
 
 	default:
@@ -2288,9 +2289,9 @@ func (s *TypeDeclBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interfa
 	}
 }
 
-func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
+func (p *MiniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 	localctx = NewTypeDeclContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 12, miniGoParserRULE_typeDecl)
+	p.EnterRule(localctx, 12, MiniGoParserRULE_typeDecl)
 	p.SetState(150)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -2303,7 +2304,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(136)
-			p.Match(miniGoParserTYPE)
+			p.Match(MiniGoParserTYPE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2315,7 +2316,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		}
 		{
 			p.SetState(138)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2327,7 +2328,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(140)
-			p.Match(miniGoParserTYPE)
+			p.Match(MiniGoParserTYPE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2335,7 +2336,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		}
 		{
 			p.SetState(141)
-			p.Match(miniGoParserLPAREN)
+			p.Match(MiniGoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2347,7 +2348,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		}
 		{
 			p.SetState(143)
-			p.Match(miniGoParserRPAREN)
+			p.Match(MiniGoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2355,7 +2356,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		}
 		{
 			p.SetState(144)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2367,7 +2368,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(146)
-			p.Match(miniGoParserTYPE)
+			p.Match(MiniGoParserTYPE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2375,7 +2376,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		}
 		{
 			p.SetState(147)
-			p.Match(miniGoParserLPAREN)
+			p.Match(MiniGoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2383,7 +2384,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		}
 		{
 			p.SetState(148)
-			p.Match(miniGoParserRPAREN)
+			p.Match(MiniGoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2391,7 +2392,7 @@ func (p *miniGoParser) TypeDecl() (localctx ITypeDeclContext) {
 		}
 		{
 			p.SetState(149)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2433,13 +2434,13 @@ type InnerTypeDeclsContext struct {
 func NewEmptyInnerTypeDeclsContext() *InnerTypeDeclsContext {
 	var p = new(InnerTypeDeclsContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_innerTypeDecls
+	p.RuleIndex = MiniGoParserRULE_innerTypeDecls
 	return p
 }
 
 func InitEmptyInnerTypeDeclsContext(p *InnerTypeDeclsContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_innerTypeDecls
+	p.RuleIndex = MiniGoParserRULE_innerTypeDecls
 }
 
 func (*InnerTypeDeclsContext) IsInnerTypeDeclsContext() {}
@@ -2450,7 +2451,7 @@ func NewInnerTypeDeclsContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_innerTypeDecls
+	p.RuleIndex = MiniGoParserRULE_innerTypeDecls
 
 	return p
 }
@@ -2529,28 +2530,28 @@ func (s *InnerTypeDeclsASTContext) SingleTypeDecl(i int) ISingleTypeDeclContext 
 }
 
 func (s *InnerTypeDeclsASTContext) AllSEMICOLON() []antlr.TerminalNode {
-	return s.GetTokens(miniGoParserSEMICOLON)
+	return s.GetTokens(MiniGoParserSEMICOLON)
 }
 
 func (s *InnerTypeDeclsASTContext) SEMICOLON(i int) antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, i)
+	return s.GetToken(MiniGoParserSEMICOLON, i)
 }
 
 func (s *InnerTypeDeclsASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterInnerTypeDeclsAST(s)
 	}
 }
 
 func (s *InnerTypeDeclsASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitInnerTypeDeclsAST(s)
 	}
 }
 
 func (s *InnerTypeDeclsASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitInnerTypeDeclsAST(s)
 
 	default:
@@ -2558,9 +2559,9 @@ func (s *InnerTypeDeclsASTContext) Accept(visitor antlr.ParseTreeVisitor) interf
 	}
 }
 
-func (p *miniGoParser) InnerTypeDecls() (localctx IInnerTypeDeclsContext) {
+func (p *MiniGoParser) InnerTypeDecls() (localctx IInnerTypeDeclsContext) {
 	localctx = NewInnerTypeDeclsContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 14, miniGoParserRULE_innerTypeDecls)
+	p.EnterRule(localctx, 14, MiniGoParserRULE_innerTypeDecls)
 	var _la int
 
 	localctx = NewInnerTypeDeclsASTContext(p, localctx)
@@ -2571,7 +2572,7 @@ func (p *miniGoParser) InnerTypeDecls() (localctx IInnerTypeDeclsContext) {
 	}
 	{
 		p.SetState(153)
-		p.Match(miniGoParserSEMICOLON)
+		p.Match(MiniGoParserSEMICOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -2584,14 +2585,14 @@ func (p *miniGoParser) InnerTypeDecls() (localctx IInnerTypeDeclsContext) {
 	}
 	_la = p.GetTokenStream().LA(1)
 
-	for _la == miniGoParserIDENTIFIER {
+	for _la == MiniGoParserIDENTIFIER {
 		{
 			p.SetState(154)
 			p.SingleTypeDecl()
 		}
 		{
 			p.SetState(155)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -2637,13 +2638,13 @@ type SingleTypeDeclContext struct {
 func NewEmptySingleTypeDeclContext() *SingleTypeDeclContext {
 	var p = new(SingleTypeDeclContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_singleTypeDecl
+	p.RuleIndex = MiniGoParserRULE_singleTypeDecl
 	return p
 }
 
 func InitEmptySingleTypeDeclContext(p *SingleTypeDeclContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_singleTypeDecl
+	p.RuleIndex = MiniGoParserRULE_singleTypeDecl
 }
 
 func (*SingleTypeDeclContext) IsSingleTypeDeclContext() {}
@@ -2654,7 +2655,7 @@ func NewSingleTypeDeclContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_singleTypeDecl
+	p.RuleIndex = MiniGoParserRULE_singleTypeDecl
 
 	return p
 }
@@ -2692,7 +2693,7 @@ func (s *SingleTypeDeclASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *SingleTypeDeclASTContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIDENTIFIER, 0)
+	return s.GetToken(MiniGoParserIDENTIFIER, 0)
 }
 
 func (s *SingleTypeDeclASTContext) DeclType() IDeclTypeContext {
@@ -2712,20 +2713,20 @@ func (s *SingleTypeDeclASTContext) DeclType() IDeclTypeContext {
 }
 
 func (s *SingleTypeDeclASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSingleTypeDeclAST(s)
 	}
 }
 
 func (s *SingleTypeDeclASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSingleTypeDeclAST(s)
 	}
 }
 
 func (s *SingleTypeDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSingleTypeDeclAST(s)
 
 	default:
@@ -2733,14 +2734,14 @@ func (s *SingleTypeDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interf
 	}
 }
 
-func (p *miniGoParser) SingleTypeDecl() (localctx ISingleTypeDeclContext) {
+func (p *MiniGoParser) SingleTypeDecl() (localctx ISingleTypeDeclContext) {
 	localctx = NewSingleTypeDeclContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 16, miniGoParserRULE_singleTypeDecl)
+	p.EnterRule(localctx, 16, MiniGoParserRULE_singleTypeDecl)
 	localctx = NewSingleTypeDeclASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(162)
-		p.Match(miniGoParserIDENTIFIER)
+		p.Match(MiniGoParserIDENTIFIER)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -2782,13 +2783,13 @@ type FuncDeclContext struct {
 func NewEmptyFuncDeclContext() *FuncDeclContext {
 	var p = new(FuncDeclContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_funcDecl
+	p.RuleIndex = MiniGoParserRULE_funcDecl
 	return p
 }
 
 func InitEmptyFuncDeclContext(p *FuncDeclContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_funcDecl
+	p.RuleIndex = MiniGoParserRULE_funcDecl
 }
 
 func (*FuncDeclContext) IsFuncDeclContext() {}
@@ -2799,7 +2800,7 @@ func NewFuncDeclContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_funcDecl
+	p.RuleIndex = MiniGoParserRULE_funcDecl
 
 	return p
 }
@@ -2869,24 +2870,24 @@ func (s *FuncDeclASTContext) Block() IBlockContext {
 }
 
 func (s *FuncDeclASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *FuncDeclASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterFuncDeclAST(s)
 	}
 }
 
 func (s *FuncDeclASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitFuncDeclAST(s)
 	}
 }
 
 func (s *FuncDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitFuncDeclAST(s)
 
 	default:
@@ -2894,9 +2895,9 @@ func (s *FuncDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} 
 	}
 }
 
-func (p *miniGoParser) FuncDecl() (localctx IFuncDeclContext) {
+func (p *MiniGoParser) FuncDecl() (localctx IFuncDeclContext) {
 	localctx = NewFuncDeclContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 18, miniGoParserRULE_funcDecl)
+	p.EnterRule(localctx, 18, MiniGoParserRULE_funcDecl)
 	localctx = NewFuncDeclASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
@@ -2909,7 +2910,7 @@ func (p *miniGoParser) FuncDecl() (localctx IFuncDeclContext) {
 	}
 	{
 		p.SetState(167)
-		p.Match(miniGoParserSEMICOLON)
+		p.Match(MiniGoParserSEMICOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -2947,13 +2948,13 @@ type FuncFrontDeclContext struct {
 func NewEmptyFuncFrontDeclContext() *FuncFrontDeclContext {
 	var p = new(FuncFrontDeclContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_funcFrontDecl
+	p.RuleIndex = MiniGoParserRULE_funcFrontDecl
 	return p
 }
 
 func InitEmptyFuncFrontDeclContext(p *FuncFrontDeclContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_funcFrontDecl
+	p.RuleIndex = MiniGoParserRULE_funcFrontDecl
 }
 
 func (*FuncFrontDeclContext) IsFuncFrontDeclContext() {}
@@ -2964,7 +2965,7 @@ func NewFuncFrontDeclContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_funcFrontDecl
+	p.RuleIndex = MiniGoParserRULE_funcFrontDecl
 
 	return p
 }
@@ -3002,19 +3003,19 @@ func (s *FuncFrontDeclASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *FuncFrontDeclASTContext) FUNC() antlr.TerminalNode {
-	return s.GetToken(miniGoParserFUNC, 0)
+	return s.GetToken(MiniGoParserFUNC, 0)
 }
 
 func (s *FuncFrontDeclASTContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIDENTIFIER, 0)
+	return s.GetToken(MiniGoParserIDENTIFIER, 0)
 }
 
 func (s *FuncFrontDeclASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *FuncFrontDeclASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *FuncFrontDeclASTContext) FuncArgDecls() IFuncArgDeclsContext {
@@ -3091,20 +3092,20 @@ func (s *FuncFrontDeclASTContext) DeclType() IDeclTypeContext {
 }
 
 func (s *FuncFrontDeclASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterFuncFrontDeclAST(s)
 	}
 }
 
 func (s *FuncFrontDeclASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitFuncFrontDeclAST(s)
 	}
 }
 
 func (s *FuncFrontDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitFuncFrontDeclAST(s)
 
 	default:
@@ -3112,14 +3113,14 @@ func (s *FuncFrontDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interfa
 	}
 }
 
-func (p *miniGoParser) FuncFrontDecl() (localctx IFuncFrontDeclContext) {
+func (p *MiniGoParser) FuncFrontDecl() (localctx IFuncFrontDeclContext) {
 	localctx = NewFuncFrontDeclContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 20, miniGoParserRULE_funcFrontDecl)
+	p.EnterRule(localctx, 20, MiniGoParserRULE_funcFrontDecl)
 	localctx = NewFuncFrontDeclASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(169)
-		p.Match(miniGoParserFUNC)
+		p.Match(MiniGoParserFUNC)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3127,7 +3128,7 @@ func (p *miniGoParser) FuncFrontDecl() (localctx IFuncFrontDeclContext) {
 	}
 	{
 		p.SetState(170)
-		p.Match(miniGoParserIDENTIFIER)
+		p.Match(MiniGoParserIDENTIFIER)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3135,7 +3136,7 @@ func (p *miniGoParser) FuncFrontDecl() (localctx IFuncFrontDeclContext) {
 	}
 	{
 		p.SetState(171)
-		p.Match(miniGoParserLPAREN)
+		p.Match(MiniGoParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3148,13 +3149,13 @@ func (p *miniGoParser) FuncFrontDecl() (localctx IFuncFrontDeclContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserIDENTIFIER:
+	case MiniGoParserIDENTIFIER:
 		{
 			p.SetState(172)
 			p.FuncArgDecls()
 		}
 
-	case miniGoParserRPAREN:
+	case MiniGoParserRPAREN:
 		{
 			p.SetState(173)
 			p.Epsilon()
@@ -3166,7 +3167,7 @@ func (p *miniGoParser) FuncFrontDecl() (localctx IFuncFrontDeclContext) {
 	}
 	{
 		p.SetState(176)
-		p.Match(miniGoParserRPAREN)
+		p.Match(MiniGoParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3179,13 +3180,13 @@ func (p *miniGoParser) FuncFrontDecl() (localctx IFuncFrontDeclContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserSTRUCT, miniGoParserIDENTIFIER, miniGoParserLPAREN, miniGoParserLBRACKET:
+	case MiniGoParserSTRUCT, MiniGoParserIDENTIFIER, MiniGoParserLPAREN, MiniGoParserLBRACKET:
 		{
 			p.SetState(177)
 			p.DeclType()
 		}
 
-	case miniGoParserLBRACE:
+	case MiniGoParserLBRACE:
 		{
 			p.SetState(178)
 			p.Epsilon()
@@ -3227,13 +3228,13 @@ type FuncArgDeclsContext struct {
 func NewEmptyFuncArgDeclsContext() *FuncArgDeclsContext {
 	var p = new(FuncArgDeclsContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_funcArgDecls
+	p.RuleIndex = MiniGoParserRULE_funcArgDecls
 	return p
 }
 
 func InitEmptyFuncArgDeclsContext(p *FuncArgDeclsContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_funcArgDecls
+	p.RuleIndex = MiniGoParserRULE_funcArgDecls
 }
 
 func (*FuncArgDeclsContext) IsFuncArgDeclsContext() {}
@@ -3244,7 +3245,7 @@ func NewFuncArgDeclsContext(parser antlr.Parser, parent antlr.ParserRuleContext,
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_funcArgDecls
+	p.RuleIndex = MiniGoParserRULE_funcArgDecls
 
 	return p
 }
@@ -3323,28 +3324,28 @@ func (s *FuncArgDeclsASTContext) SingleVarDeclNoExps(i int) ISingleVarDeclNoExps
 }
 
 func (s *FuncArgDeclsASTContext) AllCOMMA() []antlr.TerminalNode {
-	return s.GetTokens(miniGoParserCOMMA)
+	return s.GetTokens(MiniGoParserCOMMA)
 }
 
 func (s *FuncArgDeclsASTContext) COMMA(i int) antlr.TerminalNode {
-	return s.GetToken(miniGoParserCOMMA, i)
+	return s.GetToken(MiniGoParserCOMMA, i)
 }
 
 func (s *FuncArgDeclsASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterFuncArgDeclsAST(s)
 	}
 }
 
 func (s *FuncArgDeclsASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitFuncArgDeclsAST(s)
 	}
 }
 
 func (s *FuncArgDeclsASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitFuncArgDeclsAST(s)
 
 	default:
@@ -3352,9 +3353,9 @@ func (s *FuncArgDeclsASTContext) Accept(visitor antlr.ParseTreeVisitor) interfac
 	}
 }
 
-func (p *miniGoParser) FuncArgDecls() (localctx IFuncArgDeclsContext) {
+func (p *MiniGoParser) FuncArgDecls() (localctx IFuncArgDeclsContext) {
 	localctx = NewFuncArgDeclsContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 22, miniGoParserRULE_funcArgDecls)
+	p.EnterRule(localctx, 22, MiniGoParserRULE_funcArgDecls)
 	var _la int
 
 	localctx = NewFuncArgDeclsASTContext(p, localctx)
@@ -3370,10 +3371,10 @@ func (p *miniGoParser) FuncArgDecls() (localctx IFuncArgDeclsContext) {
 	}
 	_la = p.GetTokenStream().LA(1)
 
-	for _la == miniGoParserCOMMA {
+	for _la == MiniGoParserCOMMA {
 		{
 			p.SetState(182)
-			p.Match(miniGoParserCOMMA)
+			p.Match(MiniGoParserCOMMA)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3423,13 +3424,13 @@ type DeclTypeContext struct {
 func NewEmptyDeclTypeContext() *DeclTypeContext {
 	var p = new(DeclTypeContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_declType
+	p.RuleIndex = MiniGoParserRULE_declType
 	return p
 }
 
 func InitEmptyDeclTypeContext(p *DeclTypeContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_declType
+	p.RuleIndex = MiniGoParserRULE_declType
 }
 
 func (*DeclTypeContext) IsDeclTypeContext() {}
@@ -3440,7 +3441,7 @@ func NewDeclTypeContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_declType
+	p.RuleIndex = MiniGoParserRULE_declType
 
 	return p
 }
@@ -3494,20 +3495,20 @@ func (s *DeclTypeStructASTContext) StructDeclType() IStructDeclTypeContext {
 }
 
 func (s *DeclTypeStructASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterDeclTypeStructAST(s)
 	}
 }
 
 func (s *DeclTypeStructASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitDeclTypeStructAST(s)
 	}
 }
 
 func (s *DeclTypeStructASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitDeclTypeStructAST(s)
 
 	default:
@@ -3550,20 +3551,20 @@ func (s *DeclTypeSliceASTContext) SliceDeclType() ISliceDeclTypeContext {
 }
 
 func (s *DeclTypeSliceASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterDeclTypeSliceAST(s)
 	}
 }
 
 func (s *DeclTypeSliceASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitDeclTypeSliceAST(s)
 	}
 }
 
 func (s *DeclTypeSliceASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitDeclTypeSliceAST(s)
 
 	default:
@@ -3606,20 +3607,20 @@ func (s *DeclTypeArrayASTContext) ArrayDeclType() IArrayDeclTypeContext {
 }
 
 func (s *DeclTypeArrayASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterDeclTypeArrayAST(s)
 	}
 }
 
 func (s *DeclTypeArrayASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitDeclTypeArrayAST(s)
 	}
 }
 
 func (s *DeclTypeArrayASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitDeclTypeArrayAST(s)
 
 	default:
@@ -3646,7 +3647,7 @@ func (s *DeclTypeParenASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *DeclTypeParenASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *DeclTypeParenASTContext) DeclType() IDeclTypeContext {
@@ -3666,24 +3667,24 @@ func (s *DeclTypeParenASTContext) DeclType() IDeclTypeContext {
 }
 
 func (s *DeclTypeParenASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *DeclTypeParenASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterDeclTypeParenAST(s)
 	}
 }
 
 func (s *DeclTypeParenASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitDeclTypeParenAST(s)
 	}
 }
 
 func (s *DeclTypeParenASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitDeclTypeParenAST(s)
 
 	default:
@@ -3710,24 +3711,24 @@ func (s *DeclTypeIdentifierASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *DeclTypeIdentifierASTContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIDENTIFIER, 0)
+	return s.GetToken(MiniGoParserIDENTIFIER, 0)
 }
 
 func (s *DeclTypeIdentifierASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterDeclTypeIdentifierAST(s)
 	}
 }
 
 func (s *DeclTypeIdentifierASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitDeclTypeIdentifierAST(s)
 	}
 }
 
 func (s *DeclTypeIdentifierASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitDeclTypeIdentifierAST(s)
 
 	default:
@@ -3735,9 +3736,9 @@ func (s *DeclTypeIdentifierASTContext) Accept(visitor antlr.ParseTreeVisitor) in
 	}
 }
 
-func (p *miniGoParser) DeclType() (localctx IDeclTypeContext) {
+func (p *MiniGoParser) DeclType() (localctx IDeclTypeContext) {
 	localctx = NewDeclTypeContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 24, miniGoParserRULE_declType)
+	p.EnterRule(localctx, 24, MiniGoParserRULE_declType)
 	p.SetState(197)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -3750,7 +3751,7 @@ func (p *miniGoParser) DeclType() (localctx IDeclTypeContext) {
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(189)
-			p.Match(miniGoParserLPAREN)
+			p.Match(MiniGoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3762,7 +3763,7 @@ func (p *miniGoParser) DeclType() (localctx IDeclTypeContext) {
 		}
 		{
 			p.SetState(191)
-			p.Match(miniGoParserRPAREN)
+			p.Match(MiniGoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3774,7 +3775,7 @@ func (p *miniGoParser) DeclType() (localctx IDeclTypeContext) {
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(193)
-			p.Match(miniGoParserIDENTIFIER)
+			p.Match(MiniGoParserIDENTIFIER)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -3840,13 +3841,13 @@ type SliceDeclTypeContext struct {
 func NewEmptySliceDeclTypeContext() *SliceDeclTypeContext {
 	var p = new(SliceDeclTypeContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_sliceDeclType
+	p.RuleIndex = MiniGoParserRULE_sliceDeclType
 	return p
 }
 
 func InitEmptySliceDeclTypeContext(p *SliceDeclTypeContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_sliceDeclType
+	p.RuleIndex = MiniGoParserRULE_sliceDeclType
 }
 
 func (*SliceDeclTypeContext) IsSliceDeclTypeContext() {}
@@ -3857,7 +3858,7 @@ func NewSliceDeclTypeContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_sliceDeclType
+	p.RuleIndex = MiniGoParserRULE_sliceDeclType
 
 	return p
 }
@@ -3895,11 +3896,11 @@ func (s *SliceDeclTypeASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *SliceDeclTypeASTContext) LBRACKET() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLBRACKET, 0)
+	return s.GetToken(MiniGoParserLBRACKET, 0)
 }
 
 func (s *SliceDeclTypeASTContext) RBRACKET() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRBRACKET, 0)
+	return s.GetToken(MiniGoParserRBRACKET, 0)
 }
 
 func (s *SliceDeclTypeASTContext) DeclType() IDeclTypeContext {
@@ -3919,20 +3920,20 @@ func (s *SliceDeclTypeASTContext) DeclType() IDeclTypeContext {
 }
 
 func (s *SliceDeclTypeASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSliceDeclTypeAST(s)
 	}
 }
 
 func (s *SliceDeclTypeASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSliceDeclTypeAST(s)
 	}
 }
 
 func (s *SliceDeclTypeASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSliceDeclTypeAST(s)
 
 	default:
@@ -3940,14 +3941,14 @@ func (s *SliceDeclTypeASTContext) Accept(visitor antlr.ParseTreeVisitor) interfa
 	}
 }
 
-func (p *miniGoParser) SliceDeclType() (localctx ISliceDeclTypeContext) {
+func (p *MiniGoParser) SliceDeclType() (localctx ISliceDeclTypeContext) {
 	localctx = NewSliceDeclTypeContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 26, miniGoParserRULE_sliceDeclType)
+	p.EnterRule(localctx, 26, MiniGoParserRULE_sliceDeclType)
 	localctx = NewSliceDeclTypeASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(199)
-		p.Match(miniGoParserLBRACKET)
+		p.Match(MiniGoParserLBRACKET)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3955,7 +3956,7 @@ func (p *miniGoParser) SliceDeclType() (localctx ISliceDeclTypeContext) {
 	}
 	{
 		p.SetState(200)
-		p.Match(miniGoParserRBRACKET)
+		p.Match(MiniGoParserRBRACKET)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -3997,13 +3998,13 @@ type ArrayDeclTypeContext struct {
 func NewEmptyArrayDeclTypeContext() *ArrayDeclTypeContext {
 	var p = new(ArrayDeclTypeContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_arrayDeclType
+	p.RuleIndex = MiniGoParserRULE_arrayDeclType
 	return p
 }
 
 func InitEmptyArrayDeclTypeContext(p *ArrayDeclTypeContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_arrayDeclType
+	p.RuleIndex = MiniGoParserRULE_arrayDeclType
 }
 
 func (*ArrayDeclTypeContext) IsArrayDeclTypeContext() {}
@@ -4014,7 +4015,7 @@ func NewArrayDeclTypeContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_arrayDeclType
+	p.RuleIndex = MiniGoParserRULE_arrayDeclType
 
 	return p
 }
@@ -4052,15 +4053,15 @@ func (s *ArrayDeclTypeASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *ArrayDeclTypeASTContext) LBRACKET() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLBRACKET, 0)
+	return s.GetToken(MiniGoParserLBRACKET, 0)
 }
 
 func (s *ArrayDeclTypeASTContext) INTLITERAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserINTLITERAL, 0)
+	return s.GetToken(MiniGoParserINTLITERAL, 0)
 }
 
 func (s *ArrayDeclTypeASTContext) RBRACKET() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRBRACKET, 0)
+	return s.GetToken(MiniGoParserRBRACKET, 0)
 }
 
 func (s *ArrayDeclTypeASTContext) DeclType() IDeclTypeContext {
@@ -4080,20 +4081,20 @@ func (s *ArrayDeclTypeASTContext) DeclType() IDeclTypeContext {
 }
 
 func (s *ArrayDeclTypeASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterArrayDeclTypeAST(s)
 	}
 }
 
 func (s *ArrayDeclTypeASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitArrayDeclTypeAST(s)
 	}
 }
 
 func (s *ArrayDeclTypeASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitArrayDeclTypeAST(s)
 
 	default:
@@ -4101,14 +4102,14 @@ func (s *ArrayDeclTypeASTContext) Accept(visitor antlr.ParseTreeVisitor) interfa
 	}
 }
 
-func (p *miniGoParser) ArrayDeclType() (localctx IArrayDeclTypeContext) {
+func (p *MiniGoParser) ArrayDeclType() (localctx IArrayDeclTypeContext) {
 	localctx = NewArrayDeclTypeContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 28, miniGoParserRULE_arrayDeclType)
+	p.EnterRule(localctx, 28, MiniGoParserRULE_arrayDeclType)
 	localctx = NewArrayDeclTypeASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(203)
-		p.Match(miniGoParserLBRACKET)
+		p.Match(MiniGoParserLBRACKET)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4116,7 +4117,7 @@ func (p *miniGoParser) ArrayDeclType() (localctx IArrayDeclTypeContext) {
 	}
 	{
 		p.SetState(204)
-		p.Match(miniGoParserINTLITERAL)
+		p.Match(MiniGoParserINTLITERAL)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4124,7 +4125,7 @@ func (p *miniGoParser) ArrayDeclType() (localctx IArrayDeclTypeContext) {
 	}
 	{
 		p.SetState(205)
-		p.Match(miniGoParserRBRACKET)
+		p.Match(MiniGoParserRBRACKET)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4166,13 +4167,13 @@ type StructDeclTypeContext struct {
 func NewEmptyStructDeclTypeContext() *StructDeclTypeContext {
 	var p = new(StructDeclTypeContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_structDeclType
+	p.RuleIndex = MiniGoParserRULE_structDeclType
 	return p
 }
 
 func InitEmptyStructDeclTypeContext(p *StructDeclTypeContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_structDeclType
+	p.RuleIndex = MiniGoParserRULE_structDeclType
 }
 
 func (*StructDeclTypeContext) IsStructDeclTypeContext() {}
@@ -4183,7 +4184,7 @@ func NewStructDeclTypeContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_structDeclType
+	p.RuleIndex = MiniGoParserRULE_structDeclType
 
 	return p
 }
@@ -4221,15 +4222,15 @@ func (s *StructDeclTypeASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *StructDeclTypeASTContext) STRUCT() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSTRUCT, 0)
+	return s.GetToken(MiniGoParserSTRUCT, 0)
 }
 
 func (s *StructDeclTypeASTContext) LBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLBRACE, 0)
+	return s.GetToken(MiniGoParserLBRACE, 0)
 }
 
 func (s *StructDeclTypeASTContext) RBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRBRACE, 0)
+	return s.GetToken(MiniGoParserRBRACE, 0)
 }
 
 func (s *StructDeclTypeASTContext) StructMemDecls() IStructMemDeclsContext {
@@ -4265,20 +4266,20 @@ func (s *StructDeclTypeASTContext) Epsilon() IEpsilonContext {
 }
 
 func (s *StructDeclTypeASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStructDeclTypeAST(s)
 	}
 }
 
 func (s *StructDeclTypeASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStructDeclTypeAST(s)
 	}
 }
 
 func (s *StructDeclTypeASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStructDeclTypeAST(s)
 
 	default:
@@ -4286,14 +4287,14 @@ func (s *StructDeclTypeASTContext) Accept(visitor antlr.ParseTreeVisitor) interf
 	}
 }
 
-func (p *miniGoParser) StructDeclType() (localctx IStructDeclTypeContext) {
+func (p *MiniGoParser) StructDeclType() (localctx IStructDeclTypeContext) {
 	localctx = NewStructDeclTypeContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 30, miniGoParserRULE_structDeclType)
+	p.EnterRule(localctx, 30, MiniGoParserRULE_structDeclType)
 	localctx = NewStructDeclTypeASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(208)
-		p.Match(miniGoParserSTRUCT)
+		p.Match(MiniGoParserSTRUCT)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4301,7 +4302,7 @@ func (p *miniGoParser) StructDeclType() (localctx IStructDeclTypeContext) {
 	}
 	{
 		p.SetState(209)
-		p.Match(miniGoParserLBRACE)
+		p.Match(MiniGoParserLBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4314,13 +4315,13 @@ func (p *miniGoParser) StructDeclType() (localctx IStructDeclTypeContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserIDENTIFIER:
+	case MiniGoParserIDENTIFIER:
 		{
 			p.SetState(210)
 			p.StructMemDecls()
 		}
 
-	case miniGoParserRBRACE:
+	case MiniGoParserRBRACE:
 		{
 			p.SetState(211)
 			p.Epsilon()
@@ -4332,7 +4333,7 @@ func (p *miniGoParser) StructDeclType() (localctx IStructDeclTypeContext) {
 	}
 	{
 		p.SetState(214)
-		p.Match(miniGoParserRBRACE)
+		p.Match(MiniGoParserRBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4370,13 +4371,13 @@ type StructMemDeclsContext struct {
 func NewEmptyStructMemDeclsContext() *StructMemDeclsContext {
 	var p = new(StructMemDeclsContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_structMemDecls
+	p.RuleIndex = MiniGoParserRULE_structMemDecls
 	return p
 }
 
 func InitEmptyStructMemDeclsContext(p *StructMemDeclsContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_structMemDecls
+	p.RuleIndex = MiniGoParserRULE_structMemDecls
 }
 
 func (*StructMemDeclsContext) IsStructMemDeclsContext() {}
@@ -4387,7 +4388,7 @@ func NewStructMemDeclsContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_structMemDecls
+	p.RuleIndex = MiniGoParserRULE_structMemDecls
 
 	return p
 }
@@ -4466,28 +4467,28 @@ func (s *StructMemDeclsASTContext) SingleVarDeclNoExps(i int) ISingleVarDeclNoEx
 }
 
 func (s *StructMemDeclsASTContext) AllSEMICOLON() []antlr.TerminalNode {
-	return s.GetTokens(miniGoParserSEMICOLON)
+	return s.GetTokens(MiniGoParserSEMICOLON)
 }
 
 func (s *StructMemDeclsASTContext) SEMICOLON(i int) antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, i)
+	return s.GetToken(MiniGoParserSEMICOLON, i)
 }
 
 func (s *StructMemDeclsASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStructMemDeclsAST(s)
 	}
 }
 
 func (s *StructMemDeclsASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStructMemDeclsAST(s)
 	}
 }
 
 func (s *StructMemDeclsASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStructMemDeclsAST(s)
 
 	default:
@@ -4495,9 +4496,9 @@ func (s *StructMemDeclsASTContext) Accept(visitor antlr.ParseTreeVisitor) interf
 	}
 }
 
-func (p *miniGoParser) StructMemDecls() (localctx IStructMemDeclsContext) {
+func (p *MiniGoParser) StructMemDecls() (localctx IStructMemDeclsContext) {
 	localctx = NewStructMemDeclsContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 32, miniGoParserRULE_structMemDecls)
+	p.EnterRule(localctx, 32, MiniGoParserRULE_structMemDecls)
 	var _la int
 
 	localctx = NewStructMemDeclsASTContext(p, localctx)
@@ -4508,7 +4509,7 @@ func (p *miniGoParser) StructMemDecls() (localctx IStructMemDeclsContext) {
 	}
 	{
 		p.SetState(217)
-		p.Match(miniGoParserSEMICOLON)
+		p.Match(MiniGoParserSEMICOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4521,14 +4522,14 @@ func (p *miniGoParser) StructMemDecls() (localctx IStructMemDeclsContext) {
 	}
 	_la = p.GetTokenStream().LA(1)
 
-	for _la == miniGoParserIDENTIFIER {
+	for _la == MiniGoParserIDENTIFIER {
 		{
 			p.SetState(218)
 			p.SingleVarDeclNoExps()
 		}
 		{
 			p.SetState(219)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -4574,13 +4575,13 @@ type IdentifierListContext struct {
 func NewEmptyIdentifierListContext() *IdentifierListContext {
 	var p = new(IdentifierListContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_identifierList
+	p.RuleIndex = MiniGoParserRULE_identifierList
 	return p
 }
 
 func InitEmptyIdentifierListContext(p *IdentifierListContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_identifierList
+	p.RuleIndex = MiniGoParserRULE_identifierList
 }
 
 func (*IdentifierListContext) IsIdentifierListContext() {}
@@ -4591,7 +4592,7 @@ func NewIdentifierListContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_identifierList
+	p.RuleIndex = MiniGoParserRULE_identifierList
 
 	return p
 }
@@ -4629,36 +4630,36 @@ func (s *IdentifierListASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *IdentifierListASTContext) AllIDENTIFIER() []antlr.TerminalNode {
-	return s.GetTokens(miniGoParserIDENTIFIER)
+	return s.GetTokens(MiniGoParserIDENTIFIER)
 }
 
 func (s *IdentifierListASTContext) IDENTIFIER(i int) antlr.TerminalNode {
-	return s.GetToken(miniGoParserIDENTIFIER, i)
+	return s.GetToken(MiniGoParserIDENTIFIER, i)
 }
 
 func (s *IdentifierListASTContext) AllCOMMA() []antlr.TerminalNode {
-	return s.GetTokens(miniGoParserCOMMA)
+	return s.GetTokens(MiniGoParserCOMMA)
 }
 
 func (s *IdentifierListASTContext) COMMA(i int) antlr.TerminalNode {
-	return s.GetToken(miniGoParserCOMMA, i)
+	return s.GetToken(MiniGoParserCOMMA, i)
 }
 
 func (s *IdentifierListASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterIdentifierListAST(s)
 	}
 }
 
 func (s *IdentifierListASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitIdentifierListAST(s)
 	}
 }
 
 func (s *IdentifierListASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitIdentifierListAST(s)
 
 	default:
@@ -4666,16 +4667,16 @@ func (s *IdentifierListASTContext) Accept(visitor antlr.ParseTreeVisitor) interf
 	}
 }
 
-func (p *miniGoParser) IdentifierList() (localctx IIdentifierListContext) {
+func (p *MiniGoParser) IdentifierList() (localctx IIdentifierListContext) {
 	localctx = NewIdentifierListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 34, miniGoParserRULE_identifierList)
+	p.EnterRule(localctx, 34, MiniGoParserRULE_identifierList)
 	var _la int
 
 	localctx = NewIdentifierListASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(226)
-		p.Match(miniGoParserIDENTIFIER)
+		p.Match(MiniGoParserIDENTIFIER)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -4688,10 +4689,10 @@ func (p *miniGoParser) IdentifierList() (localctx IIdentifierListContext) {
 	}
 	_la = p.GetTokenStream().LA(1)
 
-	for _la == miniGoParserCOMMA {
+	for _la == MiniGoParserCOMMA {
 		{
 			p.SetState(227)
-			p.Match(miniGoParserCOMMA)
+			p.Match(MiniGoParserCOMMA)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -4699,7 +4700,7 @@ func (p *miniGoParser) IdentifierList() (localctx IIdentifierListContext) {
 		}
 		{
 			p.SetState(228)
-			p.Match(miniGoParserIDENTIFIER)
+			p.Match(MiniGoParserIDENTIFIER)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -4745,13 +4746,13 @@ type ExpressionContext struct {
 func NewEmptyExpressionContext() *ExpressionContext {
 	var p = new(ExpressionContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expression
+	p.RuleIndex = MiniGoParserRULE_expression
 	return p
 }
 
 func InitEmptyExpressionContext(p *ExpressionContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expression
+	p.RuleIndex = MiniGoParserRULE_expression
 }
 
 func (*ExpressionContext) IsExpressionContext() {}
@@ -4762,7 +4763,7 @@ func NewExpressionContext(parser antlr.Parser, parent antlr.ParserRuleContext, i
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_expression
+	p.RuleIndex = MiniGoParserRULE_expression
 
 	return p
 }
@@ -4800,7 +4801,7 @@ func (s *ExpressionNotUnaryASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *ExpressionNotUnaryASTContext) NOT() antlr.TerminalNode {
-	return s.GetToken(miniGoParserNOT, 0)
+	return s.GetToken(MiniGoParserNOT, 0)
 }
 
 func (s *ExpressionNotUnaryASTContext) Expression() IExpressionContext {
@@ -4820,20 +4821,20 @@ func (s *ExpressionNotUnaryASTContext) Expression() IExpressionContext {
 }
 
 func (s *ExpressionNotUnaryASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionNotUnaryAST(s)
 	}
 }
 
 func (s *ExpressionNotUnaryASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionNotUnaryAST(s)
 	}
 }
 
 func (s *ExpressionNotUnaryASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionNotUnaryAST(s)
 
 	default:
@@ -4901,24 +4902,24 @@ func (s *ExpressionMultiplyASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionMultiplyASTContext) MULTIPLY() antlr.TerminalNode {
-	return s.GetToken(miniGoParserMULTIPLY, 0)
+	return s.GetToken(MiniGoParserMULTIPLY, 0)
 }
 
 func (s *ExpressionMultiplyASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionMultiplyAST(s)
 	}
 }
 
 func (s *ExpressionMultiplyASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionMultiplyAST(s)
 	}
 }
 
 func (s *ExpressionMultiplyASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionMultiplyAST(s)
 
 	default:
@@ -4986,24 +4987,24 @@ func (s *ExpressionPlusASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionPlusASTContext) PLUS() antlr.TerminalNode {
-	return s.GetToken(miniGoParserPLUS, 0)
+	return s.GetToken(MiniGoParserPLUS, 0)
 }
 
 func (s *ExpressionPlusASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionPlusAST(s)
 	}
 }
 
 func (s *ExpressionPlusASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionPlusAST(s)
 	}
 }
 
 func (s *ExpressionPlusASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionPlusAST(s)
 
 	default:
@@ -5071,24 +5072,24 @@ func (s *ExpressionModuloASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionModuloASTContext) MODULO() antlr.TerminalNode {
-	return s.GetToken(miniGoParserMODULO, 0)
+	return s.GetToken(MiniGoParserMODULO, 0)
 }
 
 func (s *ExpressionModuloASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionModuloAST(s)
 	}
 }
 
 func (s *ExpressionModuloASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionModuloAST(s)
 	}
 }
 
 func (s *ExpressionModuloASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionModuloAST(s)
 
 	default:
@@ -5156,24 +5157,24 @@ func (s *ExpressionAndASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionAndASTContext) AND() antlr.TerminalNode {
-	return s.GetToken(miniGoParserAND, 0)
+	return s.GetToken(MiniGoParserAND, 0)
 }
 
 func (s *ExpressionAndASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionAndAST(s)
 	}
 }
 
 func (s *ExpressionAndASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionAndAST(s)
 	}
 }
 
 func (s *ExpressionAndASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionAndAST(s)
 
 	default:
@@ -5241,24 +5242,24 @@ func (s *ExpressionBitwiseXorASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionBitwiseXorASTContext) BITWISEXOR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBITWISEXOR, 0)
+	return s.GetToken(MiniGoParserBITWISEXOR, 0)
 }
 
 func (s *ExpressionBitwiseXorASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionBitwiseXorAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseXorASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionBitwiseXorAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseXorASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionBitwiseXorAST(s)
 
 	default:
@@ -5326,24 +5327,24 @@ func (s *ExpressionMinusASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionMinusASTContext) MINUS() antlr.TerminalNode {
-	return s.GetToken(miniGoParserMINUS, 0)
+	return s.GetToken(MiniGoParserMINUS, 0)
 }
 
 func (s *ExpressionMinusASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionMinusAST(s)
 	}
 }
 
 func (s *ExpressionMinusASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionMinusAST(s)
 	}
 }
 
 func (s *ExpressionMinusASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionMinusAST(s)
 
 	default:
@@ -5370,7 +5371,7 @@ func (s *ExpressionBitwiseXorUnaryASTContext) GetRuleContext() antlr.RuleContext
 }
 
 func (s *ExpressionBitwiseXorUnaryASTContext) BITWISEXOR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBITWISEXOR, 0)
+	return s.GetToken(MiniGoParserBITWISEXOR, 0)
 }
 
 func (s *ExpressionBitwiseXorUnaryASTContext) Expression() IExpressionContext {
@@ -5390,20 +5391,20 @@ func (s *ExpressionBitwiseXorUnaryASTContext) Expression() IExpressionContext {
 }
 
 func (s *ExpressionBitwiseXorUnaryASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionBitwiseXorUnaryAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseXorUnaryASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionBitwiseXorUnaryAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseXorUnaryASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionBitwiseXorUnaryAST(s)
 
 	default:
@@ -5471,24 +5472,24 @@ func (s *ExpressionEqualASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionEqualASTContext) EQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserEQUAL, 0)
+	return s.GetToken(MiniGoParserEQUAL, 0)
 }
 
 func (s *ExpressionEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionEqualAST(s)
 	}
 }
 
 func (s *ExpressionEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionEqualAST(s)
 	}
 }
 
 func (s *ExpressionEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionEqualAST(s)
 
 	default:
@@ -5515,7 +5516,7 @@ func (s *ExpressionMinusUnaryASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *ExpressionMinusUnaryASTContext) MINUS() antlr.TerminalNode {
-	return s.GetToken(miniGoParserMINUS, 0)
+	return s.GetToken(MiniGoParserMINUS, 0)
 }
 
 func (s *ExpressionMinusUnaryASTContext) Expression() IExpressionContext {
@@ -5535,20 +5536,20 @@ func (s *ExpressionMinusUnaryASTContext) Expression() IExpressionContext {
 }
 
 func (s *ExpressionMinusUnaryASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionMinusUnaryAST(s)
 	}
 }
 
 func (s *ExpressionMinusUnaryASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionMinusUnaryAST(s)
 	}
 }
 
 func (s *ExpressionMinusUnaryASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionMinusUnaryAST(s)
 
 	default:
@@ -5616,24 +5617,24 @@ func (s *ExpressionBitwiseClearASTContext) Expression(i int) IExpressionContext 
 }
 
 func (s *ExpressionBitwiseClearASTContext) BITWISECLEAR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBITWISECLEAR, 0)
+	return s.GetToken(MiniGoParserBITWISECLEAR, 0)
 }
 
 func (s *ExpressionBitwiseClearASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionBitwiseClearAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseClearASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionBitwiseClearAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseClearASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionBitwiseClearAST(s)
 
 	default:
@@ -5701,24 +5702,24 @@ func (s *ExpressionGreaterEqualASTContext) Expression(i int) IExpressionContext 
 }
 
 func (s *ExpressionGreaterEqualASTContext) GREATEREQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserGREATEREQUAL, 0)
+	return s.GetToken(MiniGoParserGREATEREQUAL, 0)
 }
 
 func (s *ExpressionGreaterEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionGreaterEqualAST(s)
 	}
 }
 
 func (s *ExpressionGreaterEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionGreaterEqualAST(s)
 	}
 }
 
 func (s *ExpressionGreaterEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionGreaterEqualAST(s)
 
 	default:
@@ -5786,24 +5787,24 @@ func (s *ExpressionLessEqualASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionLessEqualASTContext) LESSEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLESSEQUAL, 0)
+	return s.GetToken(MiniGoParserLESSEQUAL, 0)
 }
 
 func (s *ExpressionLessEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionLessEqualAST(s)
 	}
 }
 
 func (s *ExpressionLessEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionLessEqualAST(s)
 	}
 }
 
 func (s *ExpressionLessEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionLessEqualAST(s)
 
 	default:
@@ -5871,24 +5872,24 @@ func (s *ExpressionNotEqualASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionNotEqualASTContext) NOTEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserNOTEQUAL, 0)
+	return s.GetToken(MiniGoParserNOTEQUAL, 0)
 }
 
 func (s *ExpressionNotEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionNotEqualAST(s)
 	}
 }
 
 func (s *ExpressionNotEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionNotEqualAST(s)
 	}
 }
 
 func (s *ExpressionNotEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionNotEqualAST(s)
 
 	default:
@@ -5931,20 +5932,20 @@ func (s *ExpressionPrimaryASTContext) PrimaryExpression() IPrimaryExpressionCont
 }
 
 func (s *ExpressionPrimaryASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionPrimaryAST(s)
 	}
 }
 
 func (s *ExpressionPrimaryASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionPrimaryAST(s)
 	}
 }
 
 func (s *ExpressionPrimaryASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionPrimaryAST(s)
 
 	default:
@@ -6012,24 +6013,24 @@ func (s *ExpressionBitwiseAndASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionBitwiseAndASTContext) BITWISEAND() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBITWISEAND, 0)
+	return s.GetToken(MiniGoParserBITWISEAND, 0)
 }
 
 func (s *ExpressionBitwiseAndASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionBitwiseAndAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseAndASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionBitwiseAndAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseAndASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionBitwiseAndAST(s)
 
 	default:
@@ -6097,24 +6098,24 @@ func (s *ExpressionGreaterASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionGreaterASTContext) GREATER() antlr.TerminalNode {
-	return s.GetToken(miniGoParserGREATER, 0)
+	return s.GetToken(MiniGoParserGREATER, 0)
 }
 
 func (s *ExpressionGreaterASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionGreaterAST(s)
 	}
 }
 
 func (s *ExpressionGreaterASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionGreaterAST(s)
 	}
 }
 
 func (s *ExpressionGreaterASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionGreaterAST(s)
 
 	default:
@@ -6182,24 +6183,24 @@ func (s *ExpressionDivideASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionDivideASTContext) DIVIDE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserDIVIDE, 0)
+	return s.GetToken(MiniGoParserDIVIDE, 0)
 }
 
 func (s *ExpressionDivideASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionDivideAST(s)
 	}
 }
 
 func (s *ExpressionDivideASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionDivideAST(s)
 	}
 }
 
 func (s *ExpressionDivideASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionDivideAST(s)
 
 	default:
@@ -6267,24 +6268,24 @@ func (s *ExpressionOrASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionOrASTContext) OR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserOR, 0)
+	return s.GetToken(MiniGoParserOR, 0)
 }
 
 func (s *ExpressionOrASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionOrAST(s)
 	}
 }
 
 func (s *ExpressionOrASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionOrAST(s)
 	}
 }
 
 func (s *ExpressionOrASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionOrAST(s)
 
 	default:
@@ -6311,7 +6312,7 @@ func (s *ExpressionPlusUnaryASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *ExpressionPlusUnaryASTContext) PLUS() antlr.TerminalNode {
-	return s.GetToken(miniGoParserPLUS, 0)
+	return s.GetToken(MiniGoParserPLUS, 0)
 }
 
 func (s *ExpressionPlusUnaryASTContext) Expression() IExpressionContext {
@@ -6331,20 +6332,20 @@ func (s *ExpressionPlusUnaryASTContext) Expression() IExpressionContext {
 }
 
 func (s *ExpressionPlusUnaryASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionPlusUnaryAST(s)
 	}
 }
 
 func (s *ExpressionPlusUnaryASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionPlusUnaryAST(s)
 	}
 }
 
 func (s *ExpressionPlusUnaryASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionPlusUnaryAST(s)
 
 	default:
@@ -6412,24 +6413,24 @@ func (s *ExpressionBitwiseOrASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionBitwiseOrASTContext) BITWISEOR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBITWISEOR, 0)
+	return s.GetToken(MiniGoParserBITWISEOR, 0)
 }
 
 func (s *ExpressionBitwiseOrASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionBitwiseOrAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseOrASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionBitwiseOrAST(s)
 	}
 }
 
 func (s *ExpressionBitwiseOrASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionBitwiseOrAST(s)
 
 	default:
@@ -6497,24 +6498,24 @@ func (s *ExpressionLessASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionLessASTContext) LESS() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLESS, 0)
+	return s.GetToken(MiniGoParserLESS, 0)
 }
 
 func (s *ExpressionLessASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionLessAST(s)
 	}
 }
 
 func (s *ExpressionLessASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionLessAST(s)
 	}
 }
 
 func (s *ExpressionLessASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionLessAST(s)
 
 	default:
@@ -6582,24 +6583,24 @@ func (s *ExpressionShiftRightASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionShiftRightASTContext) SHIFTRIGHT() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSHIFTRIGHT, 0)
+	return s.GetToken(MiniGoParserSHIFTRIGHT, 0)
 }
 
 func (s *ExpressionShiftRightASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionShiftRightAST(s)
 	}
 }
 
 func (s *ExpressionShiftRightASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionShiftRightAST(s)
 	}
 }
 
 func (s *ExpressionShiftRightASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionShiftRightAST(s)
 
 	default:
@@ -6667,24 +6668,24 @@ func (s *ExpressionShiftLeftASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionShiftLeftASTContext) SHIFTLEFT() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSHIFTLEFT, 0)
+	return s.GetToken(MiniGoParserSHIFTLEFT, 0)
 }
 
 func (s *ExpressionShiftLeftASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionShiftLeftAST(s)
 	}
 }
 
 func (s *ExpressionShiftLeftASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionShiftLeftAST(s)
 	}
 }
 
 func (s *ExpressionShiftLeftASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionShiftLeftAST(s)
 
 	default:
@@ -6692,11 +6693,11 @@ func (s *ExpressionShiftLeftASTContext) Accept(visitor antlr.ParseTreeVisitor) i
 	}
 }
 
-func (p *miniGoParser) Expression() (localctx IExpressionContext) {
+func (p *MiniGoParser) Expression() (localctx IExpressionContext) {
 	return p.expression(0)
 }
 
-func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
+func (p *MiniGoParser) expression(_p int) (localctx IExpressionContext) {
 	var _parentctx antlr.ParserRuleContext = p.GetParserRuleContext()
 
 	_parentState := p.GetState()
@@ -6704,7 +6705,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 	var _prevctx IExpressionContext = localctx
 	var _ antlr.ParserRuleContext = _prevctx // TODO: To prevent unused variable warning.
 	_startState := 36
-	p.EnterRecursionRule(localctx, 36, miniGoParserRULE_expression, _p)
+	p.EnterRecursionRule(localctx, 36, MiniGoParserRULE_expression, _p)
 	var _alt int
 
 	p.EnterOuterAlt(localctx, 1)
@@ -6715,7 +6716,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserINTLITERAL, miniGoParserFLOATLITERAL, miniGoParserRUNELITERAL, miniGoParserRAWSTRINGLITERAL, miniGoParserINTERPRETEDSTRINGLITERAL, miniGoParserLEN, miniGoParserCAP, miniGoParserAPPEND, miniGoParserIDENTIFIER, miniGoParserLPAREN:
+	case MiniGoParserINTLITERAL, MiniGoParserFLOATLITERAL, MiniGoParserRUNELITERAL, MiniGoParserRAWSTRINGLITERAL, MiniGoParserINTERPRETEDSTRINGLITERAL, MiniGoParserLEN, MiniGoParserCAP, MiniGoParserAPPEND, MiniGoParserIDENTIFIER, MiniGoParserLPAREN:
 		localctx = NewExpressionPrimaryASTContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
@@ -6725,13 +6726,13 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 			p.primaryExpression(0)
 		}
 
-	case miniGoParserPLUS:
+	case MiniGoParserPLUS:
 		localctx = NewExpressionPlusUnaryASTContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
 		{
 			p.SetState(236)
-			p.Match(miniGoParserPLUS)
+			p.Match(MiniGoParserPLUS)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -6742,13 +6743,13 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 			p.expression(4)
 		}
 
-	case miniGoParserMINUS:
+	case MiniGoParserMINUS:
 		localctx = NewExpressionMinusUnaryASTContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
 		{
 			p.SetState(238)
-			p.Match(miniGoParserMINUS)
+			p.Match(MiniGoParserMINUS)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -6759,13 +6760,13 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 			p.expression(3)
 		}
 
-	case miniGoParserNOT:
+	case MiniGoParserNOT:
 		localctx = NewExpressionNotUnaryASTContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
 		{
 			p.SetState(240)
-			p.Match(miniGoParserNOT)
+			p.Match(MiniGoParserNOT)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -6776,13 +6777,13 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 			p.expression(2)
 		}
 
-	case miniGoParserBITWISEXOR:
+	case MiniGoParserBITWISEXOR:
 		localctx = NewExpressionBitwiseXorUnaryASTContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
 		{
 			p.SetState(242)
-			p.Match(miniGoParserBITWISEXOR)
+			p.Match(MiniGoParserBITWISEXOR)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -6822,7 +6823,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 			switch p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 15, p.GetParserRuleContext()) {
 			case 1:
 				localctx = NewExpressionMultiplyASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(246)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 23)) {
@@ -6831,7 +6832,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(247)
-					p.Match(miniGoParserMULTIPLY)
+					p.Match(MiniGoParserMULTIPLY)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -6844,7 +6845,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 2:
 				localctx = NewExpressionDivideASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(249)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 22)) {
@@ -6853,7 +6854,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(250)
-					p.Match(miniGoParserDIVIDE)
+					p.Match(MiniGoParserDIVIDE)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -6866,7 +6867,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 3:
 				localctx = NewExpressionModuloASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(252)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 21)) {
@@ -6875,7 +6876,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(253)
-					p.Match(miniGoParserMODULO)
+					p.Match(MiniGoParserMODULO)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -6888,7 +6889,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 4:
 				localctx = NewExpressionShiftLeftASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(255)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 20)) {
@@ -6897,7 +6898,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(256)
-					p.Match(miniGoParserSHIFTLEFT)
+					p.Match(MiniGoParserSHIFTLEFT)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -6910,7 +6911,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 5:
 				localctx = NewExpressionShiftRightASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(258)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 19)) {
@@ -6919,7 +6920,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(259)
-					p.Match(miniGoParserSHIFTRIGHT)
+					p.Match(MiniGoParserSHIFTRIGHT)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -6932,7 +6933,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 6:
 				localctx = NewExpressionBitwiseAndASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(261)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 18)) {
@@ -6941,7 +6942,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(262)
-					p.Match(miniGoParserBITWISEAND)
+					p.Match(MiniGoParserBITWISEAND)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -6954,7 +6955,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 7:
 				localctx = NewExpressionBitwiseClearASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(264)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 17)) {
@@ -6963,7 +6964,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(265)
-					p.Match(miniGoParserBITWISECLEAR)
+					p.Match(MiniGoParserBITWISECLEAR)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -6976,7 +6977,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 8:
 				localctx = NewExpressionPlusASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(267)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 16)) {
@@ -6985,7 +6986,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(268)
-					p.Match(miniGoParserPLUS)
+					p.Match(MiniGoParserPLUS)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -6998,7 +6999,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 9:
 				localctx = NewExpressionMinusASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(270)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 15)) {
@@ -7007,7 +7008,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(271)
-					p.Match(miniGoParserMINUS)
+					p.Match(MiniGoParserMINUS)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7020,7 +7021,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 10:
 				localctx = NewExpressionBitwiseOrASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(273)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 14)) {
@@ -7029,7 +7030,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(274)
-					p.Match(miniGoParserBITWISEOR)
+					p.Match(MiniGoParserBITWISEOR)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7042,7 +7043,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 11:
 				localctx = NewExpressionBitwiseXorASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(276)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 13)) {
@@ -7051,7 +7052,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(277)
-					p.Match(miniGoParserBITWISEXOR)
+					p.Match(MiniGoParserBITWISEXOR)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7064,7 +7065,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 12:
 				localctx = NewExpressionEqualASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(279)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 12)) {
@@ -7073,7 +7074,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(280)
-					p.Match(miniGoParserEQUAL)
+					p.Match(MiniGoParserEQUAL)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7086,7 +7087,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 13:
 				localctx = NewExpressionNotEqualASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(282)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 11)) {
@@ -7095,7 +7096,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(283)
-					p.Match(miniGoParserNOTEQUAL)
+					p.Match(MiniGoParserNOTEQUAL)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7108,7 +7109,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 14:
 				localctx = NewExpressionLessASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(285)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 10)) {
@@ -7117,7 +7118,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(286)
-					p.Match(miniGoParserLESS)
+					p.Match(MiniGoParserLESS)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7130,7 +7131,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 15:
 				localctx = NewExpressionLessEqualASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(288)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 9)) {
@@ -7139,7 +7140,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(289)
-					p.Match(miniGoParserLESSEQUAL)
+					p.Match(MiniGoParserLESSEQUAL)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7152,7 +7153,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 16:
 				localctx = NewExpressionGreaterASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(291)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 8)) {
@@ -7161,7 +7162,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(292)
-					p.Match(miniGoParserGREATER)
+					p.Match(MiniGoParserGREATER)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7174,7 +7175,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 17:
 				localctx = NewExpressionGreaterEqualASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(294)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 7)) {
@@ -7183,7 +7184,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(295)
-					p.Match(miniGoParserGREATEREQUAL)
+					p.Match(MiniGoParserGREATEREQUAL)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7196,7 +7197,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 18:
 				localctx = NewExpressionAndASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(297)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 6)) {
@@ -7205,7 +7206,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(298)
-					p.Match(miniGoParserAND)
+					p.Match(MiniGoParserAND)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7218,7 +7219,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 
 			case 19:
 				localctx = NewExpressionOrASTContext(p, NewExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expression)
 				p.SetState(300)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 5)) {
@@ -7227,7 +7228,7 @@ func (p *miniGoParser) expression(_p int) (localctx IExpressionContext) {
 				}
 				{
 					p.SetState(301)
-					p.Match(miniGoParserOR)
+					p.Match(MiniGoParserOR)
 					if p.HasError() {
 						// Recognition error - abort rule
 						goto errorExit
@@ -7285,13 +7286,13 @@ type ExpressionListContext struct {
 func NewEmptyExpressionListContext() *ExpressionListContext {
 	var p = new(ExpressionListContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expressionList
+	p.RuleIndex = MiniGoParserRULE_expressionList
 	return p
 }
 
 func InitEmptyExpressionListContext(p *ExpressionListContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expressionList
+	p.RuleIndex = MiniGoParserRULE_expressionList
 }
 
 func (*ExpressionListContext) IsExpressionListContext() {}
@@ -7302,7 +7303,7 @@ func NewExpressionListContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_expressionList
+	p.RuleIndex = MiniGoParserRULE_expressionList
 
 	return p
 }
@@ -7381,28 +7382,28 @@ func (s *ExpressionListASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *ExpressionListASTContext) AllCOMMA() []antlr.TerminalNode {
-	return s.GetTokens(miniGoParserCOMMA)
+	return s.GetTokens(MiniGoParserCOMMA)
 }
 
 func (s *ExpressionListASTContext) COMMA(i int) antlr.TerminalNode {
-	return s.GetToken(miniGoParserCOMMA, i)
+	return s.GetToken(MiniGoParserCOMMA, i)
 }
 
 func (s *ExpressionListASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionListAST(s)
 	}
 }
 
 func (s *ExpressionListASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionListAST(s)
 	}
 }
 
 func (s *ExpressionListASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionListAST(s)
 
 	default:
@@ -7410,9 +7411,9 @@ func (s *ExpressionListASTContext) Accept(visitor antlr.ParseTreeVisitor) interf
 	}
 }
 
-func (p *miniGoParser) ExpressionList() (localctx IExpressionListContext) {
+func (p *MiniGoParser) ExpressionList() (localctx IExpressionListContext) {
 	localctx = NewExpressionListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 38, miniGoParserRULE_expressionList)
+	p.EnterRule(localctx, 38, MiniGoParserRULE_expressionList)
 	var _alt int
 
 	localctx = NewExpressionListASTContext(p, localctx)
@@ -7434,7 +7435,7 @@ func (p *miniGoParser) ExpressionList() (localctx IExpressionListContext) {
 		if _alt == 1 {
 			{
 				p.SetState(309)
-				p.Match(miniGoParserCOMMA)
+				p.Match(MiniGoParserCOMMA)
 				if p.HasError() {
 					// Recognition error - abort rule
 					goto errorExit
@@ -7488,13 +7489,13 @@ type PrimaryExpressionContext struct {
 func NewEmptyPrimaryExpressionContext() *PrimaryExpressionContext {
 	var p = new(PrimaryExpressionContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_primaryExpression
+	p.RuleIndex = MiniGoParserRULE_primaryExpression
 	return p
 }
 
 func InitEmptyPrimaryExpressionContext(p *PrimaryExpressionContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_primaryExpression
+	p.RuleIndex = MiniGoParserRULE_primaryExpression
 }
 
 func (*PrimaryExpressionContext) IsPrimaryExpressionContext() {}
@@ -7505,7 +7506,7 @@ func NewPrimaryExpressionContext(parser antlr.Parser, parent antlr.ParserRuleCon
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_primaryExpression
+	p.RuleIndex = MiniGoParserRULE_primaryExpression
 
 	return p
 }
@@ -7559,20 +7560,20 @@ func (s *PrimaryExpressionLengthASTContext) LengthExpression() ILengthExpression
 }
 
 func (s *PrimaryExpressionLengthASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterPrimaryExpressionLengthAST(s)
 	}
 }
 
 func (s *PrimaryExpressionLengthASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitPrimaryExpressionLengthAST(s)
 	}
 }
 
 func (s *PrimaryExpressionLengthASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitPrimaryExpressionLengthAST(s)
 
 	default:
@@ -7615,20 +7616,20 @@ func (s *PrimaryExpressionOperandASTContext) Operand() IOperandContext {
 }
 
 func (s *PrimaryExpressionOperandASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterPrimaryExpressionOperandAST(s)
 	}
 }
 
 func (s *PrimaryExpressionOperandASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitPrimaryExpressionOperandAST(s)
 	}
 }
 
 func (s *PrimaryExpressionOperandASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitPrimaryExpressionOperandAST(s)
 
 	default:
@@ -7687,20 +7688,20 @@ func (s *PrimaryExpressionIndexASTContext) Index() IIndexContext {
 }
 
 func (s *PrimaryExpressionIndexASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterPrimaryExpressionIndexAST(s)
 	}
 }
 
 func (s *PrimaryExpressionIndexASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitPrimaryExpressionIndexAST(s)
 	}
 }
 
 func (s *PrimaryExpressionIndexASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitPrimaryExpressionIndexAST(s)
 
 	default:
@@ -7743,20 +7744,20 @@ func (s *PrimaryExpressionAppendASTContext) AppendExpression() IAppendExpression
 }
 
 func (s *PrimaryExpressionAppendASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterPrimaryExpressionAppendAST(s)
 	}
 }
 
 func (s *PrimaryExpressionAppendASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitPrimaryExpressionAppendAST(s)
 	}
 }
 
 func (s *PrimaryExpressionAppendASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitPrimaryExpressionAppendAST(s)
 
 	default:
@@ -7815,20 +7816,20 @@ func (s *PrimaryExpressionArgumentsASTContext) Arguments() IArgumentsContext {
 }
 
 func (s *PrimaryExpressionArgumentsASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterPrimaryExpressionArgumentsAST(s)
 	}
 }
 
 func (s *PrimaryExpressionArgumentsASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitPrimaryExpressionArgumentsAST(s)
 	}
 }
 
 func (s *PrimaryExpressionArgumentsASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitPrimaryExpressionArgumentsAST(s)
 
 	default:
@@ -7871,20 +7872,20 @@ func (s *PrimaryExpressionCapASTContext) CapExpression() ICapExpressionContext {
 }
 
 func (s *PrimaryExpressionCapASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterPrimaryExpressionCapAST(s)
 	}
 }
 
 func (s *PrimaryExpressionCapASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitPrimaryExpressionCapAST(s)
 	}
 }
 
 func (s *PrimaryExpressionCapASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitPrimaryExpressionCapAST(s)
 
 	default:
@@ -7943,20 +7944,20 @@ func (s *PrimaryExpressionSelectorASTContext) Selector() ISelectorContext {
 }
 
 func (s *PrimaryExpressionSelectorASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterPrimaryExpressionSelectorAST(s)
 	}
 }
 
 func (s *PrimaryExpressionSelectorASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitPrimaryExpressionSelectorAST(s)
 	}
 }
 
 func (s *PrimaryExpressionSelectorASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitPrimaryExpressionSelectorAST(s)
 
 	default:
@@ -7964,11 +7965,11 @@ func (s *PrimaryExpressionSelectorASTContext) Accept(visitor antlr.ParseTreeVisi
 	}
 }
 
-func (p *miniGoParser) PrimaryExpression() (localctx IPrimaryExpressionContext) {
+func (p *MiniGoParser) PrimaryExpression() (localctx IPrimaryExpressionContext) {
 	return p.primaryExpression(0)
 }
 
-func (p *miniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionContext) {
+func (p *MiniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionContext) {
 	var _parentctx antlr.ParserRuleContext = p.GetParserRuleContext()
 
 	_parentState := p.GetState()
@@ -7976,7 +7977,7 @@ func (p *miniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionCon
 	var _prevctx IPrimaryExpressionContext = localctx
 	var _ antlr.ParserRuleContext = _prevctx // TODO: To prevent unused variable warning.
 	_startState := 40
-	p.EnterRecursionRule(localctx, 40, miniGoParserRULE_primaryExpression, _p)
+	p.EnterRecursionRule(localctx, 40, MiniGoParserRULE_primaryExpression, _p)
 	var _alt int
 
 	p.EnterOuterAlt(localctx, 1)
@@ -7987,7 +7988,7 @@ func (p *miniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionCon
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserINTLITERAL, miniGoParserFLOATLITERAL, miniGoParserRUNELITERAL, miniGoParserRAWSTRINGLITERAL, miniGoParserINTERPRETEDSTRINGLITERAL, miniGoParserIDENTIFIER, miniGoParserLPAREN:
+	case MiniGoParserINTLITERAL, MiniGoParserFLOATLITERAL, MiniGoParserRUNELITERAL, MiniGoParserRAWSTRINGLITERAL, MiniGoParserINTERPRETEDSTRINGLITERAL, MiniGoParserIDENTIFIER, MiniGoParserLPAREN:
 		localctx = NewPrimaryExpressionOperandASTContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
@@ -7997,7 +7998,7 @@ func (p *miniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionCon
 			p.Operand()
 		}
 
-	case miniGoParserAPPEND:
+	case MiniGoParserAPPEND:
 		localctx = NewPrimaryExpressionAppendASTContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
@@ -8006,7 +8007,7 @@ func (p *miniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionCon
 			p.AppendExpression()
 		}
 
-	case miniGoParserLEN:
+	case MiniGoParserLEN:
 		localctx = NewPrimaryExpressionLengthASTContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
@@ -8015,7 +8016,7 @@ func (p *miniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionCon
 			p.LengthExpression()
 		}
 
-	case miniGoParserCAP:
+	case MiniGoParserCAP:
 		localctx = NewPrimaryExpressionCapASTContext(p, localctx)
 		p.SetParserRuleContext(localctx)
 		_prevctx = localctx
@@ -8053,7 +8054,7 @@ func (p *miniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionCon
 			switch p.GetInterpreter().AdaptivePredict(p.BaseParser, p.GetTokenStream(), 19, p.GetParserRuleContext()) {
 			case 1:
 				localctx = NewPrimaryExpressionSelectorASTContext(p, NewPrimaryExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_primaryExpression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_primaryExpression)
 				p.SetState(323)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 6)) {
@@ -8067,7 +8068,7 @@ func (p *miniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionCon
 
 			case 2:
 				localctx = NewPrimaryExpressionIndexASTContext(p, NewPrimaryExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_primaryExpression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_primaryExpression)
 				p.SetState(325)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 5)) {
@@ -8081,7 +8082,7 @@ func (p *miniGoParser) primaryExpression(_p int) (localctx IPrimaryExpressionCon
 
 			case 3:
 				localctx = NewPrimaryExpressionArgumentsASTContext(p, NewPrimaryExpressionContext(p, _parentctx, _parentState))
-				p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_primaryExpression)
+				p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_primaryExpression)
 				p.SetState(327)
 
 				if !(p.Precpred(p.GetParserRuleContext(), 4)) {
@@ -8140,13 +8141,13 @@ type OperandContext struct {
 func NewEmptyOperandContext() *OperandContext {
 	var p = new(OperandContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_operand
+	p.RuleIndex = MiniGoParserRULE_operand
 	return p
 }
 
 func InitEmptyOperandContext(p *OperandContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_operand
+	p.RuleIndex = MiniGoParserRULE_operand
 }
 
 func (*OperandContext) IsOperandContext() {}
@@ -8157,7 +8158,7 @@ func NewOperandContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_operand
+	p.RuleIndex = MiniGoParserRULE_operand
 
 	return p
 }
@@ -8211,20 +8212,20 @@ func (s *OperandLiteralASTContext) Literal() ILiteralContext {
 }
 
 func (s *OperandLiteralASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterOperandLiteralAST(s)
 	}
 }
 
 func (s *OperandLiteralASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitOperandLiteralAST(s)
 	}
 }
 
 func (s *OperandLiteralASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitOperandLiteralAST(s)
 
 	default:
@@ -8251,24 +8252,24 @@ func (s *OperandIdentifierASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *OperandIdentifierASTContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIDENTIFIER, 0)
+	return s.GetToken(MiniGoParserIDENTIFIER, 0)
 }
 
 func (s *OperandIdentifierASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterOperandIdentifierAST(s)
 	}
 }
 
 func (s *OperandIdentifierASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitOperandIdentifierAST(s)
 	}
 }
 
 func (s *OperandIdentifierASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitOperandIdentifierAST(s)
 
 	default:
@@ -8295,7 +8296,7 @@ func (s *OperandParenASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *OperandParenASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *OperandParenASTContext) Expression() IExpressionContext {
@@ -8315,24 +8316,24 @@ func (s *OperandParenASTContext) Expression() IExpressionContext {
 }
 
 func (s *OperandParenASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *OperandParenASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterOperandParenAST(s)
 	}
 }
 
 func (s *OperandParenASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitOperandParenAST(s)
 	}
 }
 
 func (s *OperandParenASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitOperandParenAST(s)
 
 	default:
@@ -8340,9 +8341,9 @@ func (s *OperandParenASTContext) Accept(visitor antlr.ParseTreeVisitor) interfac
 	}
 }
 
-func (p *miniGoParser) Operand() (localctx IOperandContext) {
+func (p *MiniGoParser) Operand() (localctx IOperandContext) {
 	localctx = NewOperandContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 42, miniGoParserRULE_operand)
+	p.EnterRule(localctx, 42, MiniGoParserRULE_operand)
 	p.SetState(340)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -8350,7 +8351,7 @@ func (p *miniGoParser) Operand() (localctx IOperandContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserINTLITERAL, miniGoParserFLOATLITERAL, miniGoParserRUNELITERAL, miniGoParserRAWSTRINGLITERAL, miniGoParserINTERPRETEDSTRINGLITERAL:
+	case MiniGoParserINTLITERAL, MiniGoParserFLOATLITERAL, MiniGoParserRUNELITERAL, MiniGoParserRAWSTRINGLITERAL, MiniGoParserINTERPRETEDSTRINGLITERAL:
 		localctx = NewOperandLiteralASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
@@ -8358,24 +8359,24 @@ func (p *miniGoParser) Operand() (localctx IOperandContext) {
 			p.Literal()
 		}
 
-	case miniGoParserIDENTIFIER:
+	case MiniGoParserIDENTIFIER:
 		localctx = NewOperandIdentifierASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(335)
-			p.Match(miniGoParserIDENTIFIER)
+			p.Match(MiniGoParserIDENTIFIER)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserLPAREN:
+	case MiniGoParserLPAREN:
 		localctx = NewOperandParenASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(336)
-			p.Match(miniGoParserLPAREN)
+			p.Match(MiniGoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -8387,7 +8388,7 @@ func (p *miniGoParser) Operand() (localctx IOperandContext) {
 		}
 		{
 			p.SetState(338)
-			p.Match(miniGoParserRPAREN)
+			p.Match(MiniGoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -8430,13 +8431,13 @@ type LiteralContext struct {
 func NewEmptyLiteralContext() *LiteralContext {
 	var p = new(LiteralContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_literal
+	p.RuleIndex = MiniGoParserRULE_literal
 	return p
 }
 
 func InitEmptyLiteralContext(p *LiteralContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_literal
+	p.RuleIndex = MiniGoParserRULE_literal
 }
 
 func (*LiteralContext) IsLiteralContext() {}
@@ -8447,7 +8448,7 @@ func NewLiteralContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_literal
+	p.RuleIndex = MiniGoParserRULE_literal
 
 	return p
 }
@@ -8485,24 +8486,24 @@ func (s *LiteralIntASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *LiteralIntASTContext) INTLITERAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserINTLITERAL, 0)
+	return s.GetToken(MiniGoParserINTLITERAL, 0)
 }
 
 func (s *LiteralIntASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLiteralIntAST(s)
 	}
 }
 
 func (s *LiteralIntASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLiteralIntAST(s)
 	}
 }
 
 func (s *LiteralIntASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLiteralIntAST(s)
 
 	default:
@@ -8529,24 +8530,24 @@ func (s *LiteralInterpretedStringASTContext) GetRuleContext() antlr.RuleContext 
 }
 
 func (s *LiteralInterpretedStringASTContext) INTERPRETEDSTRINGLITERAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserINTERPRETEDSTRINGLITERAL, 0)
+	return s.GetToken(MiniGoParserINTERPRETEDSTRINGLITERAL, 0)
 }
 
 func (s *LiteralInterpretedStringASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLiteralInterpretedStringAST(s)
 	}
 }
 
 func (s *LiteralInterpretedStringASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLiteralInterpretedStringAST(s)
 	}
 }
 
 func (s *LiteralInterpretedStringASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLiteralInterpretedStringAST(s)
 
 	default:
@@ -8573,24 +8574,24 @@ func (s *LiteralFloatASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *LiteralFloatASTContext) FLOATLITERAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserFLOATLITERAL, 0)
+	return s.GetToken(MiniGoParserFLOATLITERAL, 0)
 }
 
 func (s *LiteralFloatASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLiteralFloatAST(s)
 	}
 }
 
 func (s *LiteralFloatASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLiteralFloatAST(s)
 	}
 }
 
 func (s *LiteralFloatASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLiteralFloatAST(s)
 
 	default:
@@ -8617,24 +8618,24 @@ func (s *LiteralRuneASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *LiteralRuneASTContext) RUNELITERAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRUNELITERAL, 0)
+	return s.GetToken(MiniGoParserRUNELITERAL, 0)
 }
 
 func (s *LiteralRuneASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLiteralRuneAST(s)
 	}
 }
 
 func (s *LiteralRuneASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLiteralRuneAST(s)
 	}
 }
 
 func (s *LiteralRuneASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLiteralRuneAST(s)
 
 	default:
@@ -8661,24 +8662,24 @@ func (s *LiteralRawStringASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *LiteralRawStringASTContext) RAWSTRINGLITERAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRAWSTRINGLITERAL, 0)
+	return s.GetToken(MiniGoParserRAWSTRINGLITERAL, 0)
 }
 
 func (s *LiteralRawStringASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLiteralRawStringAST(s)
 	}
 }
 
 func (s *LiteralRawStringASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLiteralRawStringAST(s)
 	}
 }
 
 func (s *LiteralRawStringASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLiteralRawStringAST(s)
 
 	default:
@@ -8686,9 +8687,9 @@ func (s *LiteralRawStringASTContext) Accept(visitor antlr.ParseTreeVisitor) inte
 	}
 }
 
-func (p *miniGoParser) Literal() (localctx ILiteralContext) {
+func (p *MiniGoParser) Literal() (localctx ILiteralContext) {
 	localctx = NewLiteralContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 44, miniGoParserRULE_literal)
+	p.EnterRule(localctx, 44, MiniGoParserRULE_literal)
 	p.SetState(347)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -8696,60 +8697,60 @@ func (p *miniGoParser) Literal() (localctx ILiteralContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserINTLITERAL:
+	case MiniGoParserINTLITERAL:
 		localctx = NewLiteralIntASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(342)
-			p.Match(miniGoParserINTLITERAL)
+			p.Match(MiniGoParserINTLITERAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserFLOATLITERAL:
+	case MiniGoParserFLOATLITERAL:
 		localctx = NewLiteralFloatASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(343)
-			p.Match(miniGoParserFLOATLITERAL)
+			p.Match(MiniGoParserFLOATLITERAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserRUNELITERAL:
+	case MiniGoParserRUNELITERAL:
 		localctx = NewLiteralRuneASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(344)
-			p.Match(miniGoParserRUNELITERAL)
+			p.Match(MiniGoParserRUNELITERAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserRAWSTRINGLITERAL:
+	case MiniGoParserRAWSTRINGLITERAL:
 		localctx = NewLiteralRawStringASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 4)
 		{
 			p.SetState(345)
-			p.Match(miniGoParserRAWSTRINGLITERAL)
+			p.Match(MiniGoParserRAWSTRINGLITERAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserINTERPRETEDSTRINGLITERAL:
+	case MiniGoParserINTERPRETEDSTRINGLITERAL:
 		localctx = NewLiteralInterpretedStringASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 5)
 		{
 			p.SetState(346)
-			p.Match(miniGoParserINTERPRETEDSTRINGLITERAL)
+			p.Match(MiniGoParserINTERPRETEDSTRINGLITERAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -8792,13 +8793,13 @@ type IndexContext struct {
 func NewEmptyIndexContext() *IndexContext {
 	var p = new(IndexContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_index
+	p.RuleIndex = MiniGoParserRULE_index
 	return p
 }
 
 func InitEmptyIndexContext(p *IndexContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_index
+	p.RuleIndex = MiniGoParserRULE_index
 }
 
 func (*IndexContext) IsIndexContext() {}
@@ -8809,7 +8810,7 @@ func NewIndexContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_index
+	p.RuleIndex = MiniGoParserRULE_index
 
 	return p
 }
@@ -8847,7 +8848,7 @@ func (s *IndexASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *IndexASTContext) LBRACKET() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLBRACKET, 0)
+	return s.GetToken(MiniGoParserLBRACKET, 0)
 }
 
 func (s *IndexASTContext) Expression() IExpressionContext {
@@ -8867,24 +8868,24 @@ func (s *IndexASTContext) Expression() IExpressionContext {
 }
 
 func (s *IndexASTContext) RBRACKET() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRBRACKET, 0)
+	return s.GetToken(MiniGoParserRBRACKET, 0)
 }
 
 func (s *IndexASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterIndexAST(s)
 	}
 }
 
 func (s *IndexASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitIndexAST(s)
 	}
 }
 
 func (s *IndexASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitIndexAST(s)
 
 	default:
@@ -8892,14 +8893,14 @@ func (s *IndexASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	}
 }
 
-func (p *miniGoParser) Index() (localctx IIndexContext) {
+func (p *MiniGoParser) Index() (localctx IIndexContext) {
 	localctx = NewIndexContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 46, miniGoParserRULE_index)
+	p.EnterRule(localctx, 46, MiniGoParserRULE_index)
 	localctx = NewIndexASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(349)
-		p.Match(miniGoParserLBRACKET)
+		p.Match(MiniGoParserLBRACKET)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -8911,7 +8912,7 @@ func (p *miniGoParser) Index() (localctx IIndexContext) {
 	}
 	{
 		p.SetState(351)
-		p.Match(miniGoParserRBRACKET)
+		p.Match(MiniGoParserRBRACKET)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -8949,13 +8950,13 @@ type ArgumentsContext struct {
 func NewEmptyArgumentsContext() *ArgumentsContext {
 	var p = new(ArgumentsContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_arguments
+	p.RuleIndex = MiniGoParserRULE_arguments
 	return p
 }
 
 func InitEmptyArgumentsContext(p *ArgumentsContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_arguments
+	p.RuleIndex = MiniGoParserRULE_arguments
 }
 
 func (*ArgumentsContext) IsArgumentsContext() {}
@@ -8966,7 +8967,7 @@ func NewArgumentsContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_arguments
+	p.RuleIndex = MiniGoParserRULE_arguments
 
 	return p
 }
@@ -9004,7 +9005,7 @@ func (s *ArgumentsASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *ArgumentsASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *ArgumentsASTContext) ExpressionList() IExpressionListContext {
@@ -9024,20 +9025,20 @@ func (s *ArgumentsASTContext) ExpressionList() IExpressionListContext {
 }
 
 func (s *ArgumentsASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterArgumentsAST(s)
 	}
 }
 
 func (s *ArgumentsASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitArgumentsAST(s)
 	}
 }
 
 func (s *ArgumentsASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitArgumentsAST(s)
 
 	default:
@@ -9080,24 +9081,24 @@ func (s *ArgumentsEmptyASTContext) Epsilon() IEpsilonContext {
 }
 
 func (s *ArgumentsEmptyASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *ArgumentsEmptyASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterArgumentsEmptyAST(s)
 	}
 }
 
 func (s *ArgumentsEmptyASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitArgumentsEmptyAST(s)
 	}
 }
 
 func (s *ArgumentsEmptyASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitArgumentsEmptyAST(s)
 
 	default:
@@ -9105,9 +9106,9 @@ func (s *ArgumentsEmptyASTContext) Accept(visitor antlr.ParseTreeVisitor) interf
 	}
 }
 
-func (p *miniGoParser) Arguments() (localctx IArgumentsContext) {
+func (p *MiniGoParser) Arguments() (localctx IArgumentsContext) {
 	localctx = NewArgumentsContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 48, miniGoParserRULE_arguments)
+	p.EnterRule(localctx, 48, MiniGoParserRULE_arguments)
 	p.SetState(358)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -9115,12 +9116,12 @@ func (p *miniGoParser) Arguments() (localctx IArgumentsContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserLPAREN:
+	case MiniGoParserLPAREN:
 		localctx = NewArgumentsASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(353)
-			p.Match(miniGoParserLPAREN)
+			p.Match(MiniGoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -9131,7 +9132,7 @@ func (p *miniGoParser) Arguments() (localctx IArgumentsContext) {
 			p.ExpressionList()
 		}
 
-	case miniGoParserRPAREN:
+	case MiniGoParserRPAREN:
 		localctx = NewArgumentsEmptyASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
@@ -9140,7 +9141,7 @@ func (p *miniGoParser) Arguments() (localctx IArgumentsContext) {
 		}
 		{
 			p.SetState(356)
-			p.Match(miniGoParserRPAREN)
+			p.Match(MiniGoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -9183,13 +9184,13 @@ type SelectorContext struct {
 func NewEmptySelectorContext() *SelectorContext {
 	var p = new(SelectorContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_selector
+	p.RuleIndex = MiniGoParserRULE_selector
 	return p
 }
 
 func InitEmptySelectorContext(p *SelectorContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_selector
+	p.RuleIndex = MiniGoParserRULE_selector
 }
 
 func (*SelectorContext) IsSelectorContext() {}
@@ -9200,7 +9201,7 @@ func NewSelectorContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_selector
+	p.RuleIndex = MiniGoParserRULE_selector
 
 	return p
 }
@@ -9238,28 +9239,28 @@ func (s *SelectorASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *SelectorASTContext) DOT() antlr.TerminalNode {
-	return s.GetToken(miniGoParserDOT, 0)
+	return s.GetToken(MiniGoParserDOT, 0)
 }
 
 func (s *SelectorASTContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIDENTIFIER, 0)
+	return s.GetToken(MiniGoParserIDENTIFIER, 0)
 }
 
 func (s *SelectorASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSelectorAST(s)
 	}
 }
 
 func (s *SelectorASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSelectorAST(s)
 	}
 }
 
 func (s *SelectorASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSelectorAST(s)
 
 	default:
@@ -9267,14 +9268,14 @@ func (s *SelectorASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} 
 	}
 }
 
-func (p *miniGoParser) Selector() (localctx ISelectorContext) {
+func (p *MiniGoParser) Selector() (localctx ISelectorContext) {
 	localctx = NewSelectorContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 50, miniGoParserRULE_selector)
+	p.EnterRule(localctx, 50, MiniGoParserRULE_selector)
 	localctx = NewSelectorASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(360)
-		p.Match(miniGoParserDOT)
+		p.Match(MiniGoParserDOT)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9282,7 +9283,7 @@ func (p *miniGoParser) Selector() (localctx ISelectorContext) {
 	}
 	{
 		p.SetState(361)
-		p.Match(miniGoParserIDENTIFIER)
+		p.Match(MiniGoParserIDENTIFIER)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9320,13 +9321,13 @@ type AppendExpressionContext struct {
 func NewEmptyAppendExpressionContext() *AppendExpressionContext {
 	var p = new(AppendExpressionContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_appendExpression
+	p.RuleIndex = MiniGoParserRULE_appendExpression
 	return p
 }
 
 func InitEmptyAppendExpressionContext(p *AppendExpressionContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_appendExpression
+	p.RuleIndex = MiniGoParserRULE_appendExpression
 }
 
 func (*AppendExpressionContext) IsAppendExpressionContext() {}
@@ -9337,7 +9338,7 @@ func NewAppendExpressionContext(parser antlr.Parser, parent antlr.ParserRuleCont
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_appendExpression
+	p.RuleIndex = MiniGoParserRULE_appendExpression
 
 	return p
 }
@@ -9375,11 +9376,11 @@ func (s *AppendExpressionASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *AppendExpressionASTContext) APPEND() antlr.TerminalNode {
-	return s.GetToken(miniGoParserAPPEND, 0)
+	return s.GetToken(MiniGoParserAPPEND, 0)
 }
 
 func (s *AppendExpressionASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *AppendExpressionASTContext) AllExpression() []IExpressionContext {
@@ -9424,28 +9425,28 @@ func (s *AppendExpressionASTContext) Expression(i int) IExpressionContext {
 }
 
 func (s *AppendExpressionASTContext) COMMA() antlr.TerminalNode {
-	return s.GetToken(miniGoParserCOMMA, 0)
+	return s.GetToken(MiniGoParserCOMMA, 0)
 }
 
 func (s *AppendExpressionASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *AppendExpressionASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAppendExpressionAST(s)
 	}
 }
 
 func (s *AppendExpressionASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAppendExpressionAST(s)
 	}
 }
 
 func (s *AppendExpressionASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAppendExpressionAST(s)
 
 	default:
@@ -9453,14 +9454,14 @@ func (s *AppendExpressionASTContext) Accept(visitor antlr.ParseTreeVisitor) inte
 	}
 }
 
-func (p *miniGoParser) AppendExpression() (localctx IAppendExpressionContext) {
+func (p *MiniGoParser) AppendExpression() (localctx IAppendExpressionContext) {
 	localctx = NewAppendExpressionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 52, miniGoParserRULE_appendExpression)
+	p.EnterRule(localctx, 52, MiniGoParserRULE_appendExpression)
 	localctx = NewAppendExpressionASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(363)
-		p.Match(miniGoParserAPPEND)
+		p.Match(MiniGoParserAPPEND)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9468,7 +9469,7 @@ func (p *miniGoParser) AppendExpression() (localctx IAppendExpressionContext) {
 	}
 	{
 		p.SetState(364)
-		p.Match(miniGoParserLPAREN)
+		p.Match(MiniGoParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9480,7 +9481,7 @@ func (p *miniGoParser) AppendExpression() (localctx IAppendExpressionContext) {
 	}
 	{
 		p.SetState(366)
-		p.Match(miniGoParserCOMMA)
+		p.Match(MiniGoParserCOMMA)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9492,7 +9493,7 @@ func (p *miniGoParser) AppendExpression() (localctx IAppendExpressionContext) {
 	}
 	{
 		p.SetState(368)
-		p.Match(miniGoParserRPAREN)
+		p.Match(MiniGoParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9530,13 +9531,13 @@ type LengthExpressionContext struct {
 func NewEmptyLengthExpressionContext() *LengthExpressionContext {
 	var p = new(LengthExpressionContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_lengthExpression
+	p.RuleIndex = MiniGoParserRULE_lengthExpression
 	return p
 }
 
 func InitEmptyLengthExpressionContext(p *LengthExpressionContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_lengthExpression
+	p.RuleIndex = MiniGoParserRULE_lengthExpression
 }
 
 func (*LengthExpressionContext) IsLengthExpressionContext() {}
@@ -9547,7 +9548,7 @@ func NewLengthExpressionContext(parser antlr.Parser, parent antlr.ParserRuleCont
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_lengthExpression
+	p.RuleIndex = MiniGoParserRULE_lengthExpression
 
 	return p
 }
@@ -9585,11 +9586,11 @@ func (s *LengthExpressionASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *LengthExpressionASTContext) LEN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLEN, 0)
+	return s.GetToken(MiniGoParserLEN, 0)
 }
 
 func (s *LengthExpressionASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *LengthExpressionASTContext) Expression() IExpressionContext {
@@ -9609,24 +9610,24 @@ func (s *LengthExpressionASTContext) Expression() IExpressionContext {
 }
 
 func (s *LengthExpressionASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *LengthExpressionASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLengthExpressionAST(s)
 	}
 }
 
 func (s *LengthExpressionASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLengthExpressionAST(s)
 	}
 }
 
 func (s *LengthExpressionASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLengthExpressionAST(s)
 
 	default:
@@ -9634,14 +9635,14 @@ func (s *LengthExpressionASTContext) Accept(visitor antlr.ParseTreeVisitor) inte
 	}
 }
 
-func (p *miniGoParser) LengthExpression() (localctx ILengthExpressionContext) {
+func (p *MiniGoParser) LengthExpression() (localctx ILengthExpressionContext) {
 	localctx = NewLengthExpressionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 54, miniGoParserRULE_lengthExpression)
+	p.EnterRule(localctx, 54, MiniGoParserRULE_lengthExpression)
 	localctx = NewLengthExpressionASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(370)
-		p.Match(miniGoParserLEN)
+		p.Match(MiniGoParserLEN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9649,7 +9650,7 @@ func (p *miniGoParser) LengthExpression() (localctx ILengthExpressionContext) {
 	}
 	{
 		p.SetState(371)
-		p.Match(miniGoParserLPAREN)
+		p.Match(MiniGoParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9661,7 +9662,7 @@ func (p *miniGoParser) LengthExpression() (localctx ILengthExpressionContext) {
 	}
 	{
 		p.SetState(373)
-		p.Match(miniGoParserRPAREN)
+		p.Match(MiniGoParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9699,13 +9700,13 @@ type CapExpressionContext struct {
 func NewEmptyCapExpressionContext() *CapExpressionContext {
 	var p = new(CapExpressionContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_capExpression
+	p.RuleIndex = MiniGoParserRULE_capExpression
 	return p
 }
 
 func InitEmptyCapExpressionContext(p *CapExpressionContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_capExpression
+	p.RuleIndex = MiniGoParserRULE_capExpression
 }
 
 func (*CapExpressionContext) IsCapExpressionContext() {}
@@ -9716,7 +9717,7 @@ func NewCapExpressionContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_capExpression
+	p.RuleIndex = MiniGoParserRULE_capExpression
 
 	return p
 }
@@ -9754,11 +9755,11 @@ func (s *CapExpressionASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *CapExpressionASTContext) CAP() antlr.TerminalNode {
-	return s.GetToken(miniGoParserCAP, 0)
+	return s.GetToken(MiniGoParserCAP, 0)
 }
 
 func (s *CapExpressionASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *CapExpressionASTContext) Expression() IExpressionContext {
@@ -9778,24 +9779,24 @@ func (s *CapExpressionASTContext) Expression() IExpressionContext {
 }
 
 func (s *CapExpressionASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *CapExpressionASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterCapExpressionAST(s)
 	}
 }
 
 func (s *CapExpressionASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitCapExpressionAST(s)
 	}
 }
 
 func (s *CapExpressionASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitCapExpressionAST(s)
 
 	default:
@@ -9803,14 +9804,14 @@ func (s *CapExpressionASTContext) Accept(visitor antlr.ParseTreeVisitor) interfa
 	}
 }
 
-func (p *miniGoParser) CapExpression() (localctx ICapExpressionContext) {
+func (p *MiniGoParser) CapExpression() (localctx ICapExpressionContext) {
 	localctx = NewCapExpressionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 56, miniGoParserRULE_capExpression)
+	p.EnterRule(localctx, 56, MiniGoParserRULE_capExpression)
 	localctx = NewCapExpressionASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(375)
-		p.Match(miniGoParserCAP)
+		p.Match(MiniGoParserCAP)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9818,7 +9819,7 @@ func (p *miniGoParser) CapExpression() (localctx ICapExpressionContext) {
 	}
 	{
 		p.SetState(376)
-		p.Match(miniGoParserLPAREN)
+		p.Match(MiniGoParserLPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9830,7 +9831,7 @@ func (p *miniGoParser) CapExpression() (localctx ICapExpressionContext) {
 	}
 	{
 		p.SetState(378)
-		p.Match(miniGoParserRPAREN)
+		p.Match(MiniGoParserRPAREN)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -9868,13 +9869,13 @@ type StatementListContext struct {
 func NewEmptyStatementListContext() *StatementListContext {
 	var p = new(StatementListContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_statementList
+	p.RuleIndex = MiniGoParserRULE_statementList
 	return p
 }
 
 func InitEmptyStatementListContext(p *StatementListContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_statementList
+	p.RuleIndex = MiniGoParserRULE_statementList
 }
 
 func (*StatementListContext) IsStatementListContext() {}
@@ -9885,7 +9886,7 @@ func NewStatementListContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_statementList
+	p.RuleIndex = MiniGoParserRULE_statementList
 
 	return p
 }
@@ -9964,20 +9965,20 @@ func (s *StatementListASTContext) Statement(i int) IStatementContext {
 }
 
 func (s *StatementListASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementListAST(s)
 	}
 }
 
 func (s *StatementListASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementListAST(s)
 	}
 }
 
 func (s *StatementListASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementListAST(s)
 
 	default:
@@ -9985,9 +9986,9 @@ func (s *StatementListASTContext) Accept(visitor antlr.ParseTreeVisitor) interfa
 	}
 }
 
-func (p *miniGoParser) StatementList() (localctx IStatementListContext) {
+func (p *MiniGoParser) StatementList() (localctx IStatementListContext) {
 	localctx = NewStatementListContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 58, miniGoParserRULE_statementList)
+	p.EnterRule(localctx, 58, MiniGoParserRULE_statementList)
 	var _alt int
 
 	localctx = NewStatementListASTContext(p, localctx)
@@ -10051,13 +10052,13 @@ type BlockContext struct {
 func NewEmptyBlockContext() *BlockContext {
 	var p = new(BlockContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_block
+	p.RuleIndex = MiniGoParserRULE_block
 	return p
 }
 
 func InitEmptyBlockContext(p *BlockContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_block
+	p.RuleIndex = MiniGoParserRULE_block
 }
 
 func (*BlockContext) IsBlockContext() {}
@@ -10068,7 +10069,7 @@ func NewBlockContext(parser antlr.Parser, parent antlr.ParserRuleContext, invoki
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_block
+	p.RuleIndex = MiniGoParserRULE_block
 
 	return p
 }
@@ -10106,7 +10107,7 @@ func (s *BlockASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *BlockASTContext) LBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLBRACE, 0)
+	return s.GetToken(MiniGoParserLBRACE, 0)
 }
 
 func (s *BlockASTContext) StatementList() IStatementListContext {
@@ -10126,24 +10127,24 @@ func (s *BlockASTContext) StatementList() IStatementListContext {
 }
 
 func (s *BlockASTContext) RBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRBRACE, 0)
+	return s.GetToken(MiniGoParserRBRACE, 0)
 }
 
 func (s *BlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterBlockAST(s)
 	}
 }
 
 func (s *BlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitBlockAST(s)
 	}
 }
 
 func (s *BlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitBlockAST(s)
 
 	default:
@@ -10151,14 +10152,14 @@ func (s *BlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	}
 }
 
-func (p *miniGoParser) Block() (localctx IBlockContext) {
+func (p *MiniGoParser) Block() (localctx IBlockContext) {
 	localctx = NewBlockContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 60, miniGoParserRULE_block)
+	p.EnterRule(localctx, 60, MiniGoParserRULE_block)
 	localctx = NewBlockASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(386)
-		p.Match(miniGoParserLBRACE)
+		p.Match(MiniGoParserLBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -10170,7 +10171,7 @@ func (p *miniGoParser) Block() (localctx IBlockContext) {
 	}
 	{
 		p.SetState(388)
-		p.Match(miniGoParserRBRACE)
+		p.Match(MiniGoParserRBRACE)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -10208,13 +10209,13 @@ type StatementContext struct {
 func NewEmptyStatementContext() *StatementContext {
 	var p = new(StatementContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_statement
+	p.RuleIndex = MiniGoParserRULE_statement
 	return p
 }
 
 func InitEmptyStatementContext(p *StatementContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_statement
+	p.RuleIndex = MiniGoParserRULE_statement
 }
 
 func (*StatementContext) IsStatementContext() {}
@@ -10225,7 +10226,7 @@ func NewStatementContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_statement
+	p.RuleIndex = MiniGoParserRULE_statement
 
 	return p
 }
@@ -10279,24 +10280,24 @@ func (s *StatementSimpleASTContext) SimpleStatement() ISimpleStatementContext {
 }
 
 func (s *StatementSimpleASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementSimpleASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementSimpleAST(s)
 	}
 }
 
 func (s *StatementSimpleASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementSimpleAST(s)
 	}
 }
 
 func (s *StatementSimpleASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementSimpleAST(s)
 
 	default:
@@ -10339,24 +10340,24 @@ func (s *StatementSwitchASTContext) SwitchStmt() ISwitchStmtContext {
 }
 
 func (s *StatementSwitchASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementSwitchASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementSwitchAST(s)
 	}
 }
 
 func (s *StatementSwitchASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementSwitchAST(s)
 	}
 }
 
 func (s *StatementSwitchASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementSwitchAST(s)
 
 	default:
@@ -10399,24 +10400,24 @@ func (s *StatementLoopASTContext) Loop() ILoopContext {
 }
 
 func (s *StatementLoopASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementLoopASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementLoopAST(s)
 	}
 }
 
 func (s *StatementLoopASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementLoopAST(s)
 	}
 }
 
 func (s *StatementLoopASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementLoopAST(s)
 
 	default:
@@ -10443,28 +10444,28 @@ func (s *StatementBreakASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *StatementBreakASTContext) BREAK() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBREAK, 0)
+	return s.GetToken(MiniGoParserBREAK, 0)
 }
 
 func (s *StatementBreakASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementBreakASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementBreakAST(s)
 	}
 }
 
 func (s *StatementBreakASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementBreakAST(s)
 	}
 }
 
 func (s *StatementBreakASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementBreakAST(s)
 
 	default:
@@ -10507,24 +10508,24 @@ func (s *StatementBlockASTContext) Block() IBlockContext {
 }
 
 func (s *StatementBlockASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementBlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementBlockAST(s)
 	}
 }
 
 func (s *StatementBlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementBlockAST(s)
 	}
 }
 
 func (s *StatementBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementBlockAST(s)
 
 	default:
@@ -10567,20 +10568,20 @@ func (s *StatementTypeDeclASTContext) TypeDecl() ITypeDeclContext {
 }
 
 func (s *StatementTypeDeclASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementTypeDeclAST(s)
 	}
 }
 
 func (s *StatementTypeDeclASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementTypeDeclAST(s)
 	}
 }
 
 func (s *StatementTypeDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementTypeDeclAST(s)
 
 	default:
@@ -10607,11 +10608,11 @@ func (s *StatementReturnASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *StatementReturnASTContext) RETURN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRETURN, 0)
+	return s.GetToken(MiniGoParserRETURN, 0)
 }
 
 func (s *StatementReturnASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementReturnASTContext) Expression() IExpressionContext {
@@ -10647,20 +10648,20 @@ func (s *StatementReturnASTContext) Epsilon() IEpsilonContext {
 }
 
 func (s *StatementReturnASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementReturnAST(s)
 	}
 }
 
 func (s *StatementReturnASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementReturnAST(s)
 	}
 }
 
 func (s *StatementReturnASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementReturnAST(s)
 
 	default:
@@ -10687,19 +10688,19 @@ func (s *StatementPrintASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *StatementPrintASTContext) PRINT() antlr.TerminalNode {
-	return s.GetToken(miniGoParserPRINT, 0)
+	return s.GetToken(MiniGoParserPRINT, 0)
 }
 
 func (s *StatementPrintASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *StatementPrintASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *StatementPrintASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementPrintASTContext) ExpressionList() IExpressionListContext {
@@ -10735,20 +10736,20 @@ func (s *StatementPrintASTContext) Epsilon() IEpsilonContext {
 }
 
 func (s *StatementPrintASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementPrintAST(s)
 	}
 }
 
 func (s *StatementPrintASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementPrintAST(s)
 	}
 }
 
 func (s *StatementPrintASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementPrintAST(s)
 
 	default:
@@ -10791,20 +10792,20 @@ func (s *StatementVariableDeclASTContext) VariableDecl() IVariableDeclContext {
 }
 
 func (s *StatementVariableDeclASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementVariableDeclAST(s)
 	}
 }
 
 func (s *StatementVariableDeclASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementVariableDeclAST(s)
 	}
 }
 
 func (s *StatementVariableDeclASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementVariableDeclAST(s)
 
 	default:
@@ -10831,19 +10832,19 @@ func (s *StatementPrintlnASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *StatementPrintlnASTContext) PRINTLN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserPRINTLN, 0)
+	return s.GetToken(MiniGoParserPRINTLN, 0)
 }
 
 func (s *StatementPrintlnASTContext) LPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLPAREN, 0)
+	return s.GetToken(MiniGoParserLPAREN, 0)
 }
 
 func (s *StatementPrintlnASTContext) RPAREN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRPAREN, 0)
+	return s.GetToken(MiniGoParserRPAREN, 0)
 }
 
 func (s *StatementPrintlnASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementPrintlnASTContext) ExpressionList() IExpressionListContext {
@@ -10879,20 +10880,20 @@ func (s *StatementPrintlnASTContext) Epsilon() IEpsilonContext {
 }
 
 func (s *StatementPrintlnASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementPrintlnAST(s)
 	}
 }
 
 func (s *StatementPrintlnASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementPrintlnAST(s)
 	}
 }
 
 func (s *StatementPrintlnASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementPrintlnAST(s)
 
 	default:
@@ -10919,28 +10920,28 @@ func (s *StatementContinueASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *StatementContinueASTContext) CONTINUE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserCONTINUE, 0)
+	return s.GetToken(MiniGoParserCONTINUE, 0)
 }
 
 func (s *StatementContinueASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementContinueASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementContinueAST(s)
 	}
 }
 
 func (s *StatementContinueASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementContinueAST(s)
 	}
 }
 
 func (s *StatementContinueASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementContinueAST(s)
 
 	default:
@@ -10983,24 +10984,24 @@ func (s *StatementIfASTContext) IfStatement() IIfStatementContext {
 }
 
 func (s *StatementIfASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *StatementIfASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterStatementIfAST(s)
 	}
 }
 
 func (s *StatementIfASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitStatementIfAST(s)
 	}
 }
 
 func (s *StatementIfASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitStatementIfAST(s)
 
 	default:
@@ -11008,9 +11009,9 @@ func (s *StatementIfASTContext) Accept(visitor antlr.ParseTreeVisitor) interface
 	}
 }
 
-func (p *miniGoParser) Statement() (localctx IStatementContext) {
+func (p *MiniGoParser) Statement() (localctx IStatementContext) {
 	localctx = NewStatementContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 62, miniGoParserRULE_statement)
+	p.EnterRule(localctx, 62, MiniGoParserRULE_statement)
 	p.SetState(436)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -11018,12 +11019,12 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserPRINT:
+	case MiniGoParserPRINT:
 		localctx = NewStatementPrintASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(390)
-			p.Match(miniGoParserPRINT)
+			p.Match(MiniGoParserPRINT)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11031,7 +11032,7 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(391)
-			p.Match(miniGoParserLPAREN)
+			p.Match(MiniGoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11044,13 +11045,13 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 
 		switch p.GetTokenStream().LA(1) {
-		case miniGoParserINTLITERAL, miniGoParserFLOATLITERAL, miniGoParserRUNELITERAL, miniGoParserRAWSTRINGLITERAL, miniGoParserINTERPRETEDSTRINGLITERAL, miniGoParserLEN, miniGoParserCAP, miniGoParserAPPEND, miniGoParserIDENTIFIER, miniGoParserPLUS, miniGoParserMINUS, miniGoParserNOT, miniGoParserBITWISEXOR, miniGoParserLPAREN:
+		case MiniGoParserINTLITERAL, MiniGoParserFLOATLITERAL, MiniGoParserRUNELITERAL, MiniGoParserRAWSTRINGLITERAL, MiniGoParserINTERPRETEDSTRINGLITERAL, MiniGoParserLEN, MiniGoParserCAP, MiniGoParserAPPEND, MiniGoParserIDENTIFIER, MiniGoParserPLUS, MiniGoParserMINUS, MiniGoParserNOT, MiniGoParserBITWISEXOR, MiniGoParserLPAREN:
 			{
 				p.SetState(392)
 				p.ExpressionList()
 			}
 
-		case miniGoParserRPAREN:
+		case MiniGoParserRPAREN:
 			{
 				p.SetState(393)
 				p.Epsilon()
@@ -11062,7 +11063,7 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(396)
-			p.Match(miniGoParserRPAREN)
+			p.Match(MiniGoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11070,19 +11071,19 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(397)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserPRINTLN:
+	case MiniGoParserPRINTLN:
 		localctx = NewStatementPrintlnASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(399)
-			p.Match(miniGoParserPRINTLN)
+			p.Match(MiniGoParserPRINTLN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11090,7 +11091,7 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(400)
-			p.Match(miniGoParserLPAREN)
+			p.Match(MiniGoParserLPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11103,13 +11104,13 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 
 		switch p.GetTokenStream().LA(1) {
-		case miniGoParserINTLITERAL, miniGoParserFLOATLITERAL, miniGoParserRUNELITERAL, miniGoParserRAWSTRINGLITERAL, miniGoParserINTERPRETEDSTRINGLITERAL, miniGoParserLEN, miniGoParserCAP, miniGoParserAPPEND, miniGoParserIDENTIFIER, miniGoParserPLUS, miniGoParserMINUS, miniGoParserNOT, miniGoParserBITWISEXOR, miniGoParserLPAREN:
+		case MiniGoParserINTLITERAL, MiniGoParserFLOATLITERAL, MiniGoParserRUNELITERAL, MiniGoParserRAWSTRINGLITERAL, MiniGoParserINTERPRETEDSTRINGLITERAL, MiniGoParserLEN, MiniGoParserCAP, MiniGoParserAPPEND, MiniGoParserIDENTIFIER, MiniGoParserPLUS, MiniGoParserMINUS, MiniGoParserNOT, MiniGoParserBITWISEXOR, MiniGoParserLPAREN:
 			{
 				p.SetState(401)
 				p.ExpressionList()
 			}
 
-		case miniGoParserRPAREN:
+		case MiniGoParserRPAREN:
 			{
 				p.SetState(402)
 				p.Epsilon()
@@ -11121,7 +11122,7 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(405)
-			p.Match(miniGoParserRPAREN)
+			p.Match(MiniGoParserRPAREN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11129,19 +11130,19 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(406)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserRETURN:
+	case MiniGoParserRETURN:
 		localctx = NewStatementReturnASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(408)
-			p.Match(miniGoParserRETURN)
+			p.Match(MiniGoParserRETURN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11154,13 +11155,13 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 
 		switch p.GetTokenStream().LA(1) {
-		case miniGoParserINTLITERAL, miniGoParserFLOATLITERAL, miniGoParserRUNELITERAL, miniGoParserRAWSTRINGLITERAL, miniGoParserINTERPRETEDSTRINGLITERAL, miniGoParserLEN, miniGoParserCAP, miniGoParserAPPEND, miniGoParserIDENTIFIER, miniGoParserPLUS, miniGoParserMINUS, miniGoParserNOT, miniGoParserBITWISEXOR, miniGoParserLPAREN:
+		case MiniGoParserINTLITERAL, MiniGoParserFLOATLITERAL, MiniGoParserRUNELITERAL, MiniGoParserRAWSTRINGLITERAL, MiniGoParserINTERPRETEDSTRINGLITERAL, MiniGoParserLEN, MiniGoParserCAP, MiniGoParserAPPEND, MiniGoParserIDENTIFIER, MiniGoParserPLUS, MiniGoParserMINUS, MiniGoParserNOT, MiniGoParserBITWISEXOR, MiniGoParserLPAREN:
 			{
 				p.SetState(409)
 				p.expression(0)
 			}
 
-		case miniGoParserSEMICOLON:
+		case MiniGoParserSEMICOLON:
 			{
 				p.SetState(410)
 				p.Epsilon()
@@ -11172,19 +11173,19 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(413)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserBREAK:
+	case MiniGoParserBREAK:
 		localctx = NewStatementBreakASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 4)
 		{
 			p.SetState(415)
-			p.Match(miniGoParserBREAK)
+			p.Match(MiniGoParserBREAK)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11192,19 +11193,19 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(416)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserCONTINUE:
+	case MiniGoParserCONTINUE:
 		localctx = NewStatementContinueASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 5)
 		{
 			p.SetState(417)
-			p.Match(miniGoParserCONTINUE)
+			p.Match(MiniGoParserCONTINUE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11212,14 +11213,14 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(418)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserINTLITERAL, miniGoParserFLOATLITERAL, miniGoParserRUNELITERAL, miniGoParserRAWSTRINGLITERAL, miniGoParserINTERPRETEDSTRINGLITERAL, miniGoParserLEN, miniGoParserCAP, miniGoParserAPPEND, miniGoParserIDENTIFIER, miniGoParserPLUS, miniGoParserMINUS, miniGoParserNOT, miniGoParserBITWISEXOR, miniGoParserSEMICOLON, miniGoParserLPAREN:
+	case MiniGoParserINTLITERAL, MiniGoParserFLOATLITERAL, MiniGoParserRUNELITERAL, MiniGoParserRAWSTRINGLITERAL, MiniGoParserINTERPRETEDSTRINGLITERAL, MiniGoParserLEN, MiniGoParserCAP, MiniGoParserAPPEND, MiniGoParserIDENTIFIER, MiniGoParserPLUS, MiniGoParserMINUS, MiniGoParserNOT, MiniGoParserBITWISEXOR, MiniGoParserSEMICOLON, MiniGoParserLPAREN:
 		localctx = NewStatementSimpleASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 6)
 		{
@@ -11228,14 +11229,14 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(420)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserLBRACE:
+	case MiniGoParserLBRACE:
 		localctx = NewStatementBlockASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 7)
 		{
@@ -11244,14 +11245,14 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(423)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserSWITCH:
+	case MiniGoParserSWITCH:
 		localctx = NewStatementSwitchASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 8)
 		{
@@ -11260,14 +11261,14 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(426)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserIF:
+	case MiniGoParserIF:
 		localctx = NewStatementIfASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 9)
 		{
@@ -11276,14 +11277,14 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(429)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserFOR:
+	case MiniGoParserFOR:
 		localctx = NewStatementLoopASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 10)
 		{
@@ -11292,14 +11293,14 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 		}
 		{
 			p.SetState(432)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
 			}
 		}
 
-	case miniGoParserTYPE:
+	case MiniGoParserTYPE:
 		localctx = NewStatementTypeDeclASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 11)
 		{
@@ -11307,7 +11308,7 @@ func (p *miniGoParser) Statement() (localctx IStatementContext) {
 			p.TypeDecl()
 		}
 
-	case miniGoParserVAR:
+	case MiniGoParserVAR:
 		localctx = NewStatementVariableDeclASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 12)
 		{
@@ -11351,13 +11352,13 @@ type SimpleStatementContext struct {
 func NewEmptySimpleStatementContext() *SimpleStatementContext {
 	var p = new(SimpleStatementContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_simpleStatement
+	p.RuleIndex = MiniGoParserRULE_simpleStatement
 	return p
 }
 
 func InitEmptySimpleStatementContext(p *SimpleStatementContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_simpleStatement
+	p.RuleIndex = MiniGoParserRULE_simpleStatement
 }
 
 func (*SimpleStatementContext) IsSimpleStatementContext() {}
@@ -11368,7 +11369,7 @@ func NewSimpleStatementContext(parser antlr.Parser, parent antlr.ParserRuleConte
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_simpleStatement
+	p.RuleIndex = MiniGoParserRULE_simpleStatement
 
 	return p
 }
@@ -11422,11 +11423,11 @@ func (s *SimpleStatementExpressionASTContext) Expression() IExpressionContext {
 }
 
 func (s *SimpleStatementExpressionASTContext) INCREMENT() antlr.TerminalNode {
-	return s.GetToken(miniGoParserINCREMENT, 0)
+	return s.GetToken(MiniGoParserINCREMENT, 0)
 }
 
 func (s *SimpleStatementExpressionASTContext) DECREMENT() antlr.TerminalNode {
-	return s.GetToken(miniGoParserDECREMENT, 0)
+	return s.GetToken(MiniGoParserDECREMENT, 0)
 }
 
 func (s *SimpleStatementExpressionASTContext) Epsilon() IEpsilonContext {
@@ -11446,20 +11447,20 @@ func (s *SimpleStatementExpressionASTContext) Epsilon() IEpsilonContext {
 }
 
 func (s *SimpleStatementExpressionASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSimpleStatementExpressionAST(s)
 	}
 }
 
 func (s *SimpleStatementExpressionASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSimpleStatementExpressionAST(s)
 	}
 }
 
 func (s *SimpleStatementExpressionASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSimpleStatementExpressionAST(s)
 
 	default:
@@ -11502,20 +11503,20 @@ func (s *SimpleStatementAssignmentASTContext) AssignmentStatement() IAssignmentS
 }
 
 func (s *SimpleStatementAssignmentASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSimpleStatementAssignmentAST(s)
 	}
 }
 
 func (s *SimpleStatementAssignmentASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSimpleStatementAssignmentAST(s)
 	}
 }
 
 func (s *SimpleStatementAssignmentASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSimpleStatementAssignmentAST(s)
 
 	default:
@@ -11583,24 +11584,24 @@ func (s *SimpleStatementExpressionListAssignASTContext) ExpressionList(i int) IE
 }
 
 func (s *SimpleStatementExpressionListAssignASTContext) ASSIGN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserASSIGN, 0)
+	return s.GetToken(MiniGoParserASSIGN, 0)
 }
 
 func (s *SimpleStatementExpressionListAssignASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSimpleStatementExpressionListAssignAST(s)
 	}
 }
 
 func (s *SimpleStatementExpressionListAssignASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSimpleStatementExpressionListAssignAST(s)
 	}
 }
 
 func (s *SimpleStatementExpressionListAssignASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSimpleStatementExpressionListAssignAST(s)
 
 	default:
@@ -11643,20 +11644,20 @@ func (s *SimpleStatementEmptyASTContext) Epsilon() IEpsilonContext {
 }
 
 func (s *SimpleStatementEmptyASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSimpleStatementEmptyAST(s)
 	}
 }
 
 func (s *SimpleStatementEmptyASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSimpleStatementEmptyAST(s)
 	}
 }
 
 func (s *SimpleStatementEmptyASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSimpleStatementEmptyAST(s)
 
 	default:
@@ -11664,9 +11665,9 @@ func (s *SimpleStatementEmptyASTContext) Accept(visitor antlr.ParseTreeVisitor) 
 	}
 }
 
-func (p *miniGoParser) SimpleStatement() (localctx ISimpleStatementContext) {
+func (p *MiniGoParser) SimpleStatement() (localctx ISimpleStatementContext) {
 	localctx = NewSimpleStatementContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 64, miniGoParserRULE_simpleStatement)
+	p.EnterRule(localctx, 64, MiniGoParserRULE_simpleStatement)
 	p.SetState(450)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -11696,27 +11697,27 @@ func (p *miniGoParser) SimpleStatement() (localctx ISimpleStatementContext) {
 		}
 
 		switch p.GetTokenStream().LA(1) {
-		case miniGoParserINCREMENT:
+		case MiniGoParserINCREMENT:
 			{
 				p.SetState(440)
-				p.Match(miniGoParserINCREMENT)
+				p.Match(MiniGoParserINCREMENT)
 				if p.HasError() {
 					// Recognition error - abort rule
 					goto errorExit
 				}
 			}
 
-		case miniGoParserDECREMENT:
+		case MiniGoParserDECREMENT:
 			{
 				p.SetState(441)
-				p.Match(miniGoParserDECREMENT)
+				p.Match(MiniGoParserDECREMENT)
 				if p.HasError() {
 					// Recognition error - abort rule
 					goto errorExit
 				}
 			}
 
-		case miniGoParserSEMICOLON, miniGoParserLBRACE:
+		case MiniGoParserSEMICOLON, MiniGoParserLBRACE:
 			{
 				p.SetState(442)
 				p.Epsilon()
@@ -11744,7 +11745,7 @@ func (p *miniGoParser) SimpleStatement() (localctx ISimpleStatementContext) {
 		}
 		{
 			p.SetState(447)
-			p.Match(miniGoParserASSIGN)
+			p.Match(MiniGoParserASSIGN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -11790,13 +11791,13 @@ type AssignmentStatementContext struct {
 func NewEmptyAssignmentStatementContext() *AssignmentStatementContext {
 	var p = new(AssignmentStatementContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_assignmentStatement
+	p.RuleIndex = MiniGoParserRULE_assignmentStatement
 	return p
 }
 
 func InitEmptyAssignmentStatementContext(p *AssignmentStatementContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_assignmentStatement
+	p.RuleIndex = MiniGoParserRULE_assignmentStatement
 }
 
 func (*AssignmentStatementContext) IsAssignmentStatementContext() {}
@@ -11807,7 +11808,7 @@ func NewAssignmentStatementContext(parser antlr.Parser, parent antlr.ParserRuleC
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_assignmentStatement
+	p.RuleIndex = MiniGoParserRULE_assignmentStatement
 
 	return p
 }
@@ -11886,24 +11887,24 @@ func (s *AssignmentStatementBitwiseAndEqualASTContext) Expression(i int) IExpres
 }
 
 func (s *AssignmentStatementBitwiseAndEqualASTContext) BITWISEANDEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBITWISEANDEQUAL, 0)
+	return s.GetToken(MiniGoParserBITWISEANDEQUAL, 0)
 }
 
 func (s *AssignmentStatementBitwiseAndEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementBitwiseAndEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementBitwiseAndEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementBitwiseAndEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementBitwiseAndEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementBitwiseAndEqualAST(s)
 
 	default:
@@ -11971,24 +11972,24 @@ func (s *AssignmentStatementBitwiseXorEqualASTContext) Expression(i int) IExpres
 }
 
 func (s *AssignmentStatementBitwiseXorEqualASTContext) BITWISEXOREQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBITWISEXOREQUAL, 0)
+	return s.GetToken(MiniGoParserBITWISEXOREQUAL, 0)
 }
 
 func (s *AssignmentStatementBitwiseXorEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementBitwiseXorEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementBitwiseXorEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementBitwiseXorEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementBitwiseXorEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementBitwiseXorEqualAST(s)
 
 	default:
@@ -12056,24 +12057,24 @@ func (s *AssignmentStatementShiftLeftEqualASTContext) Expression(i int) IExpress
 }
 
 func (s *AssignmentStatementShiftLeftEqualASTContext) SHIFTLEFTEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSHIFTLEFTEQUAL, 0)
+	return s.GetToken(MiniGoParserSHIFTLEFTEQUAL, 0)
 }
 
 func (s *AssignmentStatementShiftLeftEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementShiftLeftEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementShiftLeftEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementShiftLeftEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementShiftLeftEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementShiftLeftEqualAST(s)
 
 	default:
@@ -12141,24 +12142,24 @@ func (s *AssignmentStatementPlusEqualASTContext) Expression(i int) IExpressionCo
 }
 
 func (s *AssignmentStatementPlusEqualASTContext) PLUSEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserPLUSEQUAL, 0)
+	return s.GetToken(MiniGoParserPLUSEQUAL, 0)
 }
 
 func (s *AssignmentStatementPlusEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementPlusEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementPlusEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementPlusEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementPlusEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementPlusEqualAST(s)
 
 	default:
@@ -12226,24 +12227,24 @@ func (s *AssignmentStatementMinusEqualASTContext) Expression(i int) IExpressionC
 }
 
 func (s *AssignmentStatementMinusEqualASTContext) MINUSEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserMINUSEQUAL, 0)
+	return s.GetToken(MiniGoParserMINUSEQUAL, 0)
 }
 
 func (s *AssignmentStatementMinusEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementMinusEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementMinusEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementMinusEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementMinusEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementMinusEqualAST(s)
 
 	default:
@@ -12311,24 +12312,24 @@ func (s *AssignmentStatementModuloEqualASTContext) Expression(i int) IExpression
 }
 
 func (s *AssignmentStatementModuloEqualASTContext) MODULOEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserMODULOEQUAL, 0)
+	return s.GetToken(MiniGoParserMODULOEQUAL, 0)
 }
 
 func (s *AssignmentStatementModuloEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementModuloEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementModuloEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementModuloEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementModuloEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementModuloEqualAST(s)
 
 	default:
@@ -12396,24 +12397,24 @@ func (s *AssignmentStatementASTContext) ExpressionList(i int) IExpressionListCon
 }
 
 func (s *AssignmentStatementASTContext) ASSIGN() antlr.TerminalNode {
-	return s.GetToken(miniGoParserASSIGN, 0)
+	return s.GetToken(MiniGoParserASSIGN, 0)
 }
 
 func (s *AssignmentStatementASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementAST(s)
 	}
 }
 
 func (s *AssignmentStatementASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementAST(s)
 	}
 }
 
 func (s *AssignmentStatementASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementAST(s)
 
 	default:
@@ -12481,24 +12482,24 @@ func (s *AssignmentStatementBitwiseClearEqualASTContext) Expression(i int) IExpr
 }
 
 func (s *AssignmentStatementBitwiseClearEqualASTContext) BITWISECLEAREQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBITWISECLEAREQUAL, 0)
+	return s.GetToken(MiniGoParserBITWISECLEAREQUAL, 0)
 }
 
 func (s *AssignmentStatementBitwiseClearEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementBitwiseClearEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementBitwiseClearEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementBitwiseClearEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementBitwiseClearEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementBitwiseClearEqualAST(s)
 
 	default:
@@ -12566,24 +12567,24 @@ func (s *AssignmentStatementDivideEqualASTContext) Expression(i int) IExpression
 }
 
 func (s *AssignmentStatementDivideEqualASTContext) DIVIDEEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserDIVIDEEQUAL, 0)
+	return s.GetToken(MiniGoParserDIVIDEEQUAL, 0)
 }
 
 func (s *AssignmentStatementDivideEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementDivideEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementDivideEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementDivideEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementDivideEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementDivideEqualAST(s)
 
 	default:
@@ -12651,24 +12652,24 @@ func (s *AssignmentStatementShiftRightEqualASTContext) Expression(i int) IExpres
 }
 
 func (s *AssignmentStatementShiftRightEqualASTContext) SHIFTRIGHTEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSHIFTRIGHTEQUAL, 0)
+	return s.GetToken(MiniGoParserSHIFTRIGHTEQUAL, 0)
 }
 
 func (s *AssignmentStatementShiftRightEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementShiftRightEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementShiftRightEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementShiftRightEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementShiftRightEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementShiftRightEqualAST(s)
 
 	default:
@@ -12736,24 +12737,24 @@ func (s *AssignmentStatementMultiplyEqualASTContext) Expression(i int) IExpressi
 }
 
 func (s *AssignmentStatementMultiplyEqualASTContext) MULTIPLYEQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserMULTIPLYEQUAL, 0)
+	return s.GetToken(MiniGoParserMULTIPLYEQUAL, 0)
 }
 
 func (s *AssignmentStatementMultiplyEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementMultiplyEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementMultiplyEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementMultiplyEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementMultiplyEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementMultiplyEqualAST(s)
 
 	default:
@@ -12821,24 +12822,24 @@ func (s *AssignmentStatementBitwiseOrEqualASTContext) Expression(i int) IExpress
 }
 
 func (s *AssignmentStatementBitwiseOrEqualASTContext) BITWISEOREQUAL() antlr.TerminalNode {
-	return s.GetToken(miniGoParserBITWISEOREQUAL, 0)
+	return s.GetToken(MiniGoParserBITWISEOREQUAL, 0)
 }
 
 func (s *AssignmentStatementBitwiseOrEqualASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterAssignmentStatementBitwiseOrEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementBitwiseOrEqualASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitAssignmentStatementBitwiseOrEqualAST(s)
 	}
 }
 
 func (s *AssignmentStatementBitwiseOrEqualASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitAssignmentStatementBitwiseOrEqualAST(s)
 
 	default:
@@ -12846,9 +12847,9 @@ func (s *AssignmentStatementBitwiseOrEqualASTContext) Accept(visitor antlr.Parse
 	}
 }
 
-func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementContext) {
+func (p *MiniGoParser) AssignmentStatement() (localctx IAssignmentStatementContext) {
 	localctx = NewAssignmentStatementContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 66, miniGoParserRULE_assignmentStatement)
+	p.EnterRule(localctx, 66, MiniGoParserRULE_assignmentStatement)
 	p.SetState(500)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -12865,7 +12866,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(453)
-			p.Match(miniGoParserASSIGN)
+			p.Match(MiniGoParserASSIGN)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -12885,7 +12886,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(457)
-			p.Match(miniGoParserPLUSEQUAL)
+			p.Match(MiniGoParserPLUSEQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -12905,7 +12906,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(461)
-			p.Match(miniGoParserMINUSEQUAL)
+			p.Match(MiniGoParserMINUSEQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -12925,7 +12926,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(465)
-			p.Match(miniGoParserBITWISEANDEQUAL)
+			p.Match(MiniGoParserBITWISEANDEQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -12945,7 +12946,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(469)
-			p.Match(miniGoParserBITWISEOREQUAL)
+			p.Match(MiniGoParserBITWISEOREQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -12965,7 +12966,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(473)
-			p.Match(miniGoParserMULTIPLYEQUAL)
+			p.Match(MiniGoParserMULTIPLYEQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -12985,7 +12986,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(477)
-			p.Match(miniGoParserBITWISEXOREQUAL)
+			p.Match(MiniGoParserBITWISEXOREQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13005,7 +13006,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(481)
-			p.Match(miniGoParserSHIFTLEFTEQUAL)
+			p.Match(MiniGoParserSHIFTLEFTEQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13025,7 +13026,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(485)
-			p.Match(miniGoParserSHIFTRIGHTEQUAL)
+			p.Match(MiniGoParserSHIFTRIGHTEQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13045,7 +13046,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(489)
-			p.Match(miniGoParserBITWISECLEAREQUAL)
+			p.Match(MiniGoParserBITWISECLEAREQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13065,7 +13066,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(493)
-			p.Match(miniGoParserMODULOEQUAL)
+			p.Match(MiniGoParserMODULOEQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13085,7 +13086,7 @@ func (p *miniGoParser) AssignmentStatement() (localctx IAssignmentStatementConte
 		}
 		{
 			p.SetState(497)
-			p.Match(miniGoParserDIVIDEEQUAL)
+			p.Match(MiniGoParserDIVIDEEQUAL)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13131,13 +13132,13 @@ type IfStatementContext struct {
 func NewEmptyIfStatementContext() *IfStatementContext {
 	var p = new(IfStatementContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_ifStatement
+	p.RuleIndex = MiniGoParserRULE_ifStatement
 	return p
 }
 
 func InitEmptyIfStatementContext(p *IfStatementContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_ifStatement
+	p.RuleIndex = MiniGoParserRULE_ifStatement
 }
 
 func (*IfStatementContext) IsIfStatementContext() {}
@@ -13148,7 +13149,7 @@ func NewIfStatementContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_ifStatement
+	p.RuleIndex = MiniGoParserRULE_ifStatement
 
 	return p
 }
@@ -13186,7 +13187,7 @@ func (s *IfSimpleStatementASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *IfSimpleStatementASTContext) IF() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIF, 0)
+	return s.GetToken(MiniGoParserIF, 0)
 }
 
 func (s *IfSimpleStatementASTContext) SimpleStatement() ISimpleStatementContext {
@@ -13206,7 +13207,7 @@ func (s *IfSimpleStatementASTContext) SimpleStatement() ISimpleStatementContext 
 }
 
 func (s *IfSimpleStatementASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *IfSimpleStatementASTContext) Expression() IExpressionContext {
@@ -13242,20 +13243,20 @@ func (s *IfSimpleStatementASTContext) Block() IBlockContext {
 }
 
 func (s *IfSimpleStatementASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterIfSimpleStatementAST(s)
 	}
 }
 
 func (s *IfSimpleStatementASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitIfSimpleStatementAST(s)
 	}
 }
 
 func (s *IfSimpleStatementASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitIfSimpleStatementAST(s)
 
 	default:
@@ -13282,7 +13283,7 @@ func (s *IfElseIfStatementASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *IfElseIfStatementASTContext) IF() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIF, 0)
+	return s.GetToken(MiniGoParserIF, 0)
 }
 
 func (s *IfElseIfStatementASTContext) Expression() IExpressionContext {
@@ -13318,7 +13319,7 @@ func (s *IfElseIfStatementASTContext) Block() IBlockContext {
 }
 
 func (s *IfElseIfStatementASTContext) ELSE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserELSE, 0)
+	return s.GetToken(MiniGoParserELSE, 0)
 }
 
 func (s *IfElseIfStatementASTContext) IfStatement() IIfStatementContext {
@@ -13338,20 +13339,20 @@ func (s *IfElseIfStatementASTContext) IfStatement() IIfStatementContext {
 }
 
 func (s *IfElseIfStatementASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterIfElseIfStatementAST(s)
 	}
 }
 
 func (s *IfElseIfStatementASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitIfElseIfStatementAST(s)
 	}
 }
 
 func (s *IfElseIfStatementASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitIfElseIfStatementAST(s)
 
 	default:
@@ -13378,7 +13379,7 @@ func (s *IfStatementASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *IfStatementASTContext) IF() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIF, 0)
+	return s.GetToken(MiniGoParserIF, 0)
 }
 
 func (s *IfStatementASTContext) Expression() IExpressionContext {
@@ -13414,20 +13415,20 @@ func (s *IfStatementASTContext) Block() IBlockContext {
 }
 
 func (s *IfStatementASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterIfStatementAST(s)
 	}
 }
 
 func (s *IfStatementASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitIfStatementAST(s)
 	}
 }
 
 func (s *IfStatementASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitIfStatementAST(s)
 
 	default:
@@ -13454,7 +13455,7 @@ func (s *IfElseStatementASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *IfElseStatementASTContext) IF() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIF, 0)
+	return s.GetToken(MiniGoParserIF, 0)
 }
 
 func (s *IfElseStatementASTContext) Expression() IExpressionContext {
@@ -13515,24 +13516,24 @@ func (s *IfElseStatementASTContext) Block(i int) IBlockContext {
 }
 
 func (s *IfElseStatementASTContext) ELSE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserELSE, 0)
+	return s.GetToken(MiniGoParserELSE, 0)
 }
 
 func (s *IfElseStatementASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterIfElseStatementAST(s)
 	}
 }
 
 func (s *IfElseStatementASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitIfElseStatementAST(s)
 	}
 }
 
 func (s *IfElseStatementASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitIfElseStatementAST(s)
 
 	default:
@@ -13559,7 +13560,7 @@ func (s *IfSimpleElseStatementASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *IfSimpleElseStatementASTContext) IF() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIF, 0)
+	return s.GetToken(MiniGoParserIF, 0)
 }
 
 func (s *IfSimpleElseStatementASTContext) SimpleStatement() ISimpleStatementContext {
@@ -13579,7 +13580,7 @@ func (s *IfSimpleElseStatementASTContext) SimpleStatement() ISimpleStatementCont
 }
 
 func (s *IfSimpleElseStatementASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *IfSimpleElseStatementASTContext) Expression() IExpressionContext {
@@ -13640,24 +13641,24 @@ func (s *IfSimpleElseStatementASTContext) Block(i int) IBlockContext {
 }
 
 func (s *IfSimpleElseStatementASTContext) ELSE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserELSE, 0)
+	return s.GetToken(MiniGoParserELSE, 0)
 }
 
 func (s *IfSimpleElseStatementASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterIfSimpleElseStatementAST(s)
 	}
 }
 
 func (s *IfSimpleElseStatementASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitIfSimpleElseStatementAST(s)
 	}
 }
 
 func (s *IfSimpleElseStatementASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitIfSimpleElseStatementAST(s)
 
 	default:
@@ -13684,7 +13685,7 @@ func (s *IfSimpleElseIfStatementASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *IfSimpleElseIfStatementASTContext) IF() antlr.TerminalNode {
-	return s.GetToken(miniGoParserIF, 0)
+	return s.GetToken(MiniGoParserIF, 0)
 }
 
 func (s *IfSimpleElseIfStatementASTContext) SimpleStatement() ISimpleStatementContext {
@@ -13704,7 +13705,7 @@ func (s *IfSimpleElseIfStatementASTContext) SimpleStatement() ISimpleStatementCo
 }
 
 func (s *IfSimpleElseIfStatementASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *IfSimpleElseIfStatementASTContext) Expression() IExpressionContext {
@@ -13740,7 +13741,7 @@ func (s *IfSimpleElseIfStatementASTContext) Block() IBlockContext {
 }
 
 func (s *IfSimpleElseIfStatementASTContext) ELSE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserELSE, 0)
+	return s.GetToken(MiniGoParserELSE, 0)
 }
 
 func (s *IfSimpleElseIfStatementASTContext) IfStatement() IIfStatementContext {
@@ -13760,20 +13761,20 @@ func (s *IfSimpleElseIfStatementASTContext) IfStatement() IIfStatementContext {
 }
 
 func (s *IfSimpleElseIfStatementASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterIfSimpleElseIfStatementAST(s)
 	}
 }
 
 func (s *IfSimpleElseIfStatementASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitIfSimpleElseIfStatementAST(s)
 	}
 }
 
 func (s *IfSimpleElseIfStatementASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitIfSimpleElseIfStatementAST(s)
 
 	default:
@@ -13781,9 +13782,9 @@ func (s *IfSimpleElseIfStatementASTContext) Accept(visitor antlr.ParseTreeVisito
 	}
 }
 
-func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
+func (p *MiniGoParser) IfStatement() (localctx IIfStatementContext) {
 	localctx = NewIfStatementContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 68, miniGoParserRULE_ifStatement)
+	p.EnterRule(localctx, 68, MiniGoParserRULE_ifStatement)
 	p.SetState(540)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -13796,7 +13797,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(502)
-			p.Match(miniGoParserIF)
+			p.Match(MiniGoParserIF)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13816,7 +13817,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(506)
-			p.Match(miniGoParserIF)
+			p.Match(MiniGoParserIF)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13832,7 +13833,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		}
 		{
 			p.SetState(509)
-			p.Match(miniGoParserELSE)
+			p.Match(MiniGoParserELSE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13848,7 +13849,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(512)
-			p.Match(miniGoParserIF)
+			p.Match(MiniGoParserIF)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13864,7 +13865,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		}
 		{
 			p.SetState(515)
-			p.Match(miniGoParserELSE)
+			p.Match(MiniGoParserELSE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13880,7 +13881,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		p.EnterOuterAlt(localctx, 4)
 		{
 			p.SetState(518)
-			p.Match(miniGoParserIF)
+			p.Match(MiniGoParserIF)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13892,7 +13893,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		}
 		{
 			p.SetState(520)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13912,7 +13913,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		p.EnterOuterAlt(localctx, 5)
 		{
 			p.SetState(524)
-			p.Match(miniGoParserIF)
+			p.Match(MiniGoParserIF)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13924,7 +13925,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		}
 		{
 			p.SetState(526)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13940,7 +13941,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		}
 		{
 			p.SetState(529)
-			p.Match(miniGoParserELSE)
+			p.Match(MiniGoParserELSE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13956,7 +13957,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		p.EnterOuterAlt(localctx, 6)
 		{
 			p.SetState(532)
-			p.Match(miniGoParserIF)
+			p.Match(MiniGoParserIF)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13968,7 +13969,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		}
 		{
 			p.SetState(534)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -13984,7 +13985,7 @@ func (p *miniGoParser) IfStatement() (localctx IIfStatementContext) {
 		}
 		{
 			p.SetState(537)
-			p.Match(miniGoParserELSE)
+			p.Match(MiniGoParserELSE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -14030,13 +14031,13 @@ type LoopContext struct {
 func NewEmptyLoopContext() *LoopContext {
 	var p = new(LoopContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_loop
+	p.RuleIndex = MiniGoParserRULE_loop
 	return p
 }
 
 func InitEmptyLoopContext(p *LoopContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_loop
+	p.RuleIndex = MiniGoParserRULE_loop
 }
 
 func (*LoopContext) IsLoopContext() {}
@@ -14047,7 +14048,7 @@ func NewLoopContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokin
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_loop
+	p.RuleIndex = MiniGoParserRULE_loop
 
 	return p
 }
@@ -14085,7 +14086,7 @@ func (s *LoopExpressionBlockASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *LoopExpressionBlockASTContext) FOR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserFOR, 0)
+	return s.GetToken(MiniGoParserFOR, 0)
 }
 
 func (s *LoopExpressionBlockASTContext) Expression() IExpressionContext {
@@ -14121,20 +14122,20 @@ func (s *LoopExpressionBlockASTContext) Block() IBlockContext {
 }
 
 func (s *LoopExpressionBlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLoopExpressionBlockAST(s)
 	}
 }
 
 func (s *LoopExpressionBlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLoopExpressionBlockAST(s)
 	}
 }
 
 func (s *LoopExpressionBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLoopExpressionBlockAST(s)
 
 	default:
@@ -14161,7 +14162,7 @@ func (s *LoopBlockASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *LoopBlockASTContext) FOR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserFOR, 0)
+	return s.GetToken(MiniGoParserFOR, 0)
 }
 
 func (s *LoopBlockASTContext) Block() IBlockContext {
@@ -14181,20 +14182,20 @@ func (s *LoopBlockASTContext) Block() IBlockContext {
 }
 
 func (s *LoopBlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLoopBlockAST(s)
 	}
 }
 
 func (s *LoopBlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLoopBlockAST(s)
 	}
 }
 
 func (s *LoopBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLoopBlockAST(s)
 
 	default:
@@ -14221,7 +14222,7 @@ func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) GetRuleCon
 }
 
 func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) FOR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserFOR, 0)
+	return s.GetToken(MiniGoParserFOR, 0)
 }
 
 func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) AllSimpleStatement() []ISimpleStatementContext {
@@ -14266,11 +14267,11 @@ func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) SimpleStat
 }
 
 func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) AllSEMICOLON() []antlr.TerminalNode {
-	return s.GetTokens(miniGoParserSEMICOLON)
+	return s.GetTokens(MiniGoParserSEMICOLON)
 }
 
 func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) SEMICOLON(i int) antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, i)
+	return s.GetToken(MiniGoParserSEMICOLON, i)
 }
 
 func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) Expression() IExpressionContext {
@@ -14306,20 +14307,20 @@ func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) Block() IB
 }
 
 func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLoopSimpleStatementExpressionSimpleStatementBlockAST(s)
 	}
 }
 
 func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLoopSimpleStatementExpressionSimpleStatementBlockAST(s)
 	}
 }
 
 func (s *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLoopSimpleStatementExpressionSimpleStatementBlockAST(s)
 
 	default:
@@ -14346,7 +14347,7 @@ func (s *LoopSimpleStatementSimpleStatementBlockASTContext) GetRuleContext() ant
 }
 
 func (s *LoopSimpleStatementSimpleStatementBlockASTContext) FOR() antlr.TerminalNode {
-	return s.GetToken(miniGoParserFOR, 0)
+	return s.GetToken(MiniGoParserFOR, 0)
 }
 
 func (s *LoopSimpleStatementSimpleStatementBlockASTContext) AllSimpleStatement() []ISimpleStatementContext {
@@ -14391,11 +14392,11 @@ func (s *LoopSimpleStatementSimpleStatementBlockASTContext) SimpleStatement(i in
 }
 
 func (s *LoopSimpleStatementSimpleStatementBlockASTContext) AllSEMICOLON() []antlr.TerminalNode {
-	return s.GetTokens(miniGoParserSEMICOLON)
+	return s.GetTokens(MiniGoParserSEMICOLON)
 }
 
 func (s *LoopSimpleStatementSimpleStatementBlockASTContext) SEMICOLON(i int) antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, i)
+	return s.GetToken(MiniGoParserSEMICOLON, i)
 }
 
 func (s *LoopSimpleStatementSimpleStatementBlockASTContext) Block() IBlockContext {
@@ -14415,20 +14416,20 @@ func (s *LoopSimpleStatementSimpleStatementBlockASTContext) Block() IBlockContex
 }
 
 func (s *LoopSimpleStatementSimpleStatementBlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterLoopSimpleStatementSimpleStatementBlockAST(s)
 	}
 }
 
 func (s *LoopSimpleStatementSimpleStatementBlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitLoopSimpleStatementSimpleStatementBlockAST(s)
 	}
 }
 
 func (s *LoopSimpleStatementSimpleStatementBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitLoopSimpleStatementSimpleStatementBlockAST(s)
 
 	default:
@@ -14436,9 +14437,9 @@ func (s *LoopSimpleStatementSimpleStatementBlockASTContext) Accept(visitor antlr
 	}
 }
 
-func (p *miniGoParser) Loop() (localctx ILoopContext) {
+func (p *MiniGoParser) Loop() (localctx ILoopContext) {
 	localctx = NewLoopContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 70, miniGoParserRULE_loop)
+	p.EnterRule(localctx, 70, MiniGoParserRULE_loop)
 	p.SetState(563)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -14451,7 +14452,7 @@ func (p *miniGoParser) Loop() (localctx ILoopContext) {
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(542)
-			p.Match(miniGoParserFOR)
+			p.Match(MiniGoParserFOR)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -14467,7 +14468,7 @@ func (p *miniGoParser) Loop() (localctx ILoopContext) {
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(544)
-			p.Match(miniGoParserFOR)
+			p.Match(MiniGoParserFOR)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -14487,7 +14488,7 @@ func (p *miniGoParser) Loop() (localctx ILoopContext) {
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(548)
-			p.Match(miniGoParserFOR)
+			p.Match(MiniGoParserFOR)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -14499,7 +14500,7 @@ func (p *miniGoParser) Loop() (localctx ILoopContext) {
 		}
 		{
 			p.SetState(550)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -14511,7 +14512,7 @@ func (p *miniGoParser) Loop() (localctx ILoopContext) {
 		}
 		{
 			p.SetState(552)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -14531,7 +14532,7 @@ func (p *miniGoParser) Loop() (localctx ILoopContext) {
 		p.EnterOuterAlt(localctx, 4)
 		{
 			p.SetState(556)
-			p.Match(miniGoParserFOR)
+			p.Match(MiniGoParserFOR)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -14543,7 +14544,7 @@ func (p *miniGoParser) Loop() (localctx ILoopContext) {
 		}
 		{
 			p.SetState(558)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -14551,7 +14552,7 @@ func (p *miniGoParser) Loop() (localctx ILoopContext) {
 		}
 		{
 			p.SetState(559)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -14601,13 +14602,13 @@ type SwitchStmtContext struct {
 func NewEmptySwitchStmtContext() *SwitchStmtContext {
 	var p = new(SwitchStmtContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_switchStmt
+	p.RuleIndex = MiniGoParserRULE_switchStmt
 	return p
 }
 
 func InitEmptySwitchStmtContext(p *SwitchStmtContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_switchStmt
+	p.RuleIndex = MiniGoParserRULE_switchStmt
 }
 
 func (*SwitchStmtContext) IsSwitchStmtContext() {}
@@ -14618,7 +14619,7 @@ func NewSwitchStmtContext(parser antlr.Parser, parent antlr.ParserRuleContext, i
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_switchStmt
+	p.RuleIndex = MiniGoParserRULE_switchStmt
 
 	return p
 }
@@ -14656,7 +14657,7 @@ func (s *SwitchStmtSimpleStatementASTContext) GetRuleContext() antlr.RuleContext
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) SWITCH() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSWITCH, 0)
+	return s.GetToken(MiniGoParserSWITCH, 0)
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) SimpleStatement() ISimpleStatementContext {
@@ -14676,7 +14677,7 @@ func (s *SwitchStmtSimpleStatementASTContext) SimpleStatement() ISimpleStatement
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) Expression() IExpressionContext {
@@ -14696,7 +14697,7 @@ func (s *SwitchStmtSimpleStatementASTContext) Expression() IExpressionContext {
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) LBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLBRACE, 0)
+	return s.GetToken(MiniGoParserLBRACE, 0)
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) ExpressionCaseClauseList() IExpressionCaseClauseListContext {
@@ -14716,24 +14717,24 @@ func (s *SwitchStmtSimpleStatementASTContext) ExpressionCaseClauseList() IExpres
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) RBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRBRACE, 0)
+	return s.GetToken(MiniGoParserRBRACE, 0)
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSwitchStmtSimpleStatementAST(s)
 	}
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSwitchStmtSimpleStatementAST(s)
 	}
 }
 
 func (s *SwitchStmtSimpleStatementASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSwitchStmtSimpleStatementAST(s)
 
 	default:
@@ -14760,7 +14761,7 @@ func (s *SwitchStmtExpressionASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *SwitchStmtExpressionASTContext) SWITCH() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSWITCH, 0)
+	return s.GetToken(MiniGoParserSWITCH, 0)
 }
 
 func (s *SwitchStmtExpressionASTContext) Expression() IExpressionContext {
@@ -14780,7 +14781,7 @@ func (s *SwitchStmtExpressionASTContext) Expression() IExpressionContext {
 }
 
 func (s *SwitchStmtExpressionASTContext) LBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLBRACE, 0)
+	return s.GetToken(MiniGoParserLBRACE, 0)
 }
 
 func (s *SwitchStmtExpressionASTContext) ExpressionCaseClauseList() IExpressionCaseClauseListContext {
@@ -14800,24 +14801,24 @@ func (s *SwitchStmtExpressionASTContext) ExpressionCaseClauseList() IExpressionC
 }
 
 func (s *SwitchStmtExpressionASTContext) RBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRBRACE, 0)
+	return s.GetToken(MiniGoParserRBRACE, 0)
 }
 
 func (s *SwitchStmtExpressionASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSwitchStmtExpressionAST(s)
 	}
 }
 
 func (s *SwitchStmtExpressionASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSwitchStmtExpressionAST(s)
 	}
 }
 
 func (s *SwitchStmtExpressionASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSwitchStmtExpressionAST(s)
 
 	default:
@@ -14844,7 +14845,7 @@ func (s *SwitchStmtSimpleStatementBlockASTContext) GetRuleContext() antlr.RuleCo
 }
 
 func (s *SwitchStmtSimpleStatementBlockASTContext) SWITCH() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSWITCH, 0)
+	return s.GetToken(MiniGoParserSWITCH, 0)
 }
 
 func (s *SwitchStmtSimpleStatementBlockASTContext) SimpleStatement() ISimpleStatementContext {
@@ -14864,11 +14865,11 @@ func (s *SwitchStmtSimpleStatementBlockASTContext) SimpleStatement() ISimpleStat
 }
 
 func (s *SwitchStmtSimpleStatementBlockASTContext) SEMICOLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSEMICOLON, 0)
+	return s.GetToken(MiniGoParserSEMICOLON, 0)
 }
 
 func (s *SwitchStmtSimpleStatementBlockASTContext) LBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLBRACE, 0)
+	return s.GetToken(MiniGoParserLBRACE, 0)
 }
 
 func (s *SwitchStmtSimpleStatementBlockASTContext) ExpressionCaseClauseList() IExpressionCaseClauseListContext {
@@ -14888,24 +14889,24 @@ func (s *SwitchStmtSimpleStatementBlockASTContext) ExpressionCaseClauseList() IE
 }
 
 func (s *SwitchStmtSimpleStatementBlockASTContext) RBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRBRACE, 0)
+	return s.GetToken(MiniGoParserRBRACE, 0)
 }
 
 func (s *SwitchStmtSimpleStatementBlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSwitchStmtSimpleStatementBlockAST(s)
 	}
 }
 
 func (s *SwitchStmtSimpleStatementBlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSwitchStmtSimpleStatementBlockAST(s)
 	}
 }
 
 func (s *SwitchStmtSimpleStatementBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSwitchStmtSimpleStatementBlockAST(s)
 
 	default:
@@ -14932,11 +14933,11 @@ func (s *SwitchStmtBlockASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *SwitchStmtBlockASTContext) SWITCH() antlr.TerminalNode {
-	return s.GetToken(miniGoParserSWITCH, 0)
+	return s.GetToken(MiniGoParserSWITCH, 0)
 }
 
 func (s *SwitchStmtBlockASTContext) LBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserLBRACE, 0)
+	return s.GetToken(MiniGoParserLBRACE, 0)
 }
 
 func (s *SwitchStmtBlockASTContext) ExpressionCaseClauseList() IExpressionCaseClauseListContext {
@@ -14956,24 +14957,24 @@ func (s *SwitchStmtBlockASTContext) ExpressionCaseClauseList() IExpressionCaseCl
 }
 
 func (s *SwitchStmtBlockASTContext) RBRACE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserRBRACE, 0)
+	return s.GetToken(MiniGoParserRBRACE, 0)
 }
 
 func (s *SwitchStmtBlockASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterSwitchStmtBlockAST(s)
 	}
 }
 
 func (s *SwitchStmtBlockASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitSwitchStmtBlockAST(s)
 	}
 }
 
 func (s *SwitchStmtBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitSwitchStmtBlockAST(s)
 
 	default:
@@ -14981,9 +14982,9 @@ func (s *SwitchStmtBlockASTContext) Accept(visitor antlr.ParseTreeVisitor) inter
 	}
 }
 
-func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
+func (p *MiniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 	localctx = NewSwitchStmtContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 72, miniGoParserRULE_switchStmt)
+	p.EnterRule(localctx, 72, MiniGoParserRULE_switchStmt)
 	p.SetState(591)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -14996,7 +14997,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(565)
-			p.Match(miniGoParserSWITCH)
+			p.Match(MiniGoParserSWITCH)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15008,7 +15009,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(567)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15020,7 +15021,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(569)
-			p.Match(miniGoParserLBRACE)
+			p.Match(MiniGoParserLBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15032,7 +15033,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(571)
-			p.Match(miniGoParserRBRACE)
+			p.Match(MiniGoParserRBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15044,7 +15045,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(573)
-			p.Match(miniGoParserSWITCH)
+			p.Match(MiniGoParserSWITCH)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15056,7 +15057,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(575)
-			p.Match(miniGoParserLBRACE)
+			p.Match(MiniGoParserLBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15068,7 +15069,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(577)
-			p.Match(miniGoParserRBRACE)
+			p.Match(MiniGoParserRBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15080,7 +15081,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		p.EnterOuterAlt(localctx, 3)
 		{
 			p.SetState(579)
-			p.Match(miniGoParserSWITCH)
+			p.Match(MiniGoParserSWITCH)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15092,7 +15093,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(581)
-			p.Match(miniGoParserSEMICOLON)
+			p.Match(MiniGoParserSEMICOLON)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15100,7 +15101,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(582)
-			p.Match(miniGoParserLBRACE)
+			p.Match(MiniGoParserLBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15112,7 +15113,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(584)
-			p.Match(miniGoParserRBRACE)
+			p.Match(MiniGoParserRBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15124,7 +15125,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		p.EnterOuterAlt(localctx, 4)
 		{
 			p.SetState(586)
-			p.Match(miniGoParserSWITCH)
+			p.Match(MiniGoParserSWITCH)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15132,7 +15133,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(587)
-			p.Match(miniGoParserLBRACE)
+			p.Match(MiniGoParserLBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15144,7 +15145,7 @@ func (p *miniGoParser) SwitchStmt() (localctx ISwitchStmtContext) {
 		}
 		{
 			p.SetState(589)
-			p.Match(miniGoParserRBRACE)
+			p.Match(MiniGoParserRBRACE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15186,13 +15187,13 @@ type ExpressionCaseClauseListContext struct {
 func NewEmptyExpressionCaseClauseListContext() *ExpressionCaseClauseListContext {
 	var p = new(ExpressionCaseClauseListContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expressionCaseClauseList
+	p.RuleIndex = MiniGoParserRULE_expressionCaseClauseList
 	return p
 }
 
 func InitEmptyExpressionCaseClauseListContext(p *ExpressionCaseClauseListContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expressionCaseClauseList
+	p.RuleIndex = MiniGoParserRULE_expressionCaseClauseList
 }
 
 func (*ExpressionCaseClauseListContext) IsExpressionCaseClauseListContext() {}
@@ -15203,7 +15204,7 @@ func NewExpressionCaseClauseListContext(parser antlr.Parser, parent antlr.Parser
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_expressionCaseClauseList
+	p.RuleIndex = MiniGoParserRULE_expressionCaseClauseList
 
 	return p
 }
@@ -15257,20 +15258,20 @@ func (s *ExpressionCaseClauseListEmptyASTContext) Epsilon() IEpsilonContext {
 }
 
 func (s *ExpressionCaseClauseListEmptyASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionCaseClauseListEmptyAST(s)
 	}
 }
 
 func (s *ExpressionCaseClauseListEmptyASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionCaseClauseListEmptyAST(s)
 	}
 }
 
 func (s *ExpressionCaseClauseListEmptyASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionCaseClauseListEmptyAST(s)
 
 	default:
@@ -15329,20 +15330,20 @@ func (s *ExpressionCaseClauseListASTContext) ExpressionCaseClause() IExpressionC
 }
 
 func (s *ExpressionCaseClauseListASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionCaseClauseListAST(s)
 	}
 }
 
 func (s *ExpressionCaseClauseListASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionCaseClauseListAST(s)
 	}
 }
 
 func (s *ExpressionCaseClauseListASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionCaseClauseListAST(s)
 
 	default:
@@ -15350,11 +15351,11 @@ func (s *ExpressionCaseClauseListASTContext) Accept(visitor antlr.ParseTreeVisit
 	}
 }
 
-func (p *miniGoParser) ExpressionCaseClauseList() (localctx IExpressionCaseClauseListContext) {
+func (p *MiniGoParser) ExpressionCaseClauseList() (localctx IExpressionCaseClauseListContext) {
 	return p.expressionCaseClauseList(0)
 }
 
-func (p *miniGoParser) expressionCaseClauseList(_p int) (localctx IExpressionCaseClauseListContext) {
+func (p *MiniGoParser) expressionCaseClauseList(_p int) (localctx IExpressionCaseClauseListContext) {
 	var _parentctx antlr.ParserRuleContext = p.GetParserRuleContext()
 
 	_parentState := p.GetState()
@@ -15362,7 +15363,7 @@ func (p *miniGoParser) expressionCaseClauseList(_p int) (localctx IExpressionCas
 	var _prevctx IExpressionCaseClauseListContext = localctx
 	var _ antlr.ParserRuleContext = _prevctx // TODO: To prevent unused variable warning.
 	_startState := 74
-	p.EnterRecursionRule(localctx, 74, miniGoParserRULE_expressionCaseClauseList, _p)
+	p.EnterRecursionRule(localctx, 74, MiniGoParserRULE_expressionCaseClauseList, _p)
 	var _alt int
 
 	p.EnterOuterAlt(localctx, 1)
@@ -15392,7 +15393,7 @@ func (p *miniGoParser) expressionCaseClauseList(_p int) (localctx IExpressionCas
 			}
 			_prevctx = localctx
 			localctx = NewExpressionCaseClauseListASTContext(p, NewExpressionCaseClauseListContext(p, _parentctx, _parentState))
-			p.PushNewRecursionContext(localctx, _startState, miniGoParserRULE_expressionCaseClauseList)
+			p.PushNewRecursionContext(localctx, _startState, MiniGoParserRULE_expressionCaseClauseList)
 			p.SetState(596)
 
 			if !(p.Precpred(p.GetParserRuleContext(), 1)) {
@@ -15447,13 +15448,13 @@ type ExpressionCaseClauseContext struct {
 func NewEmptyExpressionCaseClauseContext() *ExpressionCaseClauseContext {
 	var p = new(ExpressionCaseClauseContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expressionCaseClause
+	p.RuleIndex = MiniGoParserRULE_expressionCaseClause
 	return p
 }
 
 func InitEmptyExpressionCaseClauseContext(p *ExpressionCaseClauseContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expressionCaseClause
+	p.RuleIndex = MiniGoParserRULE_expressionCaseClause
 }
 
 func (*ExpressionCaseClauseContext) IsExpressionCaseClauseContext() {}
@@ -15464,7 +15465,7 @@ func NewExpressionCaseClauseContext(parser antlr.Parser, parent antlr.ParserRule
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_expressionCaseClause
+	p.RuleIndex = MiniGoParserRULE_expressionCaseClause
 
 	return p
 }
@@ -15518,7 +15519,7 @@ func (s *ExpressionCaseClauseASTContext) ExpressionSwitchCase() IExpressionSwitc
 }
 
 func (s *ExpressionCaseClauseASTContext) COLON() antlr.TerminalNode {
-	return s.GetToken(miniGoParserCOLON, 0)
+	return s.GetToken(MiniGoParserCOLON, 0)
 }
 
 func (s *ExpressionCaseClauseASTContext) StatementList() IStatementListContext {
@@ -15538,20 +15539,20 @@ func (s *ExpressionCaseClauseASTContext) StatementList() IStatementListContext {
 }
 
 func (s *ExpressionCaseClauseASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionCaseClauseAST(s)
 	}
 }
 
 func (s *ExpressionCaseClauseASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionCaseClauseAST(s)
 	}
 }
 
 func (s *ExpressionCaseClauseASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionCaseClauseAST(s)
 
 	default:
@@ -15559,9 +15560,9 @@ func (s *ExpressionCaseClauseASTContext) Accept(visitor antlr.ParseTreeVisitor) 
 	}
 }
 
-func (p *miniGoParser) ExpressionCaseClause() (localctx IExpressionCaseClauseContext) {
+func (p *MiniGoParser) ExpressionCaseClause() (localctx IExpressionCaseClauseContext) {
 	localctx = NewExpressionCaseClauseContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 76, miniGoParserRULE_expressionCaseClause)
+	p.EnterRule(localctx, 76, MiniGoParserRULE_expressionCaseClause)
 	localctx = NewExpressionCaseClauseASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 	{
@@ -15570,7 +15571,7 @@ func (p *miniGoParser) ExpressionCaseClause() (localctx IExpressionCaseClauseCon
 	}
 	{
 		p.SetState(604)
-		p.Match(miniGoParserCOLON)
+		p.Match(MiniGoParserCOLON)
 		if p.HasError() {
 			// Recognition error - abort rule
 			goto errorExit
@@ -15612,13 +15613,13 @@ type ExpressionSwitchCaseContext struct {
 func NewEmptyExpressionSwitchCaseContext() *ExpressionSwitchCaseContext {
 	var p = new(ExpressionSwitchCaseContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expressionSwitchCase
+	p.RuleIndex = MiniGoParserRULE_expressionSwitchCase
 	return p
 }
 
 func InitEmptyExpressionSwitchCaseContext(p *ExpressionSwitchCaseContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_expressionSwitchCase
+	p.RuleIndex = MiniGoParserRULE_expressionSwitchCase
 }
 
 func (*ExpressionSwitchCaseContext) IsExpressionSwitchCaseContext() {}
@@ -15629,7 +15630,7 @@ func NewExpressionSwitchCaseContext(parser antlr.Parser, parent antlr.ParserRule
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_expressionSwitchCase
+	p.RuleIndex = MiniGoParserRULE_expressionSwitchCase
 
 	return p
 }
@@ -15667,7 +15668,7 @@ func (s *ExpressionSwitchCaseASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *ExpressionSwitchCaseASTContext) CASE() antlr.TerminalNode {
-	return s.GetToken(miniGoParserCASE, 0)
+	return s.GetToken(MiniGoParserCASE, 0)
 }
 
 func (s *ExpressionSwitchCaseASTContext) ExpressionList() IExpressionListContext {
@@ -15687,20 +15688,20 @@ func (s *ExpressionSwitchCaseASTContext) ExpressionList() IExpressionListContext
 }
 
 func (s *ExpressionSwitchCaseASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionSwitchCaseAST(s)
 	}
 }
 
 func (s *ExpressionSwitchCaseASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionSwitchCaseAST(s)
 	}
 }
 
 func (s *ExpressionSwitchCaseASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionSwitchCaseAST(s)
 
 	default:
@@ -15727,24 +15728,24 @@ func (s *ExpressionSwitchDefaultASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *ExpressionSwitchDefaultASTContext) DEFAULT() antlr.TerminalNode {
-	return s.GetToken(miniGoParserDEFAULT, 0)
+	return s.GetToken(MiniGoParserDEFAULT, 0)
 }
 
 func (s *ExpressionSwitchDefaultASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterExpressionSwitchDefaultAST(s)
 	}
 }
 
 func (s *ExpressionSwitchDefaultASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitExpressionSwitchDefaultAST(s)
 	}
 }
 
 func (s *ExpressionSwitchDefaultASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitExpressionSwitchDefaultAST(s)
 
 	default:
@@ -15752,9 +15753,9 @@ func (s *ExpressionSwitchDefaultASTContext) Accept(visitor antlr.ParseTreeVisito
 	}
 }
 
-func (p *miniGoParser) ExpressionSwitchCase() (localctx IExpressionSwitchCaseContext) {
+func (p *MiniGoParser) ExpressionSwitchCase() (localctx IExpressionSwitchCaseContext) {
 	localctx = NewExpressionSwitchCaseContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 78, miniGoParserRULE_expressionSwitchCase)
+	p.EnterRule(localctx, 78, MiniGoParserRULE_expressionSwitchCase)
 	p.SetState(610)
 	p.GetErrorHandler().Sync(p)
 	if p.HasError() {
@@ -15762,12 +15763,12 @@ func (p *miniGoParser) ExpressionSwitchCase() (localctx IExpressionSwitchCaseCon
 	}
 
 	switch p.GetTokenStream().LA(1) {
-	case miniGoParserCASE:
+	case MiniGoParserCASE:
 		localctx = NewExpressionSwitchCaseASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 1)
 		{
 			p.SetState(607)
-			p.Match(miniGoParserCASE)
+			p.Match(MiniGoParserCASE)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15778,12 +15779,12 @@ func (p *miniGoParser) ExpressionSwitchCase() (localctx IExpressionSwitchCaseCon
 			p.ExpressionList()
 		}
 
-	case miniGoParserDEFAULT:
+	case MiniGoParserDEFAULT:
 		localctx = NewExpressionSwitchDefaultASTContext(p, localctx)
 		p.EnterOuterAlt(localctx, 2)
 		{
 			p.SetState(609)
-			p.Match(miniGoParserDEFAULT)
+			p.Match(MiniGoParserDEFAULT)
 			if p.HasError() {
 				// Recognition error - abort rule
 				goto errorExit
@@ -15826,13 +15827,13 @@ type EpsilonContext struct {
 func NewEmptyEpsilonContext() *EpsilonContext {
 	var p = new(EpsilonContext)
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_epsilon
+	p.RuleIndex = MiniGoParserRULE_epsilon
 	return p
 }
 
 func InitEmptyEpsilonContext(p *EpsilonContext) {
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, nil, -1)
-	p.RuleIndex = miniGoParserRULE_epsilon
+	p.RuleIndex = MiniGoParserRULE_epsilon
 }
 
 func (*EpsilonContext) IsEpsilonContext() {}
@@ -15843,7 +15844,7 @@ func NewEpsilonContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	antlr.InitBaseParserRuleContext(&p.BaseParserRuleContext, parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = miniGoParserRULE_epsilon
+	p.RuleIndex = MiniGoParserRULE_epsilon
 
 	return p
 }
@@ -15881,20 +15882,20 @@ func (s *EpsilonASTContext) GetRuleContext() antlr.RuleContext {
 }
 
 func (s *EpsilonASTContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.EnterEpsilonAST(s)
 	}
 }
 
 func (s *EpsilonASTContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(miniGoParserListener); ok {
+	if listenerT, ok := listener.(MiniGoParserListener); ok {
 		listenerT.ExitEpsilonAST(s)
 	}
 }
 
 func (s *EpsilonASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case miniGoParserVisitor:
+	case MiniGoParserVisitor:
 		return t.VisitEpsilonAST(s)
 
 	default:
@@ -15902,9 +15903,9 @@ func (s *EpsilonASTContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	}
 }
 
-func (p *miniGoParser) Epsilon() (localctx IEpsilonContext) {
+func (p *MiniGoParser) Epsilon() (localctx IEpsilonContext) {
 	localctx = NewEpsilonContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 80, miniGoParserRULE_epsilon)
+	p.EnterRule(localctx, 80, MiniGoParserRULE_epsilon)
 	localctx = NewEpsilonASTContext(p, localctx)
 	p.EnterOuterAlt(localctx, 1)
 
@@ -15921,7 +15922,7 @@ errorExit:
 	goto errorExit // Trick to prevent compiler error if the label is not used
 }
 
-func (p *miniGoParser) Sempred(localctx antlr.RuleContext, ruleIndex, predIndex int) bool {
+func (p *MiniGoParser) Sempred(localctx antlr.RuleContext, ruleIndex, predIndex int) bool {
 	switch ruleIndex {
 	case 18:
 		var t *ExpressionContext = nil
@@ -15949,7 +15950,7 @@ func (p *miniGoParser) Sempred(localctx antlr.RuleContext, ruleIndex, predIndex 
 	}
 }
 
-func (p *miniGoParser) Expression_Sempred(localctx antlr.RuleContext, predIndex int) bool {
+func (p *MiniGoParser) Expression_Sempred(localctx antlr.RuleContext, predIndex int) bool {
 	switch predIndex {
 	case 0:
 		return p.Precpred(p.GetParserRuleContext(), 23)
@@ -16013,7 +16014,7 @@ func (p *miniGoParser) Expression_Sempred(localctx antlr.RuleContext, predIndex 
 	}
 }
 
-func (p *miniGoParser) PrimaryExpression_Sempred(localctx antlr.RuleContext, predIndex int) bool {
+func (p *MiniGoParser) PrimaryExpression_Sempred(localctx antlr.RuleContext, predIndex int) bool {
 	switch predIndex {
 	case 19:
 		return p.Precpred(p.GetParserRuleContext(), 6)
@@ -16029,7 +16030,7 @@ func (p *miniGoParser) PrimaryExpression_Sempred(localctx antlr.RuleContext, pre
 	}
 }
 
-func (p *miniGoParser) ExpressionCaseClauseList_Sempred(localctx antlr.RuleContext, predIndex int) bool {
+func (p *MiniGoParser) ExpressionCaseClauseList_Sempred(localctx antlr.RuleContext, predIndex int) bool {
 	switch predIndex {
 	case 22:
 		return p.Precpred(p.GetParserRuleContext(), 1)

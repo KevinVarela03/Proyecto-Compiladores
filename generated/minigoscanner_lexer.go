@@ -1,6 +1,6 @@
-// Code generated from E:/Universidad/2024/I Semestre/Compiladores e Interpretes/Proyecto Compiladores/miniGoScanner.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from C:/Users/noni4/Desktop/Proyecto-Compiladores/MiniGoScanner.g4 by ANTLR 4.13.1. DO NOT EDIT.
 
-package generated
+package parser
 
 import (
 	"fmt"
@@ -14,7 +14,7 @@ var _ = fmt.Printf
 var _ = sync.Once{}
 var _ = unicode.IsLetter
 
-type miniGoScanner struct {
+type MiniGoScanner struct {
 	*antlr.BaseLexer
 	channelNames []string
 	modeNames    []string
@@ -289,19 +289,19 @@ func minigoscannerLexerInit() {
 	}
 }
 
-// miniGoScannerInit initializes any static state used to implement miniGoScanner. By default the
+// MiniGoScannerInit initializes any static state used to implement MiniGoScanner. By default the
 // static state used to implement the lexer is lazily initialized during the first call to
-// NewminiGoScanner(). You can call this function if you wish to initialize the static state ahead
+// NewMiniGoScanner(). You can call this function if you wish to initialize the static state ahead
 // of time.
 func MiniGoScannerInit() {
 	staticData := &MiniGoScannerLexerStaticData
 	staticData.once.Do(minigoscannerLexerInit)
 }
 
-// NewminiGoScanner produces a new lexer instance for the optional input antlr.CharStream.
-func NewminiGoScanner(input antlr.CharStream) *miniGoScanner {
+// NewMiniGoScanner produces a new lexer instance for the optional input antlr.CharStream.
+func NewMiniGoScanner(input antlr.CharStream) *MiniGoScanner {
 	MiniGoScannerInit()
-	l := new(miniGoScanner)
+	l := new(MiniGoScanner)
 	l.BaseLexer = antlr.NewBaseLexer(input)
 	staticData := &MiniGoScannerLexerStaticData
 	l.Interpreter = antlr.NewLexerATNSimulator(l, staticData.atn, staticData.decisionToDFA, staticData.PredictionContextCache)
@@ -310,84 +310,84 @@ func NewminiGoScanner(input antlr.CharStream) *miniGoScanner {
 	l.RuleNames = staticData.RuleNames
 	l.LiteralNames = staticData.LiteralNames
 	l.SymbolicNames = staticData.SymbolicNames
-	l.GrammarFileName = "miniGoScanner.g4"
+	l.GrammarFileName = "MiniGoScanner.g4"
 	// TODO: l.EOF = antlr.TokenEOF
 
 	return l
 }
 
-// miniGoScanner tokens.
+// MiniGoScanner tokens.
 const (
-	miniGoScannerINTLITERAL               = 1
-	miniGoScannerFLOATLITERAL             = 2
-	miniGoScannerRUNELITERAL              = 3
-	miniGoScannerRAWSTRINGLITERAL         = 4
-	miniGoScannerINTERPRETEDSTRINGLITERAL = 5
-	miniGoScannerPACKAGE                  = 6
-	miniGoScannerVAR                      = 7
-	miniGoScannerTYPE                     = 8
-	miniGoScannerFUNC                     = 9
-	miniGoScannerSTRUCT                   = 10
-	miniGoScannerLEN                      = 11
-	miniGoScannerCAP                      = 12
-	miniGoScannerPRINT                    = 13
-	miniGoScannerPRINTLN                  = 14
-	miniGoScannerRETURN                   = 15
-	miniGoScannerBREAK                    = 16
-	miniGoScannerCONTINUE                 = 17
-	miniGoScannerAPPEND                   = 18
-	miniGoScannerIF                       = 19
-	miniGoScannerELSE                     = 20
-	miniGoScannerFOR                      = 21
-	miniGoScannerSWITCH                   = 22
-	miniGoScannerCASE                     = 23
-	miniGoScannerDEFAULT                  = 24
-	miniGoScannerIDENTIFIER               = 25
-	miniGoScannerPLUS                     = 26
-	miniGoScannerMINUS                    = 27
-	miniGoScannerMULTIPLY                 = 28
-	miniGoScannerDIVIDE                   = 29
-	miniGoScannerMODULO                   = 30
-	miniGoScannerLESS                     = 31
-	miniGoScannerLESSEQUAL                = 32
-	miniGoScannerGREATER                  = 33
-	miniGoScannerGREATEREQUAL             = 34
-	miniGoScannerEQUAL                    = 35
-	miniGoScannerNOTEQUAL                 = 36
-	miniGoScannerAND                      = 37
-	miniGoScannerOR                       = 38
-	miniGoScannerNOT                      = 39
-	miniGoScannerBITWISEAND               = 40
-	miniGoScannerBITWISEOR                = 41
-	miniGoScannerBITWISEXOR               = 42
-	miniGoScannerBITWISECLEAR             = 43
-	miniGoScannerSHIFTLEFT                = 44
-	miniGoScannerSHIFTRIGHT               = 45
-	miniGoScannerINCREMENT                = 46
-	miniGoScannerDECREMENT                = 47
-	miniGoScannerASSIGN                   = 48
-	miniGoScannerPLUSEQUAL                = 49
-	miniGoScannerMINUSEQUAL               = 50
-	miniGoScannerMULTIPLYEQUAL            = 51
-	miniGoScannerDIVIDEEQUAL              = 52
-	miniGoScannerMODULOEQUAL              = 53
-	miniGoScannerBITWISEANDEQUAL          = 54
-	miniGoScannerBITWISEOREQUAL           = 55
-	miniGoScannerBITWISEXOREQUAL          = 56
-	miniGoScannerSHIFTLEFTEQUAL           = 57
-	miniGoScannerSHIFTRIGHTEQUAL          = 58
-	miniGoScannerBITWISECLEAREQUAL        = 59
-	miniGoScannerCOLON                    = 60
-	miniGoScannerSEMICOLON                = 61
-	miniGoScannerCOMMA                    = 62
-	miniGoScannerDOT                      = 63
-	miniGoScannerLPAREN                   = 64
-	miniGoScannerRPAREN                   = 65
-	miniGoScannerLBRACKET                 = 66
-	miniGoScannerRBRACKET                 = 67
-	miniGoScannerLBRACE                   = 68
-	miniGoScannerRBRACE                   = 69
-	miniGoScannerSPACES                   = 70
-	miniGoScannerLINE_COMMENT             = 71
-	miniGoScannerBLOCK_COMMENT            = 72
+	MiniGoScannerINTLITERAL               = 1
+	MiniGoScannerFLOATLITERAL             = 2
+	MiniGoScannerRUNELITERAL              = 3
+	MiniGoScannerRAWSTRINGLITERAL         = 4
+	MiniGoScannerINTERPRETEDSTRINGLITERAL = 5
+	MiniGoScannerPACKAGE                  = 6
+	MiniGoScannerVAR                      = 7
+	MiniGoScannerTYPE                     = 8
+	MiniGoScannerFUNC                     = 9
+	MiniGoScannerSTRUCT                   = 10
+	MiniGoScannerLEN                      = 11
+	MiniGoScannerCAP                      = 12
+	MiniGoScannerPRINT                    = 13
+	MiniGoScannerPRINTLN                  = 14
+	MiniGoScannerRETURN                   = 15
+	MiniGoScannerBREAK                    = 16
+	MiniGoScannerCONTINUE                 = 17
+	MiniGoScannerAPPEND                   = 18
+	MiniGoScannerIF                       = 19
+	MiniGoScannerELSE                     = 20
+	MiniGoScannerFOR                      = 21
+	MiniGoScannerSWITCH                   = 22
+	MiniGoScannerCASE                     = 23
+	MiniGoScannerDEFAULT                  = 24
+	MiniGoScannerIDENTIFIER               = 25
+	MiniGoScannerPLUS                     = 26
+	MiniGoScannerMINUS                    = 27
+	MiniGoScannerMULTIPLY                 = 28
+	MiniGoScannerDIVIDE                   = 29
+	MiniGoScannerMODULO                   = 30
+	MiniGoScannerLESS                     = 31
+	MiniGoScannerLESSEQUAL                = 32
+	MiniGoScannerGREATER                  = 33
+	MiniGoScannerGREATEREQUAL             = 34
+	MiniGoScannerEQUAL                    = 35
+	MiniGoScannerNOTEQUAL                 = 36
+	MiniGoScannerAND                      = 37
+	MiniGoScannerOR                       = 38
+	MiniGoScannerNOT                      = 39
+	MiniGoScannerBITWISEAND               = 40
+	MiniGoScannerBITWISEOR                = 41
+	MiniGoScannerBITWISEXOR               = 42
+	MiniGoScannerBITWISECLEAR             = 43
+	MiniGoScannerSHIFTLEFT                = 44
+	MiniGoScannerSHIFTRIGHT               = 45
+	MiniGoScannerINCREMENT                = 46
+	MiniGoScannerDECREMENT                = 47
+	MiniGoScannerASSIGN                   = 48
+	MiniGoScannerPLUSEQUAL                = 49
+	MiniGoScannerMINUSEQUAL               = 50
+	MiniGoScannerMULTIPLYEQUAL            = 51
+	MiniGoScannerDIVIDEEQUAL              = 52
+	MiniGoScannerMODULOEQUAL              = 53
+	MiniGoScannerBITWISEANDEQUAL          = 54
+	MiniGoScannerBITWISEOREQUAL           = 55
+	MiniGoScannerBITWISEXOREQUAL          = 56
+	MiniGoScannerSHIFTLEFTEQUAL           = 57
+	MiniGoScannerSHIFTRIGHTEQUAL          = 58
+	MiniGoScannerBITWISECLEAREQUAL        = 59
+	MiniGoScannerCOLON                    = 60
+	MiniGoScannerSEMICOLON                = 61
+	MiniGoScannerCOMMA                    = 62
+	MiniGoScannerDOT                      = 63
+	MiniGoScannerLPAREN                   = 64
+	MiniGoScannerRPAREN                   = 65
+	MiniGoScannerLBRACKET                 = 66
+	MiniGoScannerRBRACKET                 = 67
+	MiniGoScannerLBRACE                   = 68
+	MiniGoScannerRBRACE                   = 69
+	MiniGoScannerSPACES                   = 70
+	MiniGoScannerLINE_COMMENT             = 71
+	MiniGoScannerBLOCK_COMMENT            = 72
 )

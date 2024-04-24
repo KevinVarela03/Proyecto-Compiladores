@@ -1,508 +1,509 @@
-// Code generated from E:/Universidad/2024/I Semestre/Compiladores e Interpretes/Proyecto Compiladores/miniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from C:/Users/noni4/Desktop/Proyecto-Compiladores/MiniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
 
-package generated // miniGoParser
+package parser // MiniGoParser
+
 import "github.com/antlr4-go/antlr/v4"
 
-type BaseminiGoParserVisitor struct {
+type BaseMiniGoParserVisitor struct {
 	*antlr.BaseParseTreeVisitor
 }
 
-func (v *BaseminiGoParserVisitor) VisitRootAST(ctx *RootASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitRootAST(ctx *RootASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitTopDeclarationListAST(ctx *TopDeclarationListASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitTopDeclarationListAST(ctx *TopDeclarationListASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitVariableDeclAST(ctx *VariableDeclASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitVariableDeclAST(ctx *VariableDeclASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitVariableDeclBlockAST(ctx *VariableDeclBlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitVariableDeclBlockAST(ctx *VariableDeclBlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitVariableDeclEmptyAST(ctx *VariableDeclEmptyASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitVariableDeclEmptyAST(ctx *VariableDeclEmptyASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitInnerVarDeclsAST(ctx *InnerVarDeclsASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitInnerVarDeclsAST(ctx *InnerVarDeclsASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSingleVarDeclAST(ctx *SingleVarDeclASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSingleVarDeclAST(ctx *SingleVarDeclASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSingleVarDeclAssignAST(ctx *SingleVarDeclAssignASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSingleVarDeclAssignAST(ctx *SingleVarDeclAssignASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSingleVarDeclNoExpsAST(ctx *SingleVarDeclNoExpsASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSingleVarDeclNoExpsAST(ctx *SingleVarDeclNoExpsASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSingleVarDeclNoExpsDeclTypeAST(ctx *SingleVarDeclNoExpsDeclTypeASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSingleVarDeclNoExpsDeclTypeAST(ctx *SingleVarDeclNoExpsDeclTypeASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitTypeDeclAST(ctx *TypeDeclASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitTypeDeclAST(ctx *TypeDeclASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitTypeDeclBlockAST(ctx *TypeDeclBlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitTypeDeclBlockAST(ctx *TypeDeclBlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitTypeDeclEmptyAST(ctx *TypeDeclEmptyASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitTypeDeclEmptyAST(ctx *TypeDeclEmptyASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitInnerTypeDeclsAST(ctx *InnerTypeDeclsASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitInnerTypeDeclsAST(ctx *InnerTypeDeclsASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSingleTypeDeclAST(ctx *SingleTypeDeclASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSingleTypeDeclAST(ctx *SingleTypeDeclASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitFuncDeclAST(ctx *FuncDeclASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitFuncDeclAST(ctx *FuncDeclASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitFuncFrontDeclAST(ctx *FuncFrontDeclASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitFuncFrontDeclAST(ctx *FuncFrontDeclASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitFuncArgDeclsAST(ctx *FuncArgDeclsASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitFuncArgDeclsAST(ctx *FuncArgDeclsASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitDeclTypeParenAST(ctx *DeclTypeParenASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitDeclTypeParenAST(ctx *DeclTypeParenASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitDeclTypeIdentifierAST(ctx *DeclTypeIdentifierASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitDeclTypeIdentifierAST(ctx *DeclTypeIdentifierASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitDeclTypeSliceAST(ctx *DeclTypeSliceASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitDeclTypeSliceAST(ctx *DeclTypeSliceASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitDeclTypeArrayAST(ctx *DeclTypeArrayASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitDeclTypeArrayAST(ctx *DeclTypeArrayASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitDeclTypeStructAST(ctx *DeclTypeStructASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitDeclTypeStructAST(ctx *DeclTypeStructASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSliceDeclTypeAST(ctx *SliceDeclTypeASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSliceDeclTypeAST(ctx *SliceDeclTypeASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitArrayDeclTypeAST(ctx *ArrayDeclTypeASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitArrayDeclTypeAST(ctx *ArrayDeclTypeASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStructDeclTypeAST(ctx *StructDeclTypeASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStructDeclTypeAST(ctx *StructDeclTypeASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStructMemDeclsAST(ctx *StructMemDeclsASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStructMemDeclsAST(ctx *StructMemDeclsASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitIdentifierListAST(ctx *IdentifierListASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitIdentifierListAST(ctx *IdentifierListASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionNotUnaryAST(ctx *ExpressionNotUnaryASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionNotUnaryAST(ctx *ExpressionNotUnaryASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionMultiplyAST(ctx *ExpressionMultiplyASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionMultiplyAST(ctx *ExpressionMultiplyASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionPlusAST(ctx *ExpressionPlusASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionPlusAST(ctx *ExpressionPlusASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionModuloAST(ctx *ExpressionModuloASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionModuloAST(ctx *ExpressionModuloASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionAndAST(ctx *ExpressionAndASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionAndAST(ctx *ExpressionAndASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionBitwiseXorAST(ctx *ExpressionBitwiseXorASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionBitwiseXorAST(ctx *ExpressionBitwiseXorASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionMinusAST(ctx *ExpressionMinusASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionMinusAST(ctx *ExpressionMinusASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionBitwiseXorUnaryAST(ctx *ExpressionBitwiseXorUnaryASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionBitwiseXorUnaryAST(ctx *ExpressionBitwiseXorUnaryASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionEqualAST(ctx *ExpressionEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionEqualAST(ctx *ExpressionEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionMinusUnaryAST(ctx *ExpressionMinusUnaryASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionMinusUnaryAST(ctx *ExpressionMinusUnaryASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionBitwiseClearAST(ctx *ExpressionBitwiseClearASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionBitwiseClearAST(ctx *ExpressionBitwiseClearASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionGreaterEqualAST(ctx *ExpressionGreaterEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionGreaterEqualAST(ctx *ExpressionGreaterEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionLessEqualAST(ctx *ExpressionLessEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionLessEqualAST(ctx *ExpressionLessEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionNotEqualAST(ctx *ExpressionNotEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionNotEqualAST(ctx *ExpressionNotEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionPrimaryAST(ctx *ExpressionPrimaryASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionPrimaryAST(ctx *ExpressionPrimaryASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionBitwiseAndAST(ctx *ExpressionBitwiseAndASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionBitwiseAndAST(ctx *ExpressionBitwiseAndASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionGreaterAST(ctx *ExpressionGreaterASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionGreaterAST(ctx *ExpressionGreaterASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionDivideAST(ctx *ExpressionDivideASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionDivideAST(ctx *ExpressionDivideASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionOrAST(ctx *ExpressionOrASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionOrAST(ctx *ExpressionOrASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionPlusUnaryAST(ctx *ExpressionPlusUnaryASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionPlusUnaryAST(ctx *ExpressionPlusUnaryASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionBitwiseOrAST(ctx *ExpressionBitwiseOrASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionBitwiseOrAST(ctx *ExpressionBitwiseOrASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionLessAST(ctx *ExpressionLessASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionLessAST(ctx *ExpressionLessASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionShiftRightAST(ctx *ExpressionShiftRightASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionShiftRightAST(ctx *ExpressionShiftRightASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionShiftLeftAST(ctx *ExpressionShiftLeftASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionShiftLeftAST(ctx *ExpressionShiftLeftASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionListAST(ctx *ExpressionListASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionListAST(ctx *ExpressionListASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitPrimaryExpressionLengthAST(ctx *PrimaryExpressionLengthASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitPrimaryExpressionLengthAST(ctx *PrimaryExpressionLengthASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitPrimaryExpressionOperandAST(ctx *PrimaryExpressionOperandASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitPrimaryExpressionOperandAST(ctx *PrimaryExpressionOperandASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitPrimaryExpressionIndexAST(ctx *PrimaryExpressionIndexASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitPrimaryExpressionIndexAST(ctx *PrimaryExpressionIndexASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitPrimaryExpressionAppendAST(ctx *PrimaryExpressionAppendASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitPrimaryExpressionAppendAST(ctx *PrimaryExpressionAppendASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitPrimaryExpressionArgumentsAST(ctx *PrimaryExpressionArgumentsASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitPrimaryExpressionArgumentsAST(ctx *PrimaryExpressionArgumentsASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitPrimaryExpressionCapAST(ctx *PrimaryExpressionCapASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitPrimaryExpressionCapAST(ctx *PrimaryExpressionCapASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitPrimaryExpressionSelectorAST(ctx *PrimaryExpressionSelectorASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitPrimaryExpressionSelectorAST(ctx *PrimaryExpressionSelectorASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitOperandLiteralAST(ctx *OperandLiteralASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitOperandLiteralAST(ctx *OperandLiteralASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitOperandIdentifierAST(ctx *OperandIdentifierASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitOperandIdentifierAST(ctx *OperandIdentifierASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitOperandParenAST(ctx *OperandParenASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitOperandParenAST(ctx *OperandParenASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLiteralIntAST(ctx *LiteralIntASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLiteralIntAST(ctx *LiteralIntASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLiteralFloatAST(ctx *LiteralFloatASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLiteralFloatAST(ctx *LiteralFloatASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLiteralRuneAST(ctx *LiteralRuneASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLiteralRuneAST(ctx *LiteralRuneASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLiteralRawStringAST(ctx *LiteralRawStringASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLiteralRawStringAST(ctx *LiteralRawStringASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLiteralInterpretedStringAST(ctx *LiteralInterpretedStringASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLiteralInterpretedStringAST(ctx *LiteralInterpretedStringASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitIndexAST(ctx *IndexASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitIndexAST(ctx *IndexASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitArgumentsAST(ctx *ArgumentsASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitArgumentsAST(ctx *ArgumentsASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitArgumentsEmptyAST(ctx *ArgumentsEmptyASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitArgumentsEmptyAST(ctx *ArgumentsEmptyASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSelectorAST(ctx *SelectorASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSelectorAST(ctx *SelectorASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAppendExpressionAST(ctx *AppendExpressionASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAppendExpressionAST(ctx *AppendExpressionASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLengthExpressionAST(ctx *LengthExpressionASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLengthExpressionAST(ctx *LengthExpressionASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitCapExpressionAST(ctx *CapExpressionASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitCapExpressionAST(ctx *CapExpressionASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementListAST(ctx *StatementListASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementListAST(ctx *StatementListASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitBlockAST(ctx *BlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitBlockAST(ctx *BlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementPrintAST(ctx *StatementPrintASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementPrintAST(ctx *StatementPrintASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementPrintlnAST(ctx *StatementPrintlnASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementPrintlnAST(ctx *StatementPrintlnASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementReturnAST(ctx *StatementReturnASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementReturnAST(ctx *StatementReturnASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementBreakAST(ctx *StatementBreakASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementBreakAST(ctx *StatementBreakASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementContinueAST(ctx *StatementContinueASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementContinueAST(ctx *StatementContinueASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementSimpleAST(ctx *StatementSimpleASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementSimpleAST(ctx *StatementSimpleASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementBlockAST(ctx *StatementBlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementBlockAST(ctx *StatementBlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementSwitchAST(ctx *StatementSwitchASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementSwitchAST(ctx *StatementSwitchASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementIfAST(ctx *StatementIfASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementIfAST(ctx *StatementIfASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementLoopAST(ctx *StatementLoopASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementLoopAST(ctx *StatementLoopASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementTypeDeclAST(ctx *StatementTypeDeclASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementTypeDeclAST(ctx *StatementTypeDeclASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitStatementVariableDeclAST(ctx *StatementVariableDeclASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitStatementVariableDeclAST(ctx *StatementVariableDeclASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSimpleStatementEmptyAST(ctx *SimpleStatementEmptyASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSimpleStatementEmptyAST(ctx *SimpleStatementEmptyASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSimpleStatementExpressionAST(ctx *SimpleStatementExpressionASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSimpleStatementExpressionAST(ctx *SimpleStatementExpressionASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSimpleStatementAssignmentAST(ctx *SimpleStatementAssignmentASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSimpleStatementAssignmentAST(ctx *SimpleStatementAssignmentASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSimpleStatementExpressionListAssignAST(ctx *SimpleStatementExpressionListAssignASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSimpleStatementExpressionListAssignAST(ctx *SimpleStatementExpressionListAssignASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementAST(ctx *AssignmentStatementASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementAST(ctx *AssignmentStatementASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementPlusEqualAST(ctx *AssignmentStatementPlusEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementPlusEqualAST(ctx *AssignmentStatementPlusEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementMinusEqualAST(ctx *AssignmentStatementMinusEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementMinusEqualAST(ctx *AssignmentStatementMinusEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementBitwiseAndEqualAST(ctx *AssignmentStatementBitwiseAndEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementBitwiseAndEqualAST(ctx *AssignmentStatementBitwiseAndEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementBitwiseOrEqualAST(ctx *AssignmentStatementBitwiseOrEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementBitwiseOrEqualAST(ctx *AssignmentStatementBitwiseOrEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementMultiplyEqualAST(ctx *AssignmentStatementMultiplyEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementMultiplyEqualAST(ctx *AssignmentStatementMultiplyEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementBitwiseXorEqualAST(ctx *AssignmentStatementBitwiseXorEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementBitwiseXorEqualAST(ctx *AssignmentStatementBitwiseXorEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementShiftLeftEqualAST(ctx *AssignmentStatementShiftLeftEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementShiftLeftEqualAST(ctx *AssignmentStatementShiftLeftEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementShiftRightEqualAST(ctx *AssignmentStatementShiftRightEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementShiftRightEqualAST(ctx *AssignmentStatementShiftRightEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementBitwiseClearEqualAST(ctx *AssignmentStatementBitwiseClearEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementBitwiseClearEqualAST(ctx *AssignmentStatementBitwiseClearEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementModuloEqualAST(ctx *AssignmentStatementModuloEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementModuloEqualAST(ctx *AssignmentStatementModuloEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitAssignmentStatementDivideEqualAST(ctx *AssignmentStatementDivideEqualASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitAssignmentStatementDivideEqualAST(ctx *AssignmentStatementDivideEqualASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitIfStatementAST(ctx *IfStatementASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitIfStatementAST(ctx *IfStatementASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitIfElseIfStatementAST(ctx *IfElseIfStatementASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitIfElseIfStatementAST(ctx *IfElseIfStatementASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitIfElseStatementAST(ctx *IfElseStatementASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitIfElseStatementAST(ctx *IfElseStatementASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitIfSimpleStatementAST(ctx *IfSimpleStatementASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitIfSimpleStatementAST(ctx *IfSimpleStatementASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitIfSimpleElseIfStatementAST(ctx *IfSimpleElseIfStatementASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitIfSimpleElseIfStatementAST(ctx *IfSimpleElseIfStatementASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitIfSimpleElseStatementAST(ctx *IfSimpleElseStatementASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitIfSimpleElseStatementAST(ctx *IfSimpleElseStatementASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLoopBlockAST(ctx *LoopBlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLoopBlockAST(ctx *LoopBlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLoopExpressionBlockAST(ctx *LoopExpressionBlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLoopExpressionBlockAST(ctx *LoopExpressionBlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLoopSimpleStatementExpressionSimpleStatementBlockAST(ctx *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLoopSimpleStatementExpressionSimpleStatementBlockAST(ctx *LoopSimpleStatementExpressionSimpleStatementBlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitLoopSimpleStatementSimpleStatementBlockAST(ctx *LoopSimpleStatementSimpleStatementBlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitLoopSimpleStatementSimpleStatementBlockAST(ctx *LoopSimpleStatementSimpleStatementBlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSwitchStmtSimpleStatementAST(ctx *SwitchStmtSimpleStatementASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSwitchStmtSimpleStatementAST(ctx *SwitchStmtSimpleStatementASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSwitchStmtExpressionAST(ctx *SwitchStmtExpressionASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSwitchStmtExpressionAST(ctx *SwitchStmtExpressionASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSwitchStmtSimpleStatementBlockAST(ctx *SwitchStmtSimpleStatementBlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSwitchStmtSimpleStatementBlockAST(ctx *SwitchStmtSimpleStatementBlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitSwitchStmtBlockAST(ctx *SwitchStmtBlockASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitSwitchStmtBlockAST(ctx *SwitchStmtBlockASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionCaseClauseListEmptyAST(ctx *ExpressionCaseClauseListEmptyASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionCaseClauseListEmptyAST(ctx *ExpressionCaseClauseListEmptyASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionCaseClauseListAST(ctx *ExpressionCaseClauseListASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionCaseClauseListAST(ctx *ExpressionCaseClauseListASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionCaseClauseAST(ctx *ExpressionCaseClauseASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionCaseClauseAST(ctx *ExpressionCaseClauseASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionSwitchCaseAST(ctx *ExpressionSwitchCaseASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionSwitchCaseAST(ctx *ExpressionSwitchCaseASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitExpressionSwitchDefaultAST(ctx *ExpressionSwitchDefaultASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitExpressionSwitchDefaultAST(ctx *ExpressionSwitchDefaultASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseminiGoParserVisitor) VisitEpsilonAST(ctx *EpsilonASTContext) interface{} {
+func (v *BaseMiniGoParserVisitor) VisitEpsilonAST(ctx *EpsilonASTContext) interface{} {
 	return v.VisitChildren(ctx)
 }
