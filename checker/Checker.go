@@ -18,8 +18,14 @@ func (c *Checker) Visit(tree antlr.ParseTree) interface{} {
 }
 
 func (c *Checker) VisitChildren(node antlr.RuleNode) interface{} {
-	//TODO implement me
-	panic("implement me")
+
+	var res any
+	children := node.GetChildren()
+	for _, child := range children {
+		childResult := child.(antlr.ParseTree).Accept(c)
+		res = childResult
+	}
+	return res
 }
 
 func (c *Checker) VisitTerminal(node antlr.TerminalNode) interface{} {
