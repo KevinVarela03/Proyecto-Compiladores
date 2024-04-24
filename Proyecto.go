@@ -2,7 +2,7 @@ package main
 
 import (
 	"Proyecto_Compiladores/checker"
-	"Proyecto_Compiladores/generated"
+	"Proyecto_Compiladores/parser"
 	"fmt"
 	"github.com/antlr4-go/antlr/v4"
 )
@@ -31,13 +31,13 @@ func (ast *YourASTType) ConvertToASTNode() *checker.ASTNode {
 }
 
 type miniGoListener struct {
-	*generated.BaseminiGoParserListener
+	*parser.BaseMiniGoParserListener
 	AST *YourASTType // Aquí debes definir el tipo correcto para tu AST
 }
 
 func NewMiniGoListener() *miniGoListener {
 	return &miniGoListener{
-		BaseminiGoParserListener: nil, // Aquí debes proporcionar la instancia correcta del listener base
+		BaseMiniGoParserListener: nil, // Aquí debes proporcionar la instancia correcta del listener base
 		AST:                      nil, // Inicializa el campo AST según sea necesario
 	}
 }
@@ -56,7 +56,7 @@ func main() {
 
 	// Crear un analizador léxico para el archivo de entrada
 	input, _ := antlr.NewFileStream("test.txt")
-	lexer := generated.NewminiGoScanner(input)
+	lexer := parser.NewMiniGoScanner(input)
 	lexer.RemoveErrorListeners()                 // Remover los listeners de errores por defecto
 	lexer.AddErrorListener(NewMyErrorListener()) // Añadir tu propio listener de errores
 
@@ -64,7 +64,7 @@ func main() {
 	stream := antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
 
 	// Crear un analizador sintáctico para el flujo de tokens
-	p := generated.NewminiGoParser(stream)
+	p := parser.NewMiniGoParser(stream)
 	p.RemoveErrorListeners()                 // Remover los listeners de errores por defecto
 	p.AddErrorListener(NewMyErrorListener()) // Añadir tu propio listener de errores
 
@@ -81,14 +81,18 @@ func main() {
 	check := &checker.Checker{
 		SymbolTable: globalSymbolTable,
 	}
+	check.Visit(tree)
 
-	ast := listener.GetAST()
+	/*
+		ast := listener.GetAST()
 
-	// Realizar el análisis contextual utilizando el checker
-	if err := check.Check(ast.ConvertToASTNode()); err != nil {
-		fmt.Println("Error de análisis contextual:", err)
-	} else {
-		fmt.Println("Análisis contextual completado sin errores")
-	}
+		// Realizar el análisis contextual utilizando el checker
+		if err := check.Check(ast.ConvertToASTNode()); err != nil {
+			fmt.Println("Error de análisis contextual:", err)
+		} else {
+			fmt.Println("Análisis contextual completado sin errores")
+		}
+
+	*/
 
 }

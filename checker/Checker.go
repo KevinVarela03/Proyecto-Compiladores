@@ -1,7 +1,7 @@
 package checker
 
 import (
-	parser "Proyecto_Compiladores/generated"
+	parser "Proyecto_Compiladores/parser"
 	"github.com/antlr4-go/antlr/v4"
 )
 
@@ -13,24 +13,24 @@ type Checker struct {
 }
 
 func (c *Checker) Visit(tree antlr.ParseTree) interface{} {
-	//TODO implement me
-	panic("implement me")
+
+	return tree.Accept(c)
 }
 
 func (c *Checker) VisitChildren(node antlr.RuleNode) interface{} {
 
-	var res any
+	var results []interface{}
 	children := node.GetChildren()
 	for _, child := range children {
 		childResult := child.(antlr.ParseTree).Accept(c)
-		res = childResult
+		results = append(results, childResult)
 	}
-	return res
+	return results
 }
 
 func (c *Checker) VisitTerminal(node antlr.TerminalNode) interface{} {
-	//TODO implement me
-	panic("implement me")
+
+	return nil
 }
 
 func (c *Checker) VisitErrorNode(node antlr.ErrorNode) interface{} {
@@ -40,7 +40,8 @@ func (c *Checker) VisitErrorNode(node antlr.ErrorNode) interface{} {
 
 func (c *Checker) VisitRootAST(ctx *parser.RootASTContext) interface{} {
 	//TODO implement me
-	panic("implement me")
+	c.Visit(ctx.TopDeclarationList())
+	return nil
 }
 
 func (c *Checker) VisitTopDeclarationListAST(ctx *parser.TopDeclarationListASTContext) interface{} {

@@ -1,4 +1,4 @@
-// Code generated from C:/Users/noni4/Desktop/Proyecto-Compiladores/MiniGoScanner.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code parser from C:/Users/noni4/Desktop/Proyecto-Compiladores/MiniGoScanner.g4 by ANTLR 4.13.1. DO NOT EDIT.
 
 package parser
 
