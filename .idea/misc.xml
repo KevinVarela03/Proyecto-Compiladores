@@ -26,20 +26,20 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/MiniGoScanner.g4" />
           <option name="autoGen" value="true" />
-          <option name="outputDir" value="C:\Users\noni4\Desktop\Proyecto-Compiladores\generated" />
+          <option name="outputDir" value="E:\Universidad\2024\I Semestre\Compiladores e Interpretes\Proyecto #2\Proyecto Compiladores" />
           <option name="libDir" value="" />
           <option name="encoding" value="" />
-          <option name="pkg" value="" />
+          <option name="pkg" value="parser" />
           <option name="language" value="Go" />
           <option name="generateVisitor" value="true" />
         </PerGrammarGenerationSettings>
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/MiniGoParser.g4" />
           <option name="autoGen" value="true" />
-          <option name="outputDir" value="C:\Users\noni4\Desktop\Proyecto-Compiladores\generated" />
+          <option name="outputDir" value="E:\Universidad\2024\I Semestre\Compiladores e Interpretes\Proyecto #2\Proyecto Compiladores" />
           <option name="libDir" value="" />
           <option name="encoding" value="" />
-          <option name="pkg" value="" />
+          <option name="pkg" value="parser" />
           <option name="language" value="Go" />
           <option name="generateVisitor" value="true" />
         </PerGrammarGenerationSettings>

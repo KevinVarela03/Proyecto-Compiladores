@@ -21,6 +21,16 @@ type MethodIdent struct {
 	params []int
 }
 
+type TypeIdent struct {
+	Ident
+	baseType int
+}
+
+type StructIdent struct {
+	Ident
+	fields []VarIdent
+}
+
 type TablaSimbolos struct {
 	tabla       []Ident
 	nivelActual int
@@ -33,14 +43,25 @@ func NewTablaSimbolos() *TablaSimbolos {
 	}
 }
 
-func (t *TablaSimbolos) Insertar(tok string, typ int, isConstant bool) {
+func (t *TablaSimbolos) InsertarMethod(tok string, typ int, params []int) {
+	i := MethodIdent{Ident: Ident{tok: tok, typ: typ, nivel: t.nivelActual, valor: 0}, params: params}
+	t.tabla = append(t.tabla, i.Ident)
+}
+
+func (t *TablaSimbolos) InsertarVar(tok string, typ int, isConstant bool) {
 	i := VarIdent{Ident: Ident{tok: tok, typ: typ, nivel: t.nivelActual, valor: 0}, isConstant: isConstant}
 	t.tabla = append(t.tabla, i.Ident)
 }
 
-func (t *TablaSimbolos) InsertarFunc(tok string, typ int, params []int) {
-	i := MethodIdent{Ident: Ident{tok: tok, typ: typ, nivel: t.nivelActual, valor: 0}, params: params}
+func (t *TablaSimbolos) InsertarType(tok string, typ int, baseType int) {
+	i := TypeIdent{Ident: Ident{tok: tok, typ: typ, nivel: t.nivelActual, valor: 0}, baseType: baseType}
 	t.tabla = append(t.tabla, i.Ident)
+}
+
+func (t *TablaSimbolos) InsertarStruct(tok string, typ int, fields []VarIdent) {
+	i := StructIdent{Ident: Ident{tok: tok, typ: typ, nivel: t.nivelActual, valor: 0}, fields: fields}
+	t.tabla = append(t.tabla, i.Ident)
+
 }
 
 func (t *TablaSimbolos) Buscar(nombre string) *Ident {
