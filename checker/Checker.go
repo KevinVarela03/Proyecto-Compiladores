@@ -42,7 +42,7 @@ func (c *Checker) VisitErrorNode(node antlr.ErrorNode) interface{} {
 
 func (c *Checker) VisitRootAST(ctx *parser.RootASTContext) interface{} {
 
-	return c.VisitRootAST(ctx)
+	return c.VisitChildren(ctx)
 }
 
 func (c *Checker) VisitTopDeclarationListAST(ctx *parser.TopDeclarationListASTContext) interface{} {
