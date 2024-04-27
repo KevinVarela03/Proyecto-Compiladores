@@ -1,8 +1,8 @@
-// Code parser from C:/Users/noni4/Desktop/Proyecto-Compiladores/MiniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from E:/Universidad/2024/I Semestre/Compiladores e Interpretes/Proyecto #2/Proyecto Compiladores/MiniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
 
 package parser // MiniGoParser
-
 import "github.com/antlr4-go/antlr/v4"
+
 
 // MiniGoParserListener is a complete listener for a parse tree produced by MiniGoParser.
 type MiniGoParserListener interface {
