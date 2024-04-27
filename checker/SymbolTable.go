@@ -26,7 +26,7 @@ type TablaSimbolos struct {
 	nivelActual int
 }
 
-func NewTablaSimbolos() *TablaSimbolos {
+func NewSymbolTable() *TablaSimbolos {
 	return &TablaSimbolos{
 		tabla:       make([]Ident, 0),
 		nivelActual: -1,

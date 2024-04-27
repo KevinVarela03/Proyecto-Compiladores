@@ -75,24 +75,12 @@ func main() {
 	antlr.ParseTreeWalkerDefault.Walk(listener, tree)
 
 	// Crear una tabla de símbolos global
-	globalSymbolTable := checker.NewSymbolTable(nil)
+	globalSymbolTable := checker.NewSymbolTable()
 
 	// Crear un checker con la tabla de símbolos global
 	check := &checker.Checker{
-		SymbolTable: globalSymbolTable,
+			SymbolTable: globalSymbolTable,
 	}
 	check.Visit(tree)
-
-	/*
-		ast := listener.GetAST()
-
-		// Realizar el análisis contextual utilizando el checker
-		if err := check.Check(ast.ConvertToASTNode()); err != nil {
-			fmt.Println("Error de análisis contextual:", err)
-		} else {
-			fmt.Println("Análisis contextual completado sin errores")
-		}
-
-	*/
 
 }

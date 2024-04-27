@@ -9,7 +9,7 @@ var _ parser.MiniGoParserVisitor = &Checker{}
 
 // Checker realiza el análisis contextual utilizando una tabla de símbolos
 type Checker struct {
-	SymbolTable *SymbolTable // Tabla de símbolos utilizada para el análisis contextual
+	SymbolTable *TablaSimbolos // Tabla de símbolos utilizada para el análisis contextual
 }
 
 func (c *Checker) Visit(tree antlr.ParseTree) interface{} {
