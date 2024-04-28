@@ -5,7 +5,7 @@ import (
 	"github.com/antlr4-go/antlr/v4"
 )
 
-var _ parser.MiniGoParserVisitor = &Checker{}
+//var _ parser.MiniGoParserVisitor = &Checker{}
 
 // Checker realiza el análisis contextual utilizando una tabla de símbolos
 type Checker struct {
@@ -801,4 +801,15 @@ func (c *Checker) VisitEpsilonAST(ctx *parser.EpsilonASTContext) interface{} {
 
 	//Complete
 	return c.VisitChildren(ctx)
+}
+func (v *Checker) VisitMultipleReturnTypesAST(ctx *parser.MultipleReturnTypesASTContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *Checker) VisitReturnTypeListAST(ctx *parser.ReturnTypeListASTContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *Checker) VisitSingleReturnTypeAST(ctx *parser.SingleReturnTypeContext) interface{} {
+	return v.VisitChildren(ctx)
 }
