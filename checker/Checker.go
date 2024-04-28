@@ -88,7 +88,6 @@ func (c *Checker) VisitSingleVarDeclAST(ctx *parser.SingleVarDeclASTContext) int
 
 func (c *Checker) VisitSingleVarDeclAssignAST(ctx *parser.SingleVarDeclAssignASTContext) interface{} {
 
-	//TODO
 	//Complete
 	return c.VisitChildren(ctx)
 }
@@ -802,14 +801,17 @@ func (c *Checker) VisitEpsilonAST(ctx *parser.EpsilonASTContext) interface{} {
 	//Complete
 	return c.VisitChildren(ctx)
 }
-func (v *Checker) VisitMultipleReturnTypesAST(ctx *parser.MultipleReturnTypesASTContext) interface{} {
-	return v.VisitChildren(ctx)
+
+// TODO: ADICIONAL CONTENT
+func (c *Checker) VisitMultipleReturnTypesAST(ctx *parser.MultipleReturnTypesASTContext) interface{} {
+	//Complete
+	return c.VisitChildren(ctx)
 }
 
-func (v *Checker) VisitReturnTypeListAST(ctx *parser.ReturnTypeListASTContext) interface{} {
-	return v.VisitChildren(ctx)
+func (c *Checker) VisitReturnTypeListAST(ctx *parser.ReturnTypeListASTContext) interface{} {
+	return c.VisitChildren(ctx)
 }
 
-func (v *Checker) VisitSingleReturnTypeAST(ctx *parser.SingleReturnTypeContext) interface{} {
-	return v.VisitChildren(ctx)
+func (c *Checker) VisitSingleReturnTypeAST(ctx *parser.SingleReturnTypeContext) interface{} {
+	return c.VisitChildren(ctx)
 }
