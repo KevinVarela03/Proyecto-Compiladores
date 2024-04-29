@@ -1,15 +1,11 @@
 
 package main;
 
-var hola = "hola";
+func letsgo(){
 
-func ComputeFac(num (int)) int {
-	var numaux int;
-	if (num < 1){
-		numaux = 1;
-	}
-	else {
-		numaux = num * (ComputeFac(num-1));
-	};
-	return numaux;
+};
+
+func main(){
+    caca = "string";
+    letsgo();
 };

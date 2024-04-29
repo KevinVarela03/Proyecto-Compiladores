@@ -20,9 +20,9 @@ const (
 
 // ASTNode representa un nodo en el árbol de sintaxis abstracta (AST)
 type ASTNode struct {
-	Type     NodeType    // Tipo de nodo
-	Value    string      // Valor del nodo (nombre de función, identificador, valor literal, etc.)
-	Children []*ASTNode  // Hijos del nodo (si los tiene)
+	Type     NodeType   // Tipo de nodo
+	Value    string     // Valor del nodo (nombre de función, identificador, value literal, etc.)
+	Children []*ASTNode // Hijos del nodo (si los tiene)
 }
 
 // NewASTNode crea un nuevo nodo AST

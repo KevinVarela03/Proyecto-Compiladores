@@ -5,15 +5,13 @@ import (
 )
 
 type Ident struct {
-	tok   string
-	typ   int
-	nivel int
-	valor int
+	token string
+	Type  int
+	level int
 }
 
 type VarIdent struct {
 	Ident
-	isConstant bool
 }
 
 type MethodIdent struct {
@@ -31,54 +29,84 @@ type StructIdent struct {
 	fields []VarIdent
 }
 
-type TablaSimbolos struct {
-	tabla       []Ident
-	nivelActual int
+type SymbolTable struct {
+	table       []Ident
+	actualLevel int
 }
 
-func NewSymbolTable() *TablaSimbolos {
-	return &TablaSimbolos{
-		tabla:       make([]Ident, 0),
-		nivelActual: -1,
+func NewSymbolTable() *SymbolTable {
+	return &SymbolTable{
+		table:       make([]Ident, 0),
+		actualLevel: 0,
 	}
-}
-
-func (t *TablaSimbolos) InsertarMethod(tok string, typ int, params []int) {
-	i := MethodIdent{Ident: Ident{tok: tok, typ: typ, nivel: t.nivelActual, valor: 0}, params: params}
-	t.tabla = append(t.tabla, i.Ident)
-}
-
-func (t *TablaSimbolos) InsertarVar(tok string, typ int, isConstant bool) {
-	i := VarIdent{Ident: Ident{tok: tok, typ: typ, nivel: t.nivelActual, valor: 0}, isConstant: isConstant}
-	t.tabla = append(t.tabla, i.Ident)
-}
-
-func (t *TablaSimbolos) InsertarType(tok string, typ int, baseType int) {
-	i := TypeIdent{Ident: Ident{tok: tok, typ: typ, nivel: t.nivelActual, valor: 0}, baseType: baseType}
-	t.tabla = append(t.tabla, i.Ident)
-}
-
-func (t *TablaSimbolos) InsertarStruct(tok string, typ int, fields []VarIdent) {
-	i := StructIdent{Ident: Ident{tok: tok, typ: typ, nivel: t.nivelActual, valor: 0}, fields: fields}
-	t.tabla = append(t.tabla, i.Ident)
 
 }
 
-func (t *TablaSimbolos) Buscar(nombre string) *Ident {
-	for _, id := range t.tabla {
-		if id.tok == nombre {
+var (
+	Bool = Ident{
+		token: "bool",
+		Type:  1,
+		level: 0,
+	}
+	Int = Ident{
+		token: "int",
+		Type:  2,
+		level: 0,
+	}
+	Float = Ident{
+		token: "float",
+		Type:  3,
+		level: 0,
+	}
+	String = Ident{
+		token: "string",
+		Type:  4,
+		level: 0,
+	}
+	Rune = Ident{
+		token: "rune",
+		Type:  5,
+		level: 0,
+	}
+)
+
+func (t *SymbolTable) InsertMethod(token string, typ int, params []int) {
+	i := MethodIdent{Ident: Ident{token: token, Type: typ, level: t.actualLevel}, params: params}
+	t.table = append(t.table, i.Ident)
+}
+
+func (t *SymbolTable) InsertVar(token string, typ int) {
+	i := VarIdent{Ident: Ident{token: token, Type: typ, level: t.actualLevel}}
+	t.Find(token)
+	t.table = append(t.table, i.Ident)
+}
+
+func (t *SymbolTable) InsertType(tok string, typ int, baseType int) {
+	i := TypeIdent{Ident: Ident{token: tok, Type: typ, level: t.actualLevel}, baseType: baseType}
+	t.table = append(t.table, i.Ident)
+}
+
+func (t *SymbolTable) InsertStruct(tok string, typ int, fields []VarIdent) {
+	i := StructIdent{Ident: Ident{token: tok, Type: typ, level: t.actualLevel}, fields: fields}
+	t.table = append(t.table, i.Ident)
+}
+
+func (t *SymbolTable) Find(name string) *Ident {
+	for _, id := range t.table {
+		if id.token == name {
+			fmt.Println("ERROR, MULTIPLE VAR DECLARATION \nVariable: '", id.token, "' its declared multiple times")
 			return &id
 		}
 	}
 	return nil
 }
 
-func (t *TablaSimbolos) BuscarNivelActual(nombre string) *Ident {
+func (t *SymbolTable) FindActualLevel(name string) *Ident {
 	var temp *Ident
-	tempNivel := t.nivelActual
-	for _, id := range t.tabla {
-		if tempNivel == id.nivel {
-			if id.tok == nombre {
+	tempLevel := t.actualLevel
+	for _, id := range t.table {
+		if tempLevel == id.level {
+			if id.token == name {
 				temp = &id
 			}
 		} else {
@@ -88,23 +116,36 @@ func (t *TablaSimbolos) BuscarNivelActual(nombre string) *Ident {
 	return temp
 }
 
-func (t *TablaSimbolos) OpenScope() {
-	t.nivelActual++
+func (t *SymbolTable) OpenScope() {
+	t.actualLevel++
 }
 
-func (t *TablaSimbolos) CloseScope() {
-	for i := len(t.tabla) - 1; i >= 0; i-- {
-		if t.tabla[i].nivel == t.nivelActual {
-			t.tabla = append(t.tabla[:i], t.tabla[i+1:]...)
+func (t *SymbolTable) CloseScope() {
+	for i := len(t.table) - 1; i >= 0; i-- {
+		if t.table[i].level == t.actualLevel {
+			t.table = append(t.table[:i], t.table[i+1:]...)
 		}
 	}
-	t.nivelActual--
+	t.actualLevel--
 }
 
-func (t *TablaSimbolos) Imprimir() {
-	fmt.Println("----- INICIO TABLA ------")
-	for _, s := range t.tabla {
-		fmt.Printf("Nombre: %s - %d - %d\n", s.tok, s.nivel, s.typ)
+func (t *SymbolTable) PrintTable() {
+	_type := ""
+	fmt.Println("----- SYMBOL TABLE ------")
+	fmt.Println("|    Name    |  Level  |  Type  |")
+	fmt.Println("|------------|---------|--------|")
+	for _, s := range t.table {
+		if s.Type == 1 {
+			_type = "boolean"
+		} else if s.Type == 2 {
+			_type = "int"
+		} else if s.Type == 4 {
+			_type = "string"
+		} else {
+			_type = "unknown"
+		}
+
+		fmt.Printf("|  %-10s|    %-4d|   %-4s|\n", s.token, s.level, _type)
 	}
-	fmt.Println("----- FIN TABLA ------")
+	fmt.Println("----- END TABLE ------")
 }

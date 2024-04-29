@@ -24,7 +24,7 @@ func main() {
 	// Crear un analizador léxico para el archivo de entrada
 	input, _ := antlr.NewFileStream("test.txt")
 	lexer := parser.NewMiniGoScanner(input)
-	lexer.RemoveErrorListeners()                 // Remover los listeners de errores por defecto
+	//**lexer.RemoveErrorListeners()                 // Remover los listeners de errores por defecto
 	lexer.AddErrorListener(NewMyErrorListener()) // Añadir tu propio listener de errores
 
 	// Crear un flujo de tokens a partir del analizador léxico
@@ -32,7 +32,7 @@ func main() {
 
 	// Crear un analizador sintáctico para el flujo de tokens
 	p := parser.NewMiniGoParser(stream)
-	p.RemoveErrorListeners()                 // Remover los listeners de errores por defecto
+	//**p.RemoveErrorListeners()                 // Remover los listeners de errores por defecto
 	p.AddErrorListener(NewMyErrorListener()) // Añadir tu propio listener de errores
 
 	// Construir el AST utilizando el analizador sintáctico
@@ -43,7 +43,7 @@ func main() {
 
 	// Crear un checker con la tabla de símbolos global
 	check := &checker.Checker{
-			SymbolTable: globalSymbolTable,
+		SymbolTable: globalSymbolTable,
 	}
 	check.Visit(tree)
 
