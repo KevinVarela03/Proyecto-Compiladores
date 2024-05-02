@@ -1,7 +1,8 @@
-// Code generated from C:/Users/noni4/Desktop/Proyecto-Compiladores/MiniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
+// Code generated from E:/Universidad/2024/I Semestre/Compiladores e Interpretes/Proyecto #2/Proyecto Compiladores/MiniGoParser.g4 by ANTLR 4.13.1. DO NOT EDIT.
 
 package parser // MiniGoParser
 import "github.com/antlr4-go/antlr/v4"
+
 
 // A complete Visitor for a parse tree produced by MiniGoParser.
 type MiniGoParserVisitor interface {
@@ -393,4 +394,5 @@ type MiniGoParserVisitor interface {
 
 	// Visit a parse tree produced by MiniGoParser#epsilon.
 	VisitEpsilon(ctx *EpsilonContext) interface{}
+
 }

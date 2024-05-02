@@ -1,15 +1,12 @@
-
 package main;
 
+var a int := 1;
+var b int := 2;
+var c int := "kevin";
 
-type Person struct {
-    name string;
-    age int;
+func suma(a int, b int) int {
+    var result int;
+    result := a + b;
+    print(result);
+    return result;
 };
-
-var hola = 3;
-
-var person1 = Person;
-var person2 = Person;
-
-var person3 = vaginita;
