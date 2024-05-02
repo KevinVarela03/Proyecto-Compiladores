@@ -46,6 +46,4 @@ func main() {
 		SymbolTable: globalSymbolTable,
 	}
 	check.Visit(tree)
-
-
 }
