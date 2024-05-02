@@ -1,11 +1,15 @@
 
 package main;
 
-func letsgo(){
 
+type Person struct {
+    name string;
+    age int;
 };
 
-func main(){
-    caca = "string";
-    letsgo();
-};
+var hola = 3;
+
+var person1 = Person;
+var person2 = Person;
+
+var person3 = vaginita;

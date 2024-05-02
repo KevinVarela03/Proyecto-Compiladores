@@ -4,6 +4,8 @@ import (
 	parser "Proyecto_Compiladores/parser"
 	"fmt"
 	"github.com/antlr4-go/antlr/v4"
+	"strconv"
+	"strings"
 )
 
 var _ parser.MiniGoParserVisitor = &Checker{}
@@ -19,11 +21,9 @@ func (c *Checker) VisitChildren(node antlr.RuleNode) interface{} {
 
 	var result interface{}
 	children := node.GetChildren()
-	fmt.Println(children)
 
 	for _, child := range children {
 		childResult := child.(antlr.ParseTree).Accept(c)
-
 		result = childResult
 	}
 
@@ -37,10 +37,20 @@ func (c *Checker) VisitTerminal(node antlr.TerminalNode) interface{} {
 
 func (c *Checker) VisitErrorNode(node antlr.ErrorNode) interface{} {
 	//TODO implement me
-	panic("implement me")
+	return c.errorList
 }
 
 func (c *Checker) VisitRoot(ctx *parser.RootContext) interface{} {
+
+	funcs := ctx.TopDeclarationList().AllFuncDecl()
+
+	for _, fn := range funcs {
+		fun := fn.FuncFrontDecl()
+		fmt.Println("FUNC", fun.IDENTIFIER())
+
+		fmt.Println("ARGS", fun.FuncArgDecls().GetText())
+
+	}
 
 	return c.VisitChildren(ctx)
 }
@@ -74,31 +84,49 @@ func (c *Checker) VisitSingleVarDeclAssignAST(ctx *parser.SingleVarDeclAssignAST
 
 	idents := ctx.IdentifierList().AllIDENTIFIER()
 	expressions := ctx.ExpressionList().AllExpression()
-	fmt.Println(idents)
 	for i, ident := range idents {
 
+		fmt.Println("jummm 3", ident)
 		expression := expressions[i]
-		var result = c.Visit(expression).(int)
-		c.SymbolTable.InsertVar(ident.GetText(), result)
+
+		var result = c.Visit(expression)
+
+		castResult := fmt.Sprintf("%v", result)
+		if result, err := strconv.Atoi(castResult); err == nil {
+			// Si no hay error, se puede convertir a entero
+			c.SymbolTable.InsertVar(ident.GetText(), result)
+
+			// Hacer algo aquí
+		} else {
+			// Si hay error, no se puede convertir a entero
+			fmt.Println("digaleeees: ", ident)
+			c.SymbolTable.InsertObject(ident.GetText(), castResult)
+
+			// Hacer otra cosa aquí
+		}
+
 	}
-	//c.SymbolTable.PrintTable()
+	c.SymbolTable.PrintTable()
 
 	return nil
 }
 
 func (c *Checker) VisitSingleVarDeclNoExpsAST(ctx *parser.SingleVarDeclNoExpsASTContext) interface{} {
-	//TODO implement me
-	panic("implement me")
+
+	return ctx.GetChildren()
+
 }
 
 func (c *Checker) VisitSingleVarDeclNoExps(ctx *parser.SingleVarDeclNoExpsContext) interface{} {
 	//TODO implement me
-	panic("implement me")
+	return c.VisitChildren(ctx)
 }
 
 func (c *Checker) VisitTypeDeclAST(ctx *parser.TypeDeclASTContext) interface{} {
-	//TODO implement me
-	panic("implement me")
+
+	//SUS
+
+	return c.VisitChildren(ctx)
 }
 
 func (c *Checker) VisitTypeDeclBlockAST(ctx *parser.TypeDeclBlockASTContext) interface{} {
@@ -117,13 +145,47 @@ func (c *Checker) VisitInnerTypeDecls(ctx *parser.InnerTypeDeclsContext) interfa
 }
 
 func (c *Checker) VisitSingleTypeDecl(ctx *parser.SingleTypeDeclContext) interface{} {
-	//TODO implement me
-	panic("implement me")
+
+	structName := ctx.IDENTIFIER()
+	fmt.Println("NOMBRE STRUCT:", structName)
+
+	structValues := ctx.DeclType().GetText()
+	structValues = strings.TrimPrefix(structValues, "struct{")
+	structValues = strings.TrimSuffix(structValues, ";}")
+
+	newStructValues := strings.Split(structValues, ";")
+
+	var structValuesList []string
+
+	// Agregar cada campo a la slice
+	for _, field := range newStructValues {
+		// Eliminar espacios en blanco y agregar a la slice
+		structValuesList = append(structValuesList, strings.TrimSpace(field))
+	}
+
+	fmt.Println("I ESTO: ", structValues)
+	fmt.Println("testing: ", structValuesList)
+
+	//METER LOS STRUCTS A LA SYMBOL TABLE, Y DESPUÉS FIJARSE QUE NO SE PUEDA HACER p.edad si es un "string"
+	//vamos noni que se puede :V
+
+	structNameString := fmt.Sprintf("%v", structName)
+
+	c.SymbolTable.InsertStruct(structNameString, 7, structValuesList)
+	c.SymbolTable.PrintTable()
+	return c.VisitChildren(ctx)
+
+	//panic("implement me")
 }
 
 func (c *Checker) VisitFuncDecl(ctx *parser.FuncDeclContext) interface{} {
 
-	return ctx.GetChildren()
+	fmt.Println(ctx.FuncFrontDecl().IDENTIFIER().GetText())
+	//c.SymbolTable.InsertMethod(ctx.FuncFrontDecl().GetText(), 6)
+
+	fmt.Println("ARGUMENTOS:", ctx.FuncFrontDecl().FuncArgDecls().GetText())
+	c.SymbolTable.OpenScope()
+	panic("sdakjfsdplkjfsdajlkñ")
 }
 
 func (c *Checker) VisitFuncFrontDecl(ctx *parser.FuncFrontDeclContext) interface{} {
@@ -163,7 +225,9 @@ func (c *Checker) VisitDeclTypeParenAST(ctx *parser.DeclTypeParenASTContext) int
 
 func (c *Checker) VisitDeclTypeIdentifierAST(ctx *parser.DeclTypeIdentifierASTContext) interface{} {
 	//TODO implement me
-	panic("implement me")
+	fmt.Println("esto que es 2:", ctx.IDENTIFIER())
+
+	return ctx.IDENTIFIER()
 }
 
 func (c *Checker) VisitDeclTypeSliceAST(ctx *parser.DeclTypeSliceASTContext) interface{} {
@@ -177,8 +241,10 @@ func (c *Checker) VisitDeclTypeArrayAST(ctx *parser.DeclTypeArrayASTContext) int
 }
 
 func (c *Checker) VisitDeclTypeStructAST(ctx *parser.DeclTypeStructASTContext) interface{} {
-	//TODO implement me
-	panic("implement me")
+
+	fmt.Println("struct con llaves1: ", ctx.GetText())
+
+	return c.VisitChildren(ctx)
 }
 
 func (c *Checker) VisitSliceDeclType(ctx *parser.SliceDeclTypeContext) interface{} {
@@ -192,13 +258,22 @@ func (c *Checker) VisitArrayDeclType(ctx *parser.ArrayDeclTypeContext) interface
 }
 
 func (c *Checker) VisitStructDeclType(ctx *parser.StructDeclTypeContext) interface{} {
-	//TODO implement me
-	panic("implement me")
+
+	fmt.Println("struct con llaves2: ", ctx.GetText())
+
+	return c.VisitChildren(ctx)
+	//WIP
+	//Aqui lo que ocupo hacer es guardarlo, si uno intenta hacer
+	//Person.age = "caca" le tire error porque no es del tipo
 }
 
 func (c *Checker) VisitStructMemDecls(ctx *parser.StructMemDeclsContext) interface{} {
 	//TODO implement me
-	panic("implement me")
+	fmt.Println("datos del struct sin llaves:", ctx.GetText())
+
+	//testing := ctx.GetText()
+
+	return c.VisitChildren(ctx)
 }
 
 func (c *Checker) VisitExpressionNotUnaryAST(ctx *parser.ExpressionNotUnaryASTContext) interface{} {
@@ -368,7 +443,13 @@ func (c *Checker) VisitOperandLiteralAST(ctx *parser.OperandLiteralASTContext) i
 
 func (c *Checker) VisitOperandIdentifierAST(ctx *parser.OperandIdentifierASTContext) interface{} {
 	//TODO implement me
-	panic("implement me")
+
+	fmt.Println("uuuuuuuuuuuuuuuuuuuuu", ctx.GetText())
+
+	fmt.Println("eeeeeeeeeeeee", ctx.IDENTIFIER())
+
+	return ctx.GetText()
+	//panic("implement me")
 }
 
 func (c *Checker) VisitOperandParenAST(ctx *parser.OperandParenASTContext) interface{} {
@@ -497,12 +578,13 @@ func (c *Checker) VisitStatementLoopAST(ctx *parser.StatementLoopASTContext) int
 }
 
 func (c *Checker) VisitStatementTypeDeclAST(ctx *parser.StatementTypeDeclASTContext) interface{} {
-	//TODO implement me
+
 	panic("implement me")
 }
 
 func (c *Checker) VisitStatementVariableDeclAST(ctx *parser.StatementVariableDeclASTContext) interface{} {
 	//TODO implement me
+	//JUM
 	panic("implement me")
 }
 
@@ -687,8 +769,10 @@ func (c *Checker) VisitEpsilon(ctx *parser.EpsilonContext) interface{} {
 }
 
 func (c *Checker) VisitIdentifierList(ctx *parser.IdentifierListContext) interface{} {
-	//TODO implement me
-	panic("implement me")
+
+	fmt.Println("esto que es: ", ctx.IDENTIFIER(0))
+
+	return ctx.IDENTIFIER(0)
 }
 
 func (c *Checker) Visit(tree antlr.ParseTree) interface{} {
