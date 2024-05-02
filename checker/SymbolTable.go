@@ -5,9 +5,10 @@ import (
 )
 
 type Ident struct {
-	token string
-	Type  int
-	level int
+	token      string
+	Type       int
+	level      int
+	objectType string
 }
 
 type VarIdent struct {
@@ -26,7 +27,12 @@ type TypeIdent struct {
 
 type StructIdent struct {
 	Ident
-	fields []VarIdent
+	fields []string
+}
+
+type ObjectIdent struct {
+	Ident
+	_type string
 }
 
 type SymbolTable struct {
@@ -73,6 +79,17 @@ var (
 		Type:  6,
 		level: 0,
 	}
+	Struct = Ident{
+		token: "struct",
+		Type:  7,
+		level: 0,
+	}
+	Object = Ident{
+		token: "Object",
+		Type:  8,
+		level: 0,
+	}
+
 )
 
 func (t *SymbolTable) InsertMethod(token string, typ int, params []int) {
@@ -83,27 +100,51 @@ func (t *SymbolTable) InsertMethod(token string, typ int, params []int) {
 func (t *SymbolTable) InsertVar(token string, typ int) {
 	i := VarIdent{Ident: Ident{token: token, Type: typ, level: t.actualLevel}}
 	t.Find(token)
-	t.table = append(t.table, i.Ident)
+	if t.Find(token) == true {
+		t.table = append(t.table, i.Ident)
+	}
 }
 
 func (t *SymbolTable) InsertType(tok string, typ int, baseType int) {
 	i := TypeIdent{Ident: Ident{token: tok, Type: typ, level: t.actualLevel}, baseType: baseType}
+	t.Find(tok)
 	t.table = append(t.table, i.Ident)
 }
 
-func (t *SymbolTable) InsertStruct(tok string, typ int, fields []VarIdent) {
+func (t *SymbolTable) InsertStruct(tok string, typ int, fields []string) {
 	i := StructIdent{Ident: Ident{token: tok, Type: typ, level: t.actualLevel}, fields: fields}
+	t.Find(tok)
 	t.table = append(t.table, i.Ident)
 }
-
-func (t *SymbolTable) Find(name string) *Ident {
+func (t *SymbolTable) InsertObject(token string, _type string) {
+	objectExist := false
 	for _, id := range t.table {
-		if id.token == name {
-			fmt.Println("ERROR, MULTIPLE VAR DECLARATION \nVariable: '", id.token, "' its declared multiple times")
-			return &id
+		fmt.Println("comparacion1:", id.token)
+		fmt.Println("comparacion2", token)
+		if id.Type == 7 && id.token == _type {
+			fmt.Println("el test definito", id.token)
+			if t.Find(token) == true {
+				i := ObjectIdent{Ident: Ident{token: token, Type: 8, level: t.actualLevel, objectType: _type}, _type: _type}
+
+				t.table = append(t.table, i.Ident)
+				objectExist = true
+
+			}
 		}
 	}
-	return nil
+	if objectExist == false {
+		fmt.Println("ERROR, STRUCT DONT DEFINED \nOBJECT: '", _type, "' its not declared ") //TODO PASAR AL SERVER
+	}
+}
+
+func (t *SymbolTable) Find(name string) bool {
+	for _, id := range t.table {
+		if id.token == name {
+			fmt.Println("ERROR, MULTIPLE VAR DECLARATION \nVariable: '", id.token, "' its declared multiple times") //TODO PASAR AL SERVER
+			return false
+		}
+	}
+	return true
 }
 
 func (t *SymbolTable) FindActualLevel(name string) *Ident {
@@ -148,10 +189,16 @@ func (t *SymbolTable) PrintTable() {
 			_type = "float"
 		} else if s.Type == 4 {
 			_type = "string"
+
 		} else if s.Type == 5 {
 			_type = "rune"
 		} else if s.Type == 6 {
 			_type = "func"
+		} else if s.Type == 7 {
+			_type = "struct"
+		} else if s.Type == 8 {
+			_type = s.objectType
+
 		} else {
 			_type = "unknown"
 		}
