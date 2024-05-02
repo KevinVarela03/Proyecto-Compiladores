@@ -68,6 +68,11 @@ var (
 		Type:  5,
 		level: 0,
 	}
+	Func = Ident{
+		token: "func",
+		Type:  6,
+		level: 0,
+	}
 )
 
 func (t *SymbolTable) InsertMethod(token string, typ int, params []int) {
@@ -139,8 +144,14 @@ func (t *SymbolTable) PrintTable() {
 			_type = "boolean"
 		} else if s.Type == 2 {
 			_type = "int"
+		} else if s.Type == 3 {
+			_type = "float"
 		} else if s.Type == 4 {
 			_type = "string"
+		} else if s.Type == 5 {
+			_type = "rune"
+		} else if s.Type == 6 {
+			_type = "func"
 		} else {
 			_type = "unknown"
 		}

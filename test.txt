@@ -1,11 +1,12 @@
-
 package main;
 
-func letsgo(){
+var a int := 1;
+var b int := 2;
+var c int := "kevin";
 
-};
-
-func main(){
-    caca = "string";
-    letsgo();
+func suma(a int, b int) int {
+    var result int;
+    result := a + b;
+    print(result);
+    return result;
 };
